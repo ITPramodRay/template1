@@ -1,0 +1,8 @@
+node_modules
+.DS_STORE
+node_modules
+*.zip
+*~
+__benchmarks__
+build/
+build2/
