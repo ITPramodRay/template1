@@ -9,7 +9,7 @@ import {
 import ScrollToTop from "./scrollToTop";
 import LoaderWrapper from "./loaderWrapper";
 import Loader from "../views/common/loader";
-import AppHeader from "../views/common/header";
+import AppHeader from "../views/common/Header/Header";
 
 const LandingPage = React.lazy(() => import("../views/landing"));
 const DashBoardPage = React.lazy(() => import("../views/dashboard"));
