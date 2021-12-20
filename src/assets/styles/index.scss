@@ -1,0 +1,33 @@
+@import "../modules/grid";
+@import "../modules/colors";
+@import "../modules/card";
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  * {
+    box-sizing: border-box;
+  }
+  .app-component {
+    .app-router {
+      .router-layout {
+        .container {
+          .wrapper {
+            padding: 2% 5%;
+            display: block;
+            width: 100vw;
+            min-height: calc(100vh - 10vh);
+          }
+        }
+      }
+    }
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

@@ -1,0 +1,48 @@
+@import "../modules/colors";
+@import "../modules/card";
+.dashboard-page {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .user-form-wrapper {
+    // * {
+    //   display: block;
+    //   width: 100%;
+    //   text-align: center;
+    //   a {
+    //     font-weight: bold;
+    //   }
+    // }
+    background-color: #eee;
+    width: 50vw;
+    padding: 40px;
+    .text-field {
+      margin-top: 40px;
+      background-color: $text-dark-grey;
+      input {
+        color: $text-white;
+        font-size: 22px;
+      }
+      label {
+        color: $text-navy-blue;
+      }
+      i {
+        color: $text-white;
+        font-size: 22px;
+      }
+    }
+    button {
+      @include button;
+      @include button-gradient;
+      border-radius: 32px;
+      padding: 10px;
+      font-size: 22px;
+      color: $text-white;
+      width: 50%;
+      display: block;
+      margin: 40px auto 0 auto;
+    }
+  }
+}
