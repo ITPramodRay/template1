@@ -1,14 +1,16 @@
+import React,{useEffect,useState,lazy} from 'react';
 import { Link, useHistory } from "react-router-dom";
+
+const Landing = lazy(()=>import("./LandingPage/Landing"))
+const PlanRetirment = lazy(()=>import("./PlanRetirment/PlanRetirment"))
+
 
 export default function LandingPage({ ...props }) {
   const history = useHistory();
   return (
-    <div className="wrapper">
-      This is the `Landing Page`.
-      <p>Use this page as reference for understading inter-page navigation</p>
-      <p>
-        <Link to="/dashboard">GO TO DASHBOARD</Link>
-      </p>
-    </div>
+   <>
+   <Landing/>
+   <PlanRetirment/>
+   </>
   );
 }
