@@ -9,8 +9,8 @@ export default function LandingPage({ ...props }) {
   const history = useHistory();
   return (
    <>
-   <Landing/>
-   <PlanRetirment/>
+   {/* <Landing/>
+   <PlanRetirment/> */}
    </>
   );
 }
