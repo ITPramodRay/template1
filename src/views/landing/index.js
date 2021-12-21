@@ -1,16 +1,16 @@
 import React,{useEffect,useState,lazy} from 'react';
 import { Link, useHistory } from "react-router-dom";
 
-const Landing = lazy(()=>import("./LandingPage/Landing"))
-const PlanRetirment = lazy(()=>import("./PlanRetirment/PlanRetirment"))
-
+const Home = lazy(()=>import("./components/index"))
+const Navbar = lazy(()=>import("../common/Header/Navbarmenu"))
 
 export default function LandingPage({ ...props }) {
   const history = useHistory();
   return (
    <>
-   <Landing/>
-   <PlanRetirment/>
+   <Navbar/>
+   <Home/>
+   {/* <PlanRetirment/> */}
    </>
   );
 }
