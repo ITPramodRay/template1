@@ -10,7 +10,7 @@ import ScrollToTop from "./scrollToTop";
 import LoaderWrapper from "./loaderWrapper";
 import Loader from "../views/common/loader";
 import { loadingPageRouters } from "../views/landing/LandingRouter";
-// import AppHeader from "../views/common/Header/Header";
+import { loginAndRegisterPageRouters } from "../views/Login&Register/Login&RegisteRouter";
 
 const LandingPage = React.lazy(() => import("../views/landing"));
 const DashBoardPage = React.lazy(() => import("../views/dashboard"));
@@ -37,7 +37,11 @@ export default function AppRouter({ ...props }) {
     },
   ];
 
-  let allRoutes = [...mainRoues, ...loadingPageRouters];
+  let allRoutes = [
+    ...mainRoues,
+    ...loadingPageRouters,
+    ...loginAndRegisterPageRouters,
+  ];
 
   return (
     <div className="app-router">
@@ -65,3 +69,4 @@ export default function AppRouter({ ...props }) {
     </div>
   );
 }
+
