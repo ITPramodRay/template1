@@ -8,7 +8,7 @@ import Products from "./Products/Products";
 import Servies from "./Services/Services";
 import Recommended from "./Recommended/Recommended";
 import Ads from "./Ad/Ads";
-import Faq from "./FAQ/FAQ";
+import Faq from "./FAQ/Faq";
 import Footer from "../common/Footer/Footer";
 import Testimonials from "./Testimonials/Testimonials";
 
