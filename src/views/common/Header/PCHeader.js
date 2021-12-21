@@ -3,50 +3,51 @@ import logohead from "../../../assets/images/head-logo.svg";
 import searchicon from "../../../assets/images/Search-icon.svg";
 import notification from "../../../assets/images/notification.svg";
 import downicon from "../../../assets/images/Arrow.svg";
-
-const PCHeader = () => {
+import { Link } from "react-router-dom";
+import {dashboardPaths} from "../../../utils/RoutingConstants"
+const PCHeader = ({activepath}) => {
   return (
     <>
       <header className="Dashbord-header-PC">
         <div className="left-head">
-          <img src={logohead}></img>
+          <img alt="" src={logohead}></img>
           <div className="search-bar">
             <input
               type="text"
               placeholder="Search"
               className="search-tab"
             ></input>
-            <img className="search-icon" src={searchicon}></img>
+            <img alt="" className="search-icon" src={searchicon}></img>
           </div>
         </div>
         <div className="nav-bar">
           <ul>
             <li>
-              <a href="#">Dashboard</a>
+              <Link className={activepath===dashboardPaths.dashboard?"active_link":""}>Dashboard</Link>
             </li>
             <li>
-              <a href="#">Invest</a>
+              <Link className={activepath===dashboardPaths.invest?"active_link":""}>Invest</Link>
             </li>
             <li>
-              <a href="#">Plan</a>
+              <Link className={activepath===dashboardPaths.plan?"active_link":""}>Plan</Link>
             </li>
             <li>
-              <a href="#">Advisory</a>
+              <Link className={activepath===dashboardPaths.advisory?"active_link":""}>Advisory</Link>
             </li>
             <li>
-              <a href="#">Learn</a>
+              <Link className={activepath===dashboardPaths.learn?"active_link":""}>Learn</Link>
             </li>
             <li>
-              <a href="#" className="active_link">
+              <Link className={activepath===dashboardPaths.wellbeing?"active_link":""}>
                 Wellbeing
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
         <div className="right-head">
-          <img src={notification}></img>
-          <img src="https://picsum.photos/200" className="profile-pic"></img>
-          <img src={downicon}></img>
+          <img alt="" src={notification}></img>
+          <img alt="" src="https://picsum.photos/200" className="profile-pic"></img>
+          <img alt="" src={downicon}></img>
         </div>
       </header>
     </>

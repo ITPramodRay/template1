@@ -4,7 +4,7 @@ import { Container, Row, Col, Form, Input, Label  } from 'reactstrap';
 
 import Life99Logo from '../../../assets/images/Life99Logo.svg';
 
-const SignUp = () => {
+const VerifyOtp = () => {
 
     return (
       <Fragment>
@@ -61,4 +61,4 @@ const SignUp = () => {
   }
 
 
-export default SignUp;
+export default VerifyOtp;
