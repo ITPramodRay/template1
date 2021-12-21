@@ -1,12 +1,14 @@
 import React from 'react';
 import AppHeader from "../common/Header/Header"
+import WellBeing from './WellBeing/WellBeing';
 
-export default function DashBoardPage({ ...props }) {
+const  DashBoardPage = () => {
   
   return (
     <>
     <AppHeader />
-    
+    <WellBeing />
     </>
   );
 }
+export default DashBoardPage;

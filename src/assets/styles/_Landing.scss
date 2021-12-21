@@ -596,3 +596,30 @@
     }
   }
 }
+
+//gif
+.gif-scrolltwo{
+  bottom: 40px;
+}
+.gif_scroll{
+  position: absolute;
+  bottom:  40px;
+  left: 50%;
+  img{
+    width: 50px;
+  }
+  p{
+    color: #ffffff;
+    font-size: 12px;
+  }
+}
+.slider-two{
+  position: relative;
+  .home-gif{
+    position:absolute;
+    left: 23%;
+    top: 18%;
+    width: 100px;
+  }
+}
+

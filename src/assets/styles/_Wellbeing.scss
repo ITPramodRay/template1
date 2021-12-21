@@ -1,0 +1,157 @@
+.WB_headcard {
+  background-image: url(../images/BG_wellbing.svg);
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .Hcard_text {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    color: #fff;
+    padding-left: 5rem;
+  }
+}
+//base
+.base_card_We {
+  padding: 0rem 5rem;
+  background-color: #f2f3f7;
+}
+
+//healthgoals
+.pchealthgoals {
+  .content_pchg {
+    display: flex;
+    justify-content: space-between;
+    .PCHG_Left_card {
+      background-color: #0063a1;
+      color: #fff;
+      border-radius: 14px;
+      padding: 2rem 2.5rem;
+      .head_text_div {
+        border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
+        width: max-content;
+        h2 {
+          font-weight: 600;
+          font-size: 21px;
+        }
+      }
+      p {
+        margin-top: 0.75rem;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+    .PCHG_Right_card {
+      margin: 0rem 0rem;
+      display: flex;
+      gap: 2rem;
+      padding-left: 50px;
+      .card-HG {
+        background-color: #fff;
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+        padding: 1rem 1.5rem;
+        position: relative;
+        display: flex;
+        .data_card_HG {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          img {
+            width: 35px;
+          }
+          p {
+            font-weight: 500;
+            font-size: 16px;
+            color: #005e9e;
+            margin-top: 10px;
+          }
+          .HG-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            background: #005e9e;
+            box-shadow: 0px 4px 16px rgba(175, 175, 175, 0.25);
+            border-radius: 45.3463px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-top: 2.5rem;
+            padding: 0.3rem;
+          }
+        }
+      }
+      .close_icon {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+      }
+    }
+  }
+}
+.add_icon_main {
+  justify-content: center !important;
+  align-items: center !important;
+  .add_icon {
+    justify-content: center !important;
+    align-items: center !important;
+    .add_icon {
+      width: 100px !important;
+    }
+  }
+}
+//mobile healthgoals
+.mvhealthgoals {
+    display: none;
+  .top_hg {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    .Mbtn {
+      background: #ffffff;
+      border: 1.88943px solid #005e9e;
+      box-shadow: 0px 4px 16px rgba(175, 175, 175, 0.25);
+      border-radius: 45.3463px;
+      color: #005e9e;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 0.5rem 1rem;
+    }
+  }
+  .MVHG_Left_card{
+    background-color: #0063a1;
+    color: #fff;
+    border-radius: 14px;
+    padding: 2rem 2.5rem;
+    .head_text_div {
+      border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
+      width: max-content;
+      h2 {
+        font-weight: 600;
+        font-size: 21px;
+      }
+    }
+    p {
+      margin-top: 0.75rem;
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+    .mvhealthgoals{
+        display: block;
+    }
+    .pchealthgoals{
+        display: none;
+    }
+    .WB_headcard{
+        display: none;
+    }
+    .base_card_We{
+        padding: 0rem 1.5rem;
+    }
+  }

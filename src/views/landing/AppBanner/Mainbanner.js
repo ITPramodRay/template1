@@ -1,15 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { Component, Fragment } from "react";
+import { Col, Container, Row } from "reactstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Link } from "react-router-dom";
-import { Col, Container, Row } from "reactstrap";
 
-import Appstore from "../../../assets/images/Apple.svg";
-import Google from "../../../assets/images/Google.svg";
-import HappyEmployee from "../../../assets/images/happy-employee.svg";
-import Qrcode from "../../../assets/images/QR-code.svg";
+import { Link } from "react-router-dom";
+
 import RetirementPeople from "../../../assets/images/retirement-people.svg";
 import UseingEmployee from "../../../assets/images/useing-employee.svg";
+import HappyEmployee from "../../../assets/images/happy-employee.svg";
+import Qrcode from "../../../assets/images/QR-code.svg";
+import Google from "../../../assets/images/Google.svg";
+import Appstore from "../../../assets/images/Apple.svg";
+
+import slider1 from "../../../assets/images/Slider-ill/slider-img-1.svg";
+import slider2 from "../../../assets/images/Slider-ill/slider-img-2.svg";
+import slider3 from "../../../assets/images/Slider-ill/slider-img-3.svg";
+import scroll from "../../../assets/images/GIF/Scroll.gif";
+import homegif from "../../../assets/images/GIF/Home.gif";
 
 const Mainbanner = () => {
   const responsive = {
@@ -30,7 +37,7 @@ const Mainbanner = () => {
     },
   };
   return (
-    <>
+    <Fragment>
       <div className="banner-section">
         <Row className="m-0">
           <Col className="p-0">
@@ -156,7 +163,14 @@ const Mainbanner = () => {
                           </Col>
                         </Row>
                       </Col>
+                      <Col sm={5} className="">
+                        <img src={slider1}></img>
+                      </Col>
                     </Row>
+                    <div className="gif_scroll">
+                      <img src={scroll} />
+                      <p>Scroll down</p>
+                    </div>
                   </Container>
                 </div>
               </div>
@@ -263,7 +277,15 @@ const Mainbanner = () => {
                           </Col>
                         </Row>
                       </Col>
+                      <Col sm={5} className="slider-two">
+                        <img src={slider2}></img>
+                        <img src={homegif} className="home-gif"></img>
+                      </Col>
                     </Row>
+                    <div className="gif_scroll">
+                      <img src={scroll} />
+                      <p>Scroll down</p>
+                    </div>
                   </Container>
                 </div>
               </div>
@@ -369,7 +391,14 @@ const Mainbanner = () => {
                           </Col>
                         </Row>
                       </Col>
+                      <Col sm={5} className="">
+                        <img src={slider3}></img>
+                      </Col>
                     </Row>
+                    <div className="gif_scroll">
+                      <img src={scroll} />
+                      <p>Scroll down</p>
+                    </div>
                   </Container>
                 </div>
               </div>
@@ -377,7 +406,7 @@ const Mainbanner = () => {
           </Col>
         </Row>
       </div>
-    </>
+    </Fragment>
   );
 };
 
