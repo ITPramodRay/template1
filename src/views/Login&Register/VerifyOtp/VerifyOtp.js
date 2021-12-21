@@ -1,13 +1,13 @@
-import React, { Component, Fragment } from 'react';
-import { Container, Row, Col, Form, Input, Label  } from 'reactstrap';
-
+import React, { } from 'react';
+import { Container, Row, Col, Form, Input  } from 'reactstrap';
 
 import Life99Logo from '../../../assets/images/Life99Logo.svg';
+import OtpInput from 'react-otp-input';
 
-const SignUp = () => {
+const VerifyOtp = ({verifyOtp,setOtp,otp}) => {
 
     return (
-      <Fragment>
+      <>
             <Container>
               <Row>
                 <Col md={12}>
@@ -21,23 +21,33 @@ const SignUp = () => {
                 </Col>
               </Row>
               <Form>
+              
                 <Row>
-                  <Col md={5}> 
+                  
+                <OtpInput
+                    className='otpInput'
+                    value={otp}
+                    onChange={setOtp}
+                    numInputs={4}
+                    
+                  />
+
+                  {/* <Col md={5}> 
                     <Row>
                       <Col md={3}>                     
-                          <Input type="text" name="otp" value=""/>
+                          <Input type="text" name="otp" onChange={(e)=>setOtp(prevState=>({...prevState,digit1:e.target.value}))} />
                       </Col>
                       <Col md={3}>                     
-                          <Input type="text" name="otp" value=""/>
+                          <Input type="text" name="otp" onChange={(e)=>setOtp(prevState=>({...prevState,digit2:e.target.value}))} />
                       </Col>
                       <Col md={3}>                     
-                          <Input type="text" name="otp" value=""/>
+                          <Input type="text" name="otp" onChange={(e)=>setOtp(prevState=>({...prevState,digit3:e.target.value}))} />
                       </Col>
                       <Col md={3}>                     
-                          <Input type="text" name="otp" value=""/>
+                          <Input type="text" name="otp" onChange={(e)=>setOtp(prevState=>({...prevState,digit4:e.target.value}))} />
                       </Col>
                     </Row>
-                  </Col>  
+                  </Col>   */}
                 </Row>
                  <Row className='resentotp'>
                     <Col md={4}>
@@ -49,16 +59,16 @@ const SignUp = () => {
                 </Row>
                 <Row>
                     <Col md={12}>
-                       <input className='subbtn' type="submit" name="Submit" value="Submit" />
+                       <input className='subbtn' type="submit" name="Submit" onClick={verifyOtp}/>
                     </Col>
                 </Row>
                 
               </Form>
             </Container>
-      </Fragment >
+      </ >
 
     );
   }
 
 
-export default SignUp;
+export default VerifyOtp;
