@@ -1,21 +1,20 @@
-import React, { Component, Fragment } from "react";
-import { Col, Container, Row } from "reactstrap";
+import React from "react";
 import { Accordion, AccordionItem } from "react-light-accordion";
 import "react-light-accordion/demo/css/index.css";
+import { Col, Container, Row } from "reactstrap";
 
 const Faq = () => {
-  
-    return (
-      <Fragment>
-        <div className="section faq-section">
-          <Container>
-            <Row className="title-row align-items-center">
-              <Col sm={12} className="text-center">
-                <h3 className="title-text">Frequently Asked Questions</h3>
-              </Col>
-            </Row>
-            <Col sm={11} className="mx-auto">
-              <Row>
+  return (
+    <>
+      <div className="section faq-section">
+        <Container>
+          <Row className="title-row align-items-center">
+            <Col sm={12} className="text-center">
+              <h3 className="title-text">Frequently Asked Questions</h3>
+            </Col>
+          </Row>
+          <Col sm={11} className="mx-auto">
+            <Row>
               <Col sm={4}>
                 <Accordion atomic={true}>
                   <AccordionItem title="What is life99?">
@@ -30,7 +29,7 @@ const Faq = () => {
                     </p>
                   </AccordionItem>
 
-                   <AccordionItem title="What is life99?">
+                  <AccordionItem title="What is life99?">
                     <p>
                       smallcases are modern investment
                       <br /> products that help you build a low-cost,
@@ -42,7 +41,7 @@ const Faq = () => {
                     </p>
                   </AccordionItem>
 
-                   <AccordionItem title="What is life99?">
+                  <AccordionItem title="What is life99?">
                     <p>
                       smallcases are modern investment
                       <br /> products that help you build a low-cost,
@@ -54,10 +53,9 @@ const Faq = () => {
                     </p>
                   </AccordionItem>
                 </Accordion>
+              </Col>
 
-                </Col>
-                
-                <Col sm={4}>
+              <Col sm={4}>
                 <Accordion atomic={true}>
                   <AccordionItem title="What is life99?">
                     <p>
@@ -71,7 +69,7 @@ const Faq = () => {
                     </p>
                   </AccordionItem>
 
-                   <AccordionItem title="What is life99?">
+                  <AccordionItem title="What is life99?">
                     <p>
                       smallcases are modern investment
                       <br /> products that help you build a low-cost,
@@ -83,7 +81,7 @@ const Faq = () => {
                     </p>
                   </AccordionItem>
 
-                   <AccordionItem title="What is life99?">
+                  <AccordionItem title="What is life99?">
                     <p>
                       smallcases are modern investment
                       <br /> products that help you build a low-cost,
@@ -95,9 +93,8 @@ const Faq = () => {
                     </p>
                   </AccordionItem>
                 </Accordion>
-
-                </Col>
-                <Col sm={4}>
+              </Col>
+              <Col sm={4}>
                 <Accordion atomic={true}>
                   <AccordionItem title="What is life99?">
                     <p>
@@ -111,7 +108,7 @@ const Faq = () => {
                     </p>
                   </AccordionItem>
 
-                   <AccordionItem title="What is life99?">
+                  <AccordionItem title="What is life99?">
                     <p>
                       smallcases are modern investment
                       <br /> products that help you build a low-cost,
@@ -123,7 +120,7 @@ const Faq = () => {
                     </p>
                   </AccordionItem>
 
-                   <AccordionItem title="What is life99?">
+                  <AccordionItem title="What is life99?">
                     <p>
                       smallcases are modern investment
                       <br /> products that help you build a low-cost,
@@ -135,14 +132,13 @@ const Faq = () => {
                     </p>
                   </AccordionItem>
                 </Accordion>
-                </Col>
-              </Row>
-            </Col>
-          </Container>
-        </div>
-      </Fragment>
-    );
-  }
+              </Col>
+            </Row>
+          </Col>
+        </Container>
+      </div>
+    </>
+  );
+};
 
-
-export default Faq
+export default Faq;
