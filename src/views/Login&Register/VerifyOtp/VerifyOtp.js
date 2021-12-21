@@ -4,8 +4,8 @@ import { Container, Row, Col, Form, Input, Label  } from 'reactstrap';
 
 import Life99Logo from '../../../assets/images/Life99Logo.svg';
 
-class SignUp extends Component {
-  render() {
+const SignUp = () => {
+
     return (
       <Fragment>
             <Container>
@@ -59,6 +59,6 @@ class SignUp extends Component {
 
     );
   }
-}
+
 
 export default SignUp;
