@@ -1,13 +1,14 @@
-import React, { Component, Fragment } from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Form, Input, Label  } from 'reactstrap';
 
 
 import Life99Logo from '../../../assets/images/Life99Logo.svg';
 
-const SetPassword = () => {
-  
+const SetPassword = ({setPassword}) => {
+    const [password,setPass] = useState(null)
+    const [confirmPassword,setConfirmPassword] = useState(null)
     return (
-      <Fragment>
+      <>
             <Container>
               <Row>
                 <Col md={12}>
@@ -23,23 +24,23 @@ const SetPassword = () => {
                 <Row>
                     <Col md={6}>
                       <Label>Enter Password</Label>
-                      <Input type="password" name="password" />
+                      <Input type="password" name="password" onChange={(e)=>setPass(e.target.value)} />
                     </Col>
                 </Row>
                  <Row>
                    <Col md={6}>
                       <Label>Re-Enter Password</Label>
-                      <Input type="password" name="repassword" />
+                      <Input type="password" name="repassword" onChange={(e)=>setConfirmPassword(e.target.value)} />
                     </Col>
                  </Row>
                 <Row>
                     <Col md={12}>
-                       <input className='subbtn' type="submit" name="Submit" value="Submit" />
+                       <input className='subbtn' type="submit" name="Submit" onClick={()=>setPassword(password,confirmPassword)} />
                     </Col>
                 </Row>
               </Form>
             </Container>
-      </Fragment >
+      </ >
 
     );
   }
