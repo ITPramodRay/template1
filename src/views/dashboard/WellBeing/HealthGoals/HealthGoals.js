@@ -1,13 +1,13 @@
 import React from 'react';
-import PCHealthGoals from './PCHealthGoals';
-import MVHealthGoals from './MVHealthGoals';
+import HealthGoalsPC from './HealthGoalsPC';
+import HealthGoalsMV from './HealthGoalsMV';
 
 const  HealthGoals = () => {
   
   return (
     <>
-        <PCHealthGoals />
-        <MVHealthGoals />
+        <HealthGoalsPC />
+        <HealthGoalsMV />
     </>
   );
 }

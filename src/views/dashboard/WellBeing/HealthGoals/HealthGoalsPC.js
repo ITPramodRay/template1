@@ -4,7 +4,7 @@ import Glass from '../../../../assets/images/Barbell.svg';
 import close from '../../../../assets/images/X.svg';
 import addicon from '../../../../assets/images/Add icon.svg';
 
-const  PCHealthGoals = () => {
+const  HealthGoalsPC = () => {
   
   return (
     <>
@@ -66,4 +66,4 @@ const  PCHealthGoals = () => {
     </>
   );
 }
-export default PCHealthGoals;
+export default HealthGoalsPC;

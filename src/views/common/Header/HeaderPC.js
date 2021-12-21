@@ -5,7 +5,7 @@ import notification from "../../../assets/images/notification.svg";
 import downicon from "../../../assets/images/Arrow.svg";
 import { Link } from "react-router-dom";
 import {dashboardPaths} from "../../../utils/RoutingConstants"
-const PCHeader = ({activepath}) => {
+const HeaderPC = ({activepath}) => {
   return (
     <>
       <header className="Dashbord-header-PC">
@@ -54,4 +54,4 @@ const PCHeader = ({activepath}) => {
   );
 };
 
-export default PCHeader;
+export default HeaderPC;

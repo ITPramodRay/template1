@@ -1,8 +1,6 @@
 import React from 'react';
 
-
-
-const  MVHealthGoals = () => {
+const  HealthGoalsMV = () => {
   
   return (
     <>
@@ -24,4 +22,4 @@ const  MVHealthGoals = () => {
     </>
   );
 }
-export default MVHealthGoals;
+export default HealthGoalsMV;

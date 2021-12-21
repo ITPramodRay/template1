@@ -8,7 +8,7 @@ export default function WellBeing({ ...props }) {
     <>
         <CardHead/>
         <div className='base_card_We'>
-        <HealthGoals />
+          <HealthGoals />
         </div>
     </>
   );
