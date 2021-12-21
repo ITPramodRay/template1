@@ -1,0 +1,113 @@
+.headermain {
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+  display: inline-block;
+  transition: ease-in 0.5s;
+  .container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  li {
+    min-width: 110px;
+    text-align: center;
+    margin-left: 22px;
+  }
+  .nav-item {
+    a {
+      color: $white;
+      text-decoration: none;
+      vertical-align: middle;
+
+      &:hover {
+        color: $white;
+      }
+    }
+    a.login-btn {
+      color: $white;
+      background: $darkblue;
+      box-shadow: 0px 8px 16px -6px rgba(0, 82, 103, 0.32);
+      border-radius: 28px;
+      font-size: 17px;
+      line-height: 30px;
+      font-weight: 600;
+      padding: 10px;
+    }
+    a.register-btn {
+      color: $lightblue;
+      background: $white;
+      box-shadow: 0px 8px 16px -6px rgba(0, 82, 103, 0.32);
+      border-radius: 100px;
+      font-size: 17px;
+      line-height: 30px;
+      font-weight: 600;
+      padding: 10px;
+    }
+  }
+  .nav-item .is-active,
+  .nav-item .active {
+    background: $white;
+    padding: 26px 15px;
+  }
+  .navbar-brand {
+    position: relative;
+    z-index: 99;
+  }
+}
+
+.headermain.Fixed-header {
+  background: #ffffff;
+}
+
+.Fixed-header {
+  background: #ffffff;
+  svg {
+    path {
+      fill: $darkblue;
+    }
+  }
+  .nav-item {
+    a {
+      color: $darkblue;
+      text-decoration: none;
+      vertical-align: middle;
+
+      &:hover {
+        color: $darkblue;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .headermain {
+    .container-fluid {
+      justify-content: unset;
+    }
+    li{
+        min-width: 94px;
+        text-align: center;
+        margin-left: 11px;
+    }
+    .navbar-brand {
+      svg {
+        width: 115px;
+      }
+    }
+    .mobile-menu.navbar-nav {
+      display: contents;
+      width: 100%;
+    }
+    .nav-item a.login-btn {
+        font-size: 14px;
+        line-height:24px;
+        padding: 8px;
+    }
+    .nav-item a.register-btn {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 8px;
+    }
+  }
+}

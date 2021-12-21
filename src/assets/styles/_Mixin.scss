@@ -1,0 +1,38 @@
+@mixin title($fsize, $lheight, $fweight, $color) {
+  font-size: $fsize;
+  line-height: $lheight;
+  font-weight: $fweight;
+  color: $color;
+}
+
+@mixin buttons($fsize, $fweight, $color, $bgcolor, $bradius) {
+  font-size: $fsize;
+  font-weight: $fweight;
+  color: $color;
+  background-color: $bgcolor;
+  border-radius: $bradius;
+  border: none;
+}
+
+
+
+// Common Css
+// Common Css
+.section {
+  padding: 50px 0px;
+}
+.text-right {
+  text-align: right !important;
+}
+.title-row {
+  padding-bottom: 30px;
+}
+.btn-check:active + .btn-secondary:focus,
+.btn-check:checked + .btn-secondary:focus,
+.btn-secondary.active:focus,
+.btn-secondary:active:focus,
+.show > .btn-secondary.dropdown-toggle:focus,
+.btn-check:focus + .btn-secondary,
+.btn-secondary:focus {
+  box-shadow: none !important;
+}

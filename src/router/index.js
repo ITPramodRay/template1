@@ -10,7 +10,7 @@ import ScrollToTop from "./scrollToTop";
 import LoaderWrapper from "./loaderWrapper";
 import Loader from "../views/common/loader";
 import {loadingPageRouters} from "../views/landing/LandingRouter"
-import AppHeader from "../views/common/Header/Header";
+// import AppHeader from "../views/common/Header/Header";
 
 const LandingPage = React.lazy(() => import("../views/landing"));
 const DashBoardPage = React.lazy(() => import("../views/dashboard"));
@@ -29,9 +29,9 @@ export default function AppRouter({ ...props }) {
     <div className="app-router">
       <LoaderWrapper>
         <div className="router-layout">
-          <div className="container">
+         
             <Router>
-              <AppHeader />
+              {/* <AppHeader /> */}
               <ScrollToTop>
                 <Switch>
                   <Route
@@ -42,13 +42,14 @@ export default function AppRouter({ ...props }) {
                     path="/welcome"
                     component={WaitingComponent(LandingPage)}
                   />
-                  <Route path="/" component={WaitingComponent(LandingPage)} />
+                  {/* <Route exact path="/" component={WaitingComponent(LandingPage)} /> */}
 
                   {loadingPageRouters.map((value,index)=>{
                     return(
                       <Route 
-                        path={value["path"]} 
-                        component={WaitingComponent(value["component"])} 
+                        exact={value.exact}
+                        path={value.path} 
+                        component={WaitingComponent(value.component)} 
                         key={index}
                       />
                     )
@@ -57,7 +58,7 @@ export default function AppRouter({ ...props }) {
               </ScrollToTop>
             </Router>
           </div>
-        </div>
+       
       </LoaderWrapper>
     </div>
   );
