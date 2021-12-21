@@ -1,30 +1,56 @@
-import React, { Component, Fragment } from "react";
-import { Container } from "reactstrap";
+import React, { useState } from "react";
 
 import Signupfrm from "./Signup/Signup";
 import VerifyOtp from "./VerifyOtp/VerifyOtp";
 import SetPassword from "./SetPassword/SetPassword";
 import Loading from "./Loading";
 import Otprightimg from "../../assets/images/Otpright.svg";
-
+import { Link } from "react-router-dom";
 const SignUp = () => {
+  const [viewComponent, setViewComponent] = useState("signupForm");
+  const [otp, setOtp] = useState("");
+
+  const registerUser = (e) => {
+    e.preventDefault();
+    console.log(e.target);
+    setViewComponent("verifyOtp");
+  };
+
+  const verifyOtp = () => {
+    alert(otp);
+    setViewComponent("setPassword");
+  };
+
+  const setPassword = (password, confirmPassword) => {
+    alert(password + " " + confirmPassword);
+    setViewComponent("loading");
+  };
+
   return (
-    <Fragment>
-      {/* <Loading /> */}
-      <section className="signupmain">
-        <div className="signleft">
-          <Signupfrm />
-          {/* <VerifyOtp /> */}
-          {/* <SetPassword /> */}
-        </div>
-        <div className="signright">
-          <h3>
-            Be smart with your money. Start <a href="#">planning</a> today.
-          </h3>
-          <img className="img-fluid" src={Otprightimg} alt="" title="" />
-        </div>
-      </section>
-    </Fragment>
+    <>
+      {viewComponent === "loading" && <Loading />}
+      {viewComponent !== "loading" && (
+        <section className="signupmain">
+          <div className="signleft">
+            {viewComponent === "signupForm" && (
+              <Signupfrm registerUser={registerUser} />
+            )}
+            {viewComponent === "verifyOtp" && (
+              <VerifyOtp verifyOtp={verifyOtp} otp={otp} setOtp={setOtp} />
+            )}
+            {viewComponent === "setPassword" && (
+              <SetPassword setPassword={setPassword} />
+            )}
+          </div>
+          <div className="signright">
+            <h3>
+              Be smart with your money. Start <Link>planning</Link> today.
+            </h3>
+            <img className="img-fluid" src={Otprightimg} alt="" title="" />
+          </div>
+        </section>
+      )}
+    </>
   );
 };
 

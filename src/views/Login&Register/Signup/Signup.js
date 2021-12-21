@@ -1,12 +1,13 @@
-import React, { Component, Fragment } from 'react';
+import React, {  } from 'react';
 import { Container, Row, Col, Form, Input, Label  } from 'reactstrap';
 
 import Life99Logo from '../../../assets/images/Life99Logo.svg';
 
-const SignUp = () => {
-  
+const SignUp = ({registerUser}) => {
+
+
     return (
-      <Fragment>
+      <>
             <Container>
               <Row>
                 <Col md={12}>
@@ -19,31 +20,31 @@ const SignUp = () => {
                   </div>
                 </Col>
               </Row>
-              <Form className='signupfrm'>
+              <Form className='signupfrm' onSubmit={e=>registerUser(e)}>
                 <Row>
                     <Col md={6}>
                       <Label>First Name</Label>
-                      <Input type="text" name="firstname" value=""/>
+                      <Input type="text" name="firstname"/>
                     </Col>
                     <Col md={6}>
                       <Label>Last Name</Label>
-                      <Input type="text" name="lastname" value=""/>
+                      <Input type="text" name="lastname"/>
                     </Col>
                 </Row>
                 <Row>
                     <Col md={6}>
                       <Label>Mobile/Email</Label>
-                      <Input type="text" name="mobemail" value=""/>
+                      <Input type="text" name="mobemail"/>
                     </Col>
                     <Col md={6}>
                       <Label>Age</Label>
-                      <Input type="number" name="age" value=""/>
+                      <Input type="number" name="age"/>
                     </Col>
                 </Row>
                 <Row>
                     <Col md={6}>
                       <Label>Income</Label>
-                      <Input type="text" name="income" value=""/>
+                      <Input type="text" name="income"/>
                     </Col>
                 </Row>
                 <Row>
@@ -54,7 +55,7 @@ const SignUp = () => {
                 </Row>
                 <Row>
                     <Col md={12}>
-                       <input type="submit" name="Submit" value="Sign up" />
+                       <input type="submit" name="Submit"/>
                     </Col>
                 </Row>
                 <Row>
@@ -65,7 +66,7 @@ const SignUp = () => {
               </Form>
             </Container>
          
-      </Fragment >
+      </ >
 
     );
   }
