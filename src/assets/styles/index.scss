@@ -1,0 +1,39 @@
+@import "../modules/grid";
+@import "../modules/colors";
+@import "../modules/card";
+@import "./main.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  .app-component {
+    .app-router {
+      .router-layout {
+        .container {
+          .wrapper {
+            padding: 2% 5%;
+            display: block;
+            width: 100vw;
+            min-height: calc(100vh - 10vh);
+          }
+        }
+      }
+    }
+  }
+}
+iframe{
+  display: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
