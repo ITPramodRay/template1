@@ -4,7 +4,7 @@ import Wdownicon from '../../../assets/images/W_Arrow.svg';
 import Wnotification from '../../../assets/images/W_notification.svg';
 import {dashboardPaths} from "../../../utils/RoutingConstants"
 import {Link} from "react-router-dom"
-const MVHeader = ({activepath}) => {
+const HeaderMV = ({activepath}) => {
   return (
     <>
       <header className="Dashbord-header-MB">
@@ -45,4 +45,4 @@ const MVHeader = ({activepath}) => {
   );
 };
 
-export default MVHeader;
+export default HeaderMV;
