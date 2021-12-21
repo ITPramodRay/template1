@@ -3,7 +3,7 @@ import { Container, Row, Col, Form, Input, Label } from "reactstrap";
 
 import Life99Logo from "../../../assets/images/Life99Logo.svg";
 
-const SignUp = ({ registerUser, setRegisterForm }) => {
+const SignUp = ({ handleSetRegister }) => {
   return (
     <>
       <Container>
@@ -20,31 +20,51 @@ const SignUp = ({ registerUser, setRegisterForm }) => {
             </div>
           </Col>
         </Row>
-        <Form className="signupfrm" onSubmit={(e) => registerUser(e)}>
+        <Form className="signupfrm">
           <Row>
             <Col md={6}>
               <Label>First Name</Label>
-              <Input type="text" name="firstname" />
+              <Input
+                type="text"
+                name="firstname"
+                onChange={(e) => handleSetRegister("firstName", e.target.value)}
+              />
             </Col>
             <Col md={6}>
               <Label>Last Name</Label>
-              <Input type="text" name="lastname" />
+              <Input
+                type="text"
+                name="lastname"
+                onChange={(e) => handleSetRegister("lastName", e.target.value)}
+              />
             </Col>
           </Row>
           <Row>
             <Col md={6}>
               <Label>Mobile/Email</Label>
-              <Input type="text" name="mobemail" />
+              <Input
+                type="text"
+                name="mobemail"
+                onChange={(e) => handleSetRegister("mobEmail", e.target.value)}
+              />
             </Col>
             <Col md={6}>
               <Label>Age</Label>
-              <Input type="number" name="age" />
+              <Input
+                type="number"
+                name="age"
+                onChange={(e) => handleSetRegister("age", e.target.value)}
+              />
             </Col>
           </Row>
           <Row>
             <Col md={6}>
               <Label>Income</Label>
-              <Input type="text" name="income" />
+              <Input
+                type="text"
+                name="income"
+                onChange={(e) => handleSetRegister("income", e.target.value)}
+              />
             </Col>
           </Row>
           <Row>

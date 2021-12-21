@@ -9,7 +9,9 @@ import ScrollToTop from "./scrollToTop";
 
 const LandingPage = React.lazy(() => import("../views/landing"));
 const DashBoardPage = React.lazy(() => import("../views/dashboard"));
-const WellBeing = React.lazy(() => import("../views/dashboard/WellBeing/WellBeing"));
+const WellBeing = React.lazy(() =>
+  import("../views/dashboard/WellBeing/WellBeing")
+);
 
 function WaitingComponent(Component) {
   return (props) => (
