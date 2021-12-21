@@ -1,12 +1,13 @@
 import React, { lazy } from "react";
-
-const LandingPage = lazy(() => import("./LandingPage/Landing"));
+import {landingPagePaths} from "../../utils/RoutingConstants"
+const LandingPage = lazy(() => import("./index"));
+const Home = lazy(() => import("./components/index"));
 
 export const loadingPageRouters = [
     {
-        "path":"/landingPage",
-        "component":LandingPage,
-        "exact":true
-    }
+        path: landingPagePaths.landingPage,
+        component:LandingPage,
+        exact:true
+    },
 ]
 

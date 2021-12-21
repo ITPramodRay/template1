@@ -1,0 +1,93 @@
+@media only screen and (max-width: 767px) {
+  // Banner
+  .banner-section {
+    background: linear-gradient(97deg, #1a3e6d 0.61%, #2d6fc6 101.43%);
+    padding-top: 60px;
+    padding-bottom: 20px;
+    .banner-text {
+      font-size: 34px;
+      line-height: 44px;
+      a {
+        color: #0bb8e4;
+        margin-right: 15px;
+      }
+    }
+    .mobilebanner-image {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .banner-download-application {
+      margin-top: 0px;
+      p {
+        font-size: 18px;
+        line-height: 27px;
+        font-weight: normal;
+        color: $white;
+      }
+      img {
+        width: 136px;
+        height: 45px;
+        padding-right: 10px;
+      }
+    }
+  }
+
+  // Products Section
+  .products-container {
+    padding: 0px 00px;
+    .products-section {
+      background: $powderblue;
+      border-radius: 0px;
+      padding-bottom: 60px;
+      padding-top: 60px;
+      .title-row {
+        padding-bottom: 0px;
+        .title-text {
+          @include title(18px, 27px, 600, $darkblue);
+        }
+      }
+      .text-right {
+        text-align: left;
+      }
+      .explore-btn {
+        @include buttons(14px, 600, $lightwhite, $darkblue, 28px);
+        padding: 10px 25px;
+        margin-top: 10px;
+      }
+      .col-sm-15 {
+        flex: 0 0 auto;
+        width: 100%;
+      }
+      .InfiniteCarousel{
+        padding: 0px;
+      }
+      .products-box {
+        margin-top: 60px;
+        position: relative;
+        .products-detail {
+          background: #ffffff;
+          padding: 15px 0px;
+          .comingsoon-img {
+            position: absolute;
+            top: 3px;
+            right: 0px;
+            width: 31px;
+          }
+          .product-img {
+            width: 40px;
+            height: 40px;
+          }
+          .products-category {
+            color: $lightblue;
+            font-size: 9px;
+            line-height: 24px;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 8px 0px 0px 0px;
+            margin-bottom: 0px;
+          }
+        }
+      }
+    }
+  }
+}

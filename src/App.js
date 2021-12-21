@@ -1,10 +1,11 @@
-import "./assets/styles/app.scss";
+// import "./assets/styles/app.scss";
 import AppRouter from "./router";
 import store from "./store";
 import { Encrypt } from "./modules";
 import { Provider } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./assets/styles/_Websitmain.scss"
 store.subscribe(() => {
   if (process.env.REACT_APP_PERSIST_STORE_DATA === "ENABLED") {
     sessionStorage.setItem("_store", Encrypt(store.getState(), "local"));
