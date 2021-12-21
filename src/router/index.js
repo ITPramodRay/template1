@@ -1,16 +1,11 @@
 import React, { Suspense } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useHistory,
-  withRouter,
-} from "react-router-dom";
-import ScrollToTop from "./scrollToTop";
-import LoaderWrapper from "./loaderWrapper";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import Loader from "../views/common/loader";
 import { loadingPageRouters } from "../views/landing/LandingRouter";
 import { loginAndRegisterPageRouters } from "../views/Login&Register/Login&RegisteRouter";
+import LoaderWrapper from "./loaderWrapper";
+import ScrollToTop from "./scrollToTop";
 
 const LandingPage = React.lazy(() => import("../views/landing"));
 const DashBoardPage = React.lazy(() => import("../views/dashboard"));
@@ -48,7 +43,6 @@ export default function AppRouter({ ...props }) {
       <LoaderWrapper>
         <div className="router-layout">
           <Router>
-            {/* <AppHeader /> */}
             <ScrollToTop>
               <Switch>
                 {allRoutes.map((value, index) => {
@@ -69,4 +63,3 @@ export default function AppRouter({ ...props }) {
     </div>
   );
 }
-
