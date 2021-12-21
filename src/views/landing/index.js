@@ -1,20 +1,20 @@
-import React, { useEffect, useState, lazy } from "react";
-import { Link, useHistory } from "react-router-dom";
+import React, { lazy } from "react";
+import { useHistory } from "react-router-dom";
 import { Container } from "reactstrap";
 
+import Footer from "../common/Footer/Footer";
+import Ads from "./Ad/Ads";
 import Mainbanner from "./AppBanner/Mainbanner";
+import Faq from "./FAQ/Faq";
 import PrepareRetirement from "./PlanRetirment/PrepareRetirement";
 import Products from "./Products/Products";
-import Servies from "./Services/Services";
 import Recommended from "./Recommended/Recommended";
-import Ads from "./Ad/Ads";
-import Faq from "./FAQ/Faq";
-import Footer from "../common/Footer/Footer";
+import Servies from "./Services/Services";
 import Testimonials from "./Testimonials/Testimonials";
 
 const Navbar = lazy(() => import("../common/Header/Navbarmenu"));
 
-export default function LandingPage({ ...props }) {
+const LandingPage = () => {
   const history = useHistory();
   return (
     <>
@@ -40,4 +40,6 @@ export default function LandingPage({ ...props }) {
       <Footer />
     </>
   );
-}
+};
+
+export default LandingPage;
