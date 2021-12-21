@@ -8,6 +8,13 @@ import Otprightimg from "../../assets/images/Otpright.svg";
 import { Link } from "react-router-dom";
 const SignUp = () => {
   const [viewComponent, setViewComponent] = useState("signupForm");
+  const [registerForm, setRegisterForm] = useState({
+    firstName: "",
+    lastName: "",
+    mobEmail: "",
+    age: "",
+    income: "",
+  });
   const [otp, setOtp] = useState("");
 
   const registerUser = (e) => {
@@ -33,7 +40,11 @@ const SignUp = () => {
         <section className="signupmain">
           <div className="signleft">
             {viewComponent === "signupForm" && (
-              <Signupfrm registerUser={registerUser} />
+              <Signupfrm
+                registerUser={registerUser}
+                registerForm={registerForm}
+                setRegisterForm={setRegisterForm}
+              />
             )}
             {viewComponent === "verifyOtp" && (
               <VerifyOtp verifyOtp={verifyOtp} otp={otp} setOtp={setOtp} />
