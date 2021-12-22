@@ -1,8 +1,8 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
 
-import Investlefttop from '../../../../assets/images/InvestDashboard/Investlefttop.svg';
-import investleftbottom from "../../../../assets/images/InvestDashboard/investleftbottom.svg";
+import Investlefttop from '../../../assets/images/InvestDashboard/Investlefttop.svg';
+import investleftbottom from '../../../assets/images/InvestDashboard/investleftbottom.svg';
 
 const  InvestLeftPanel = () => {
   

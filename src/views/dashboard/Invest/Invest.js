@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container,Row,Col } from 'reactstrap';
 
-import InvestTitle from './InvestHeader/InvestTitle';
-import InvestCard from './InvestHeader/InvestCard';
-import InvestLeftPanel from './InvestHeader/InvestLeftPanel';
+import InvestTitle from './InvestTitle';
+import InvestCard from './InvestCard';
+import InvestLeftPanel from './InvestLeftPanel';
 
 
 export default function Invest({ ...props }) {

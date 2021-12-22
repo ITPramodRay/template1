@@ -1,8 +1,8 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
 
-import Npslogo from '../../../../assets/images/InvestDashboard/ChartLine.svg';
-import Comingsoon from "../../../../assets/images/comingsoon.svg";
+import Npslogo from '../../../assets/images/InvestDashboard/ChartLine.svg';
+import Comingsoon from '../../../assets/images/comingsoon.svg';
 
 const  InvestCard = () => {
   
