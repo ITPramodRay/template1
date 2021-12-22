@@ -24,15 +24,15 @@ const VerifyOtp = ({verifyOtp,setOtp,otp}) => {
               
                 <Row>
                   
-                <OtpInput
+                {/* <OtpInput
                     className='otpInput'
                     value={otp}
                     onChange={setOtp}
                     numInputs={4}
                     
-                  />
+                  /> */}
 
-                  {/* <Col md={5}> 
+                  <Col md={5}> 
                     <Row>
                       <Col md={3}>                     
                           <Input type="text" name="otp" onChange={(e)=>setOtp(prevState=>({...prevState,digit1:e.target.value}))} />
@@ -47,7 +47,7 @@ const VerifyOtp = ({verifyOtp,setOtp,otp}) => {
                           <Input type="text" name="otp" onChange={(e)=>setOtp(prevState=>({...prevState,digit4:e.target.value}))} />
                       </Col>
                     </Row>
-                  </Col>   */}
+                  </Col>  
                 </Row>
                  <Row className='resentotp'>
                     <Col md={4}>
