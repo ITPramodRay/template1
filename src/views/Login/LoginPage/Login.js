@@ -10,6 +10,8 @@ const LoginPage = ({
   handleLoginValues,
   handleForgetPassword,
   handleLoginUser,
+  errorToast,
+  validationError,
 }) => {
   return (
     <>
@@ -18,7 +20,7 @@ const LoginPage = ({
           <Col md={12}>
             <div className="Logo">
               <img src={Life99Logo} alt="Life99" title="Life99" />
-              <h2>Demo Text</h2>
+              <h2>{errorToast}</h2>
             </div>
           </Col>
           <Col md={12}>
@@ -36,6 +38,7 @@ const LoginPage = ({
               name="mobemail"
               onChange={(e) => handleLoginValues("email", e.target.value)}
             />
+            <p>{validationError && validationError["email"]}</p>
           </Col>
         </Row>
         {optLogin === false ? (
@@ -47,6 +50,7 @@ const LoginPage = ({
                 name="passoword"
                 onChange={(e) => handleLoginValues("password", e.target.value)}
               />
+              <p>{validationError && validationError["password"]}</p>
             </Col>
           </Row>
         ) : (
@@ -55,9 +59,10 @@ const LoginPage = ({
               <Label>Enter OTP</Label>
               <Input
                 type="text"
-                name="passoword"
+                name="otp"
                 onChange={(e) => handleLoginValues("otp", e.target.value)}
               />
+              <p>{validationError && validationError["otp"]}</p>
             </Col>
           </Row>
         )}
@@ -66,12 +71,12 @@ const LoginPage = ({
           <Col md={12}>
             {optLogin === false ? (
               <span>
-                <a
+                <Button
                   href=""
-                  onClick={(e) => handleForgetPassword("OptLoginView")}
+                  onClick={(e) => handleForgetPassword("ForgetPassword")}
                 >
                   Forget Password
-                </a>
+                </Button>
               </span>
             ) : (
               <>

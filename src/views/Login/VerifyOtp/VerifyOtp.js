@@ -1,10 +1,10 @@
-import React from "react";
-import OtpInput from "react-otp-input";
-import { Col, Container, Form, Row } from "reactstrap";
+import React, { useState } from "react";
+import { Button } from "@mui/material";
+import { Col, Container, Form, Row, Input } from "reactstrap";
 
 import Life99Logo from "../../../assets/images/Life99Logo.svg";
 
-const VerifyLoginOtp = ({ verifyOtp, setOtp, otp }) => {
+const VerifyLoginOtp = ({ handleLoginValues, handleForgetPasswordOtp }) => {
   return (
     <>
       <Container>
@@ -22,34 +22,31 @@ const VerifyLoginOtp = ({ verifyOtp, setOtp, otp }) => {
             </div>
           </Col>
         </Row>
-        <Form>
-          <Row>
-            <OtpInput
-              className="otpInput"
-              value={otp}
-              onChange={setOtp}
-              numInputs={4}
-            />
-          </Row>
-          <Row className="resentotp">
-            <Col md={4}>
-              <a href="#">Resent OTP</a>
-            </Col>
-            <Col md={6} className="mr-right">
-              <p>09:59</p>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={12}>
-              <input
-                className="subbtn"
-                type="submit"
-                name="Submit"
-                onClick={verifyOtp}
-              />
-            </Col>
-          </Row>
-        </Form>
+        <Row>
+          <Input
+            type="text"
+            name="otp"
+            onChange={(e) => handleLoginValues("otp", e.target.value)}
+          />
+        </Row>
+        <Row className="resentotp">
+          <Col md={4}>
+            <a href="#">Resent OTP</a>
+          </Col>
+          <Col md={6} className="mr-right">
+            <p>09:59</p>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={12}>
+            <Button
+              className="subbtn"
+              onClick={() => handleForgetPasswordOtp()}
+            >
+              Submit
+            </Button>
+          </Col>
+        </Row>
       </Container>
     </>
   );

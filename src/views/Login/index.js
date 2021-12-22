@@ -8,6 +8,7 @@ import LoginPage from "./LoginPage/Login";
 import VerifyLoginOtp from "./VerifyOtp/VerifyOtp";
 import { encryptPassword } from "../../utils/Utils";
 import { dashboardPaths } from "../../utils/RoutingConstants";
+import LoginValidation from "./LoginValidation";
 
 const Login = () => {
   const [viewCompoment, setViewComponent] = useState("LoginPage");
@@ -18,31 +19,69 @@ const Login = () => {
     password: "",
     otp: "",
   });
+
   const [errorToast, setErrorToast] = useState("");
+  const [validationError, setValidationError] = useState({});
   const history = useHistory();
+  let baseUrl = "https://api-uat.life99.in/";
 
   const handleLoginValues = (field, value) => {
     let tempLoginUserData = { ...loginUserData };
     tempLoginUserData[field] = value;
     setLoginUserData(tempLoginUserData);
+    handleValidation();
   };
 
-  const handleOtpLogin = () => {
+  const handleValidation = () => {
+    let LoginValidationError = LoginValidation(loginUserData, viewCompoment);
+    setValidationError(LoginValidationError);
+    return LoginValidationError;
+  };
+
+  const handleSentOtp = async () => {
+    let userEmail = { emailId: loginUserData.email };
+    await api(baseUrl).post("api-mdm/auth/send-login-otp", userEmail);
+  };
+
+  const handleOtpLogin = async () => {
     setLoginUserData({ ...loginUserData, otpBased: !loginUserData.otpBased });
+    !loginUserData.otpBased && handleSentOtp();
   };
 
   const handleLoginUser = async () => {
-    let baseUrl = "https://api-uat.life99.in/";
-    let redirectDashBoard = history.push(dashboardPaths["dashboard"]);
-    loginUserData["password"] = encryptPassword(loginUserData["password"]);
-    await api(baseUrl)
-      .post("api-mdm/auth/login", loginUserData)
-      .then(redirectDashBoard)
-      .catch(console.log((res) => console.log(res)));
+    if (Object.keys(handleValidation()).length === 0) {
+      loginUserData["password"] = encryptPassword(loginUserData["password"]);
+      await api(baseUrl)
+        .post("api-mdm/auth/login", loginUserData)
+        .then((res) => {
+          history.push(dashboardPaths["dashboard"]);
+        })
+        .catch((res) =>
+          setErrorToast(Object.values(res)["2"]["data"]["message"])
+        );
+    }
   };
 
-  const handleForgetPassword = (pageView) => {
-    setViewComponent(pageView);
+  const handleForgetPassword = async (pageView) => {
+    if (loginUserData.email === "") {
+      setValidationError({ ...validationError, email: "Please fill email" });
+    } else {
+      setViewComponent(pageView);
+      handleSentOtp();
+    }
+  };
+
+  const handleForgetPasswordOtp = async () => {
+    if (loginUserData.otp !== "") {
+      let forgetOtpVerfiyObj = {
+        email: loginUserData.email,
+        otp: loginUserData.otp,
+      };
+      await api(baseUrl).post(
+        "api-mdm/auth/forgot-password",
+        forgetOtpVerfiyObj
+      );
+    }
   };
 
   return (
@@ -56,13 +95,20 @@ const Login = () => {
               handleLoginValues={handleLoginValues}
               handleForgetPassword={handleForgetPassword}
               handleLoginUser={handleLoginUser}
+              errorToast={errorToast}
+              validationError={validationError}
             />
           )}
-          {viewCompoment === "OptLoginView" && <VerifyLoginOtp />}
+          {viewCompoment === "ForgetPassword" && (
+            <VerifyLoginOtp
+              handleLoginValues={handleLoginValues}
+              handleForgetPasswordOtp={handleForgetPasswordOtp}
+            />
+          )}
         </div>
         <div className="signright">
           <h3>
-            Be smart with your money. Start <Link>planning</Link> today.
+            Be smart with your money. Start <Link to="">planning</Link> today.
           </h3>
           <img className="img-fluid" src={Otprightimg} alt="" title="" />
         </div>
