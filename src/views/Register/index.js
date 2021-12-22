@@ -32,7 +32,6 @@ const SignUp = () => {
     let tempRegisterUser = { ...registerForm };
     tempRegisterUser[field] = value;
     setRegisterForm(tempRegisterUser);
-    console.log(tempRegisterUser);
   };
 
   return (
