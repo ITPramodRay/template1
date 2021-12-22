@@ -15,13 +15,8 @@ const SignUp = () => {
     age: "",
     income: "",
   });
+  const [registerUserError, setRegisterUserError] = useState({});
   const [otp, setOtp] = useState("");
-
-  const registerUser = (e) => {
-    e.preventDefault();
-    console.log(e.target);
-    setViewComponent("verifyOtp");
-  };
 
   const verifyOtp = () => {
     alert(otp);
@@ -33,6 +28,12 @@ const SignUp = () => {
     setViewComponent("loading");
   };
 
+  const handleSetRegister = (field, value) => {
+    let tempRegisterUser = { ...registerForm };
+    tempRegisterUser[field] = value;
+    setRegisterForm(tempRegisterUser);
+  };
+
   return (
     <>
       {viewComponent === "loading" && <Loading />}
@@ -40,11 +41,7 @@ const SignUp = () => {
         <section className="signupmain">
           <div className="signleft">
             {viewComponent === "signupForm" && (
-              <Signupfrm
-                registerUser={registerUser}
-                registerForm={registerForm}
-                setRegisterForm={setRegisterForm}
-              />
+              <Signupfrm handleSetRegister={handleSetRegister} />
             )}
             {viewComponent === "verifyOtp" && (
               <VerifyOtp verifyOtp={verifyOtp} otp={otp} setOtp={setOtp} />

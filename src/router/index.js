@@ -3,13 +3,16 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Loader from "../views/common/loader";
 import { loadingPageRouters } from "../views/landing/LandingRouter";
-import { loginAndRegisterPageRouters } from "../views/Login&Register/Login&RegisteRouter";
+import { loginAndRegisterPageRouters } from "../views/Register/RegisteRouter";
+import { loginPageRouters } from "../views/Login/LoginRouter";
 import LoaderWrapper from "./loaderWrapper";
 import ScrollToTop from "./scrollToTop";
 
 const LandingPage = React.lazy(() => import("../views/landing"));
 const DashBoardPage = React.lazy(() => import("../views/dashboard"));
-const WellBeing = React.lazy(() => import("../views/dashboard/WellBeing/WellBeing"));
+const WellBeing = React.lazy(() =>
+  import("../views/dashboard/WellBeing/WellBeing")
+);
 
 function WaitingComponent(Component) {
   return (props) => (
@@ -37,6 +40,7 @@ export default function AppRouter({ ...props }) {
     ...mainRoues,
     ...loadingPageRouters,
     ...loginAndRegisterPageRouters,
+    ...loginPageRouters,
   ];
 
   return (
