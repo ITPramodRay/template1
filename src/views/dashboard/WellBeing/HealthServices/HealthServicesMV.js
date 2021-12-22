@@ -32,7 +32,7 @@ const  HealthServicesMV = () => {
         </div>
         <div className='down_hg mt-5'>
         <Swiper
-            slidesPerView={1}
+            slidesPerView={1.2}
             spaceBetween={15}
             pagination={pagination}
             className='mySwiper'
