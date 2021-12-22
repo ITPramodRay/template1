@@ -20,4 +20,19 @@
 //Wellbing page
 @import './Wellbeing';
 
-
+.desktopView{
+    margin:0;
+    padding:0;
+    display:block;
+    @media only screen and (max-width: 600px) {
+    display:none;
+     }
+}
+.mobileView{
+    margin:0;
+    padding:0;
+    display:none;
+    @media only screen and (max-width: 600px) {
+        display:block;
+         }
+}

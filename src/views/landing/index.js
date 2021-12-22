@@ -2,16 +2,33 @@ import React, { lazy } from "react";
 import { useHistory } from "react-router-dom";
 import { Container } from "reactstrap";
 
-import Footer from "../common/Footer/Footer";
-import Ads from "./Ad/Ads";
-import Mainbanner from "./AppBanner/Mainbanner";
-import Faq from "./FAQ/Faq";
-import PrepareRetirement from "./PlanRetirment/PrepareRetirement";
-import Products from "./Products/Products";
-import Recommended from "./Recommended/Recommended";
-import Servies from "./Services/Services";
-import Testimonials from "./Testimonials/Testimonials";
+// import Mainbanner from "./AppBanner/Mainbanner";
+// import MainbannerMobile from "./AppBanner/Mainbanner-Mobile";
+// import Footer from "../common/Footer/Footer";
+// import Ads from "./Ad/Ads";
+// import Faq from "./FAQ/Faq";
+// import FaqMobile from "./FAQ/Faq-Mobile";
+// import PrepareRetirement from "./PlanRetirment/PrepareRetirement";
+// import Products from "./Products/Products";
+// import ProductsMobile from "./Products/Products-Mobile";
+// import Recommended from "./Recommended/Recommended";
+// import Servies from "./Services/Services";
+// import ServiesMobile from "./Services/Service-Mobile";
+// import Testimonials from "./Testimonials/Testimonials";
 
+const Mainbanner = lazy(() => import("./AppBanner/Mainbanner"));
+const MainbannerMobile = lazy(() => import("./AppBanner/Mainbanner-Mobile"));
+const Footer = lazy(() => import("../common/Footer/Footer"));
+const Ads = lazy(() => import("./Ad/Ads"));
+const Faq = lazy(() => import("./FAQ/Faq"));
+const FaqMobile = lazy(() => import("./FAQ/Faq-Mobile"));
+const PrepareRetirement = lazy(() => import("./PlanRetirment/PrepareRetirement"));
+const Products = lazy(() => import("./Products/Products"));
+const ProductsMobile = lazy(() => import("./Products/Products-Mobile"));
+const Recommended = lazy(() => import("./Recommended/Recommended"));
+const Servies = lazy(() => import("./Services/Services"));
+const ServiesMobile = lazy(() => import("./Services/Service-Mobile"));
+const Testimonials = lazy(() => import("./Testimonials/Testimonials"));
 const Navbar = lazy(() => import("../common/Header/Navbarmenu"));
 
 const LandingPage = () => {
@@ -19,15 +36,30 @@ const LandingPage = () => {
   return (
     <>
       <Navbar />
-      <Mainbanner />
+      <div className="desktopView">
+        <Mainbanner />
+      </div>
+      <div className="mobileView">
+        <MainbannerMobile />
+      </div>
       <Container>
         <PrepareRetirement />
       </Container>
       <Container fluid={true} className="products-container">
-        <Products />
+        <div className="desktopView">
+          <Products />
+        </div>
+        <div className="mobileView">
+          <ProductsMobile />
+        </div>
       </Container>
       <Container fluid={true}>
-        <Servies />
+        <div className="desktopView">
+          <Servies />{" "}
+        </div>
+        <div className="mobileView">
+          <ServiesMobile />{" "}
+        </div>
       </Container>
       <Recommended />
       <Testimonials />
@@ -35,7 +67,12 @@ const LandingPage = () => {
         <Ads />
       </Container>
       <Container fluid={true}>
-        <Faq />
+        <div className="desktopView">
+          <Faq />
+        </div>
+        <div className="mobileView">
+          <FaqMobile />
+        </div>
       </Container>
       <Footer />
     </>
