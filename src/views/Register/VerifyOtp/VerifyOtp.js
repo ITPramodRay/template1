@@ -11,7 +11,9 @@ const VerifyOtp = ({verifyOtp,setOtp,otp}) => {
             <Container>
               <Row>
                 <Col md={12}>
-                  <div className='Logo'><img src={Life99Logo} alt="Life99" title='Life99' /></div>
+                  <div className='Logo'><img src={Life99Logo} alt="Life99" title='Life99' />
+                  <h2>Demo Text</h2></div>
+                  
                 </Col>
                 <Col md={12}>
                   <div className='signuptitle'>
@@ -24,15 +26,15 @@ const VerifyOtp = ({verifyOtp,setOtp,otp}) => {
               
                 <Row>
                   
-                {/* <OtpInput
+                <OtpInput
                     className='otpInput'
                     value={otp}
                     onChange={setOtp}
                     numInputs={4}
                     
-                  /> */}
+                  />
 
-                  <Col md={5}> 
+                  {/* <Col md={5}> 
                     <Row>
                       <Col md={3}>                     
                           <Input type="text" name="otp" onChange={(e)=>setOtp(prevState=>({...prevState,digit1:e.target.value}))} />
@@ -47,7 +49,7 @@ const VerifyOtp = ({verifyOtp,setOtp,otp}) => {
                           <Input type="text" name="otp" onChange={(e)=>setOtp(prevState=>({...prevState,digit4:e.target.value}))} />
                       </Col>
                     </Row>
-                  </Col>  
+                  </Col>   */}
                   
                 </Row>
                  <Row className='resentotp'>

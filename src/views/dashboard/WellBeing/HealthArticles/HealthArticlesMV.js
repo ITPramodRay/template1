@@ -6,29 +6,22 @@ import close from '../../../../assets/images/X.svg';
 import 'swiper/swiper.scss';
 import 'swiper/modules/navigation/navigation.scss';
 import 'swiper/modules/pagination/pagination.scss';
-import Carddoctor from '../../../../assets/images/Doctor_img.svg';
+import Carddoctor from '../../../../assets/images/HealthArticles_card-img.svg';
 
 
 import Offercard from '../../../../assets/images/Offer_HS_img.svg'
+import Ads from '../../../landing/Ad/Ads';
 
-
-// import Swiper core and required modules
-import SwiperCore, { Pagination } from 'swiper';
-const  HealthServicesMV = () => {
+const  HealthArticlesMV = () => {
   const pagination = {
     clickable: true,
   };
   
   return (
     <>
-        <div className='MVhelthservices'>
+        <div className='HealthArticlesMV mobileView'>
         <div className='top_hg'>
           <h2 className='M_title'>Health Services & Offers</h2>
-        </div>
-        <div className='HSmvCardAdd'>
-          <div className='head_text_div'>
-            <img src={Offercard}></img>
-          </div>
         </div>
         <div className='down_hg mt-5'>
         <Swiper
@@ -39,45 +32,45 @@ const  HealthServicesMV = () => {
           >
             <SwiperSlide>
               <div className='sliderCard-HS-MV'>
-              <div className='HS_card'>
+              <div className='HA_card'>
               <div className='card_img'>
                 <img src={Carddoctor}></img>
               </div>
-              <h2 className='card_title'>Doctor Consultation </h2>
-                <p className='card_text'>Get complimentry Apollo Subscription</p>
+              <h2 className='card_title'>Learn about investment to retire well with knowledge </h2>
+                <a href='#' className='HA_readbtn'>Read more</a>
             </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className='sliderCard-HS-MV'>
-              <div className='HS_card'>
+              <div className='HA_card'>
               <div className='card_img'>
                 <img src={Carddoctor}></img>
               </div>
-              <h2 className='card_title'>Doctor Consultation </h2>
-                <p className='card_text'>Get complimentry Apollo Subscription</p>
+              <h2 className='card_title'>Learn about investment to retire well with knowledge </h2>
+                <a href='#' className='HA_readbtn'>Read more</a>
             </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className='sliderCard-HS-MV'>
-              <div className='HS_card'>
+              <div className='HA_card'>
               <div className='card_img'>
                 <img src={Carddoctor}></img>
               </div>
-              <h2 className='card_title'>Doctor Consultation </h2>
-                <p className='card_text'>Get complimentry Apollo Subscription</p>
+              <h2 className='card_title'>Learn about investment to retire well with knowledge </h2>
+                <a href='#' className='HA_readbtn'>Read more</a>
             </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className='sliderCard-HS-MV'>
-              <div className='HS_card'>
+              <div className='HA_card'>
               <div className='card_img'>
                 <img src={Carddoctor}></img>
               </div>
-              <h2 className='card_title'>Doctor Consultation </h2>
-                <p className='card_text'>Get complimentry Apollo Subscription</p>
+              <h2 className='card_title'>Learn about investment to retire well with knowledge </h2>
+                <a href='#' className='HA_readbtn'>Read more</a>
             </div>
               </div>
             </SwiperSlide>
@@ -87,4 +80,4 @@ const  HealthServicesMV = () => {
     </>
   );
 }
-export default HealthServicesMV;
+export default HealthArticlesMV;

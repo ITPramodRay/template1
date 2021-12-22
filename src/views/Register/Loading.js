@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 
 
 import Life99Logo from '../../assets/images/Life99Logo.svg';
-import Loadingmed from '../../assets/images/Loadingmed.png';
+import Loadingmed from '../../assets/images/GIF/loading.gif';
 
 class SignUp extends Component {
   render() {
