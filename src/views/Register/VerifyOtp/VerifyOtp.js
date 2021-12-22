@@ -11,7 +11,9 @@ const VerifyOtp = ({verifyOtp,setOtp,otp}) => {
             <Container>
               <Row>
                 <Col md={12}>
-                  <div className='Logo'><img src={Life99Logo} alt="Life99" title='Life99' /></div>
+                  <div className='Logo'><img src={Life99Logo} alt="Life99" title='Life99' />
+                  <h2>Demo Text</h2></div>
+                  
                 </Col>
                 <Col md={12}>
                   <div className='signuptitle'>

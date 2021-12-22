@@ -34,7 +34,7 @@ export default function HealthGoalsMV() {
             Add health goals or tick mark your today's fitness activity here
           </p>
         </div>
-        <div className='down_hg'>
+        <div className='down_hg mt-3'>
           <Swiper
             slidesPerView={2}
             spaceBetween={15}
