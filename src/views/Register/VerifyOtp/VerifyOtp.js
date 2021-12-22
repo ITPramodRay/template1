@@ -24,13 +24,13 @@ const VerifyOtp = ({verifyOtp,setOtp,otp}) => {
               
                 <Row>
                   
-                {/* <OtpInput
+                <OtpInput
                     className='otpInput'
                     value={otp}
                     onChange={setOtp}
                     numInputs={4}
                     
-                  /> */}
+                  />
 
                   <Col md={5}> 
                     <Row>

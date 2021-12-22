@@ -27,12 +27,16 @@ const SignUp = () => {
     alert(password + " " + confirmPassword);
     setViewComponent("loading");
   };
-
+  
   const handleSetRegister = (field, value) => {
     let tempRegisterUser = { ...registerForm };
     tempRegisterUser[field] = value;
     setRegisterForm(tempRegisterUser);
   };
+
+  const handleRegistration = () => {
+    setViewComponent("verifyOtp");
+  }
 
   return (
     <>
@@ -41,7 +45,7 @@ const SignUp = () => {
         <section className="signupmain">
           <div className="signleft">
             {viewComponent === "signupForm" && (
-              <Signupfrm handleSetRegister={handleSetRegister} />
+              <Signupfrm handleSetRegister={handleSetRegister} registerUser={handleRegistration} />
             )}
             {viewComponent === "verifyOtp" && (
               <VerifyOtp verifyOtp={verifyOtp} otp={otp} setOtp={setOtp} />
