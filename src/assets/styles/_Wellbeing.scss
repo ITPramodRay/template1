@@ -84,11 +84,6 @@
           }
         }
       }
-      .close_icon {
-        position: absolute;
-        right: 20px;
-        top: 20px;
-      }
     }
   }
 }
@@ -105,11 +100,11 @@
 }
 //mobile healthgoals
 .mvhealthgoals {
-    display: none;
+  display: none;
   .top_hg {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     .Mbtn {
       background: #ffffff;
       border: 1.88943px solid #005e9e;
@@ -121,7 +116,7 @@
       padding: 0.5rem 1rem;
     }
   }
-  .MVHG_Left_card{
+  .MVHG_Left_card {
     background-color: #0063a1;
     color: #fff;
     border-radius: 14px;
@@ -141,17 +136,200 @@
     }
   }
 }
-@media only screen and (max-width: 600px) {
-    .mvhealthgoals{
-        display: block;
+.card-HG {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: #fff !important;
+  border-radius: 10px;
+  // margin-top: 1rem;
+  div {
+    img {
+      width: 34px;
     }
-    .pchealthgoals{
-        display: none;
-    }
-    .WB_headcard{
-        display: none;
-    }
-    .base_card_We{
-        padding: 0rem 1.5rem;
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      color: #005e9e;
+      margin-top: 10px;
     }
   }
+
+  .HG-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #005e9e;
+    box-shadow: 0px 4px 16px rgba(175, 175, 175, 0.25);
+    border-radius: 45.3463px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 0.5rem;
+    padding: 0.3rem;
+  }
+}
+.close_icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+
+//Health goal services css
+.PCHS_Right_card {
+  // display: flex;
+  // gap: 1rem;
+  .PCHS_Right_card::-webkit-scrollbar{
+    display: none;
+  }
+  .HS_card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .card_img {
+      margin-bottom: 1rem;
+      width: 460px;
+      height: 320px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .card_title {
+      font-weight: 600;
+      font-size: 24px;
+      color: #292929;
+      margin: 0;
+      padding-left: 1rem;
+    }
+    .card_text {
+      font-weight: 500;
+      font-size: 18px;
+      color: #292929;
+      margin: 0;
+      padding-left: 1rem;
+    }
+  }
+}
+.MVhelthservices{
+  display: none;
+  .sliderCard-HS-MV{
+    .HS_card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;.card-HG
+      .card_img{
+        margin-bottom: 1rem;
+      }
+      .card_title {
+        font-weight: 600;
+        font-size: 14px;
+        color: #292929;
+        margin: 0;
+        padding-top: 0.75rem;
+      }
+      .card_text {
+        font-weight: 500;
+        font-size: 14px;
+        color: #292929;
+        margin: 0;
+        text-align: left;
+        padding-top: 0.5rem;
+      }
+    }
+  }
+}
+
+//HealthArticles page
+.HealthArticlesPC{
+  .HA_card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .card_img {
+      margin-bottom: 1rem;
+      width: 435px;
+      height: 276px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .card_title {
+      font-weight: 600;
+      font-size: 24px;
+      color: #292929;
+      margin: 0;
+      padding-left: 0.8rem;
+      padding-right: 0.8rem;
+      text-align: left;
+    }
+    .HA_readbtn{
+      text-decoration: none;
+      font-weight: 600;
+font-size: 20.4444px;
+color: #005E9E;
+padding-left: 0.8rem;
+margin-top: 2rem;
+    }
+  }
+}
+.HealthArticlesMV{
+  .HA_card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .card_img {
+      margin-bottom: 1rem;
+      // width: 435px;
+      // height: 276px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .card_title {
+      font-weight: 600;
+      font-size: 15px;
+      color: #292929;
+      margin: 0;
+      padding-left: 0.8rem;
+      padding-right: 0.8rem;
+      text-align: left;
+    }
+    .HA_readbtn{
+      text-decoration: none;
+      font-weight: 600;
+font-size: 13px;
+color: #005E9E;
+padding-left: 0.8rem;
+margin-top: 2rem;
+    }
+  }
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .mvhealthgoals {
+    display: block;
+  }
+  .pchealthgoals {
+    display: none;
+  }
+  .WB_headcard {
+    display: none;
+  }
+  .base_card_We {
+    padding: 0rem 1.5rem;
+  }
+  .PCHS_Right_card{
+    display: none;
+  }
+  .MVhelthservices{
+    display: block;
+  }
+}
