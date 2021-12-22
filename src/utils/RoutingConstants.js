@@ -3,6 +3,7 @@ export const landingPagePaths = {
 };
 export const LoginAndRegisterPagePaths = {
   loginPage: "/login",
+  forgetPassword: "/forgetpassword",
   RegisterPage: "/register",
 };
 
