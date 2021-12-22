@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import InfiniteCarousel from "react-leaf-carousel";
 import { Col, Container, Row } from "reactstrap";
 
@@ -17,6 +17,7 @@ const Testimonial = () => {
         </Container>
 
         <Row className="m-0 users-slider">
+          
           <InfiniteCarousel
             breakpoints={[
               {
