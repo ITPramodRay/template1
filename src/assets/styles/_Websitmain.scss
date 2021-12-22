@@ -8,6 +8,8 @@
 // Common
 @import './Mixin';
 
+//slider
+@import './Slider/SliderMain';
 // Header
 @import './Navbar';
 
@@ -19,6 +21,9 @@
 
 //Wellbing page
 @import './Wellbeing';
+
+
+
 
 .desktopView{
     margin:0;
