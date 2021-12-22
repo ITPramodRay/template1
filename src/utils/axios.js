@@ -2,7 +2,7 @@ import axios from "axios";
 
 const api = (url) =>
   axios.create({
-    baseURL: url !== undefined ? url : process.env.REACT_APP_AXIOSBASE_URL,
+    baseURL: url,
   });
 
 export default api;

@@ -1,13 +1,15 @@
 import React from "react";
 import { Col, Container, Input, Label, Row } from "reactstrap";
-import Life99Logo from "../../../assets/images/Life99Logo.svg";
 import { Switch, Button } from "@mui/material";
+
+import Life99Logo from "../../../assets/images/Life99Logo.svg";
 
 const LoginPage = ({
   optLogin,
   handleOtpLogin,
   handleLoginValues,
-  handleSubmit,
+  handleForgetPassword,
+  handleLoginUser,
 }) => {
   return (
     <>
@@ -32,7 +34,7 @@ const LoginPage = ({
             <Input
               type="text"
               name="mobemail"
-              onChange={(e) => handleLoginValues("mobEmial", e.target.value)}
+              onChange={(e) => handleLoginValues("email", e.target.value)}
             />
           </Col>
         </Row>
@@ -51,16 +53,34 @@ const LoginPage = ({
           <Row className="mt-3">
             <Col md={6}>
               <Label>Enter OTP</Label>
-              <Input type="text" name="passoword" />
+              <Input
+                type="text"
+                name="passoword"
+                onChange={(e) => handleLoginValues("otp", e.target.value)}
+              />
             </Col>
           </Row>
         )}
 
         <Row>
           <Col md={12}>
-            <span>
-              <a href="">Forget Password</a>
-            </span>
+            {optLogin === false ? (
+              <span>
+                <a
+                  href=""
+                  onClick={(e) => handleForgetPassword("OptLoginView")}
+                >
+                  Forget Password
+                </a>
+              </span>
+            ) : (
+              <>
+                <span>
+                  OTP has been sent to the mobile number and email entered by
+                  you.
+                </span>
+              </>
+            )}
           </Col>
         </Row>
 
@@ -75,13 +95,18 @@ const LoginPage = ({
         </Row>
         <Row>
           <Col md={12}>
-            <button className="BTN_intro">LogIn Now</button>
+            <Button variant="contained" onClick={(e) => handleLoginUser()}>
+              LogIn
+            </Button>
           </Col>
         </Row>
         <Row>
           <Col md={12}>
             <div className="reg_text">
-              New user? <a href="/"><b>Register now</b></a>
+              New user?{" "}
+              <a href="/">
+                <b>Register now</b>
+              </a>
             </div>
           </Col>
         </Row>

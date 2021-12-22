@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Otprightimg from "../../assets/images/Otpright.svg";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import api from "../../utils/axios";
 import LoginPage from "./LoginPage/Login";
 import VerifyLoginOtp from "./VerifyOtp/VerifyOtp";
+import { encryptPassword } from "../../utils/Utils";
+import { dashboardPaths } from "../../utils/RoutingConstants";
 
 const Login = () => {
   const [viewCompoment, setViewComponent] = useState("LoginPage");
@@ -15,16 +18,8 @@ const Login = () => {
     password: "",
     otp: "",
   });
-
-  //   {
-  //     "email": "abc@gmail.com",
-  //     "login_type": "employee",
-  //     "otpBased": true,
-  //     "password":""
-  //     "otp": "5210"
-  // }
-
-  const [optLogin, setOtpLogin] = useState(false);
+  const [errorToast, setErrorToast] = useState("");
+  const history = useHistory();
 
   const handleLoginValues = (field, value) => {
     let tempLoginUserData = { ...loginUserData };
@@ -33,10 +28,20 @@ const Login = () => {
   };
 
   const handleOtpLogin = () => {
-    setOtpLogin(!optLogin);
+    setLoginUserData({ ...loginUserData, otpBased: !loginUserData.otpBased });
   };
 
-  const handleSubmit = (pageView) => {
+  const handleLoginUser = async () => {
+    let baseUrl = "https://api-uat.life99.in/";
+    let redirectDashBoard = history.push(dashboardPaths["dashboard"]);
+    loginUserData["password"] = encryptPassword(loginUserData["password"]);
+    await api(baseUrl)
+      .post("api-mdm/auth/login", loginUserData)
+      .then(redirectDashBoard)
+      .catch(console.log((res) => console.log(res)));
+  };
+
+  const handleForgetPassword = (pageView) => {
     setViewComponent(pageView);
   };
 
@@ -46,10 +51,11 @@ const Login = () => {
         <div className="signleft">
           {viewCompoment === "LoginPage" && (
             <LoginPage
-              optLogin={optLogin}
+              optLogin={loginUserData.otpBased}
               handleOtpLogin={handleOtpLogin}
               handleLoginValues={handleLoginValues}
-              handleSubmit={handleSubmit}
+              handleForgetPassword={handleForgetPassword}
+              handleLoginUser={handleLoginUser}
             />
           )}
           {viewCompoment === "OptLoginView" && <VerifyLoginOtp />}
