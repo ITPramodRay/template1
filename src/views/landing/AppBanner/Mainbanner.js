@@ -12,6 +12,7 @@ import HappyEmployee from "../../../assets/images/happy-employee.svg";
 import Qrcode from "../../../assets/images/QR-code.svg";
 import Google from "../../../assets/images/Google.svg";
 import Appstore from "../../../assets/images/Apple.svg";
+
 import scroll from "../../../assets/images/GIF/Scroll.gif";
 import homegif from "../../../assets/images/GIF/Home.gif";
 

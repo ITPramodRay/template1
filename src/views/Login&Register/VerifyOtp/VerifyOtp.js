@@ -48,6 +48,7 @@ const VerifyOtp = ({verifyOtp,setOtp,otp}) => {
                       </Col>
                     </Row>
                   </Col>  
+                  
                 </Row>
                  <Row className='resentotp'>
                     <Col md={4}>

@@ -9,19 +9,19 @@ import {
   NavLink,
   Row,
 } from "reactstrap";
-
+import {Link} from "react-router-dom"
 const Navbarmenu = () => {
   const [isOpen, seIsOpen] = useState(false);
 
   const links = [
     {
-      href: "login",
+      href: "/login",
       text: "Login",
       className: "menu-item-link login-btn",
       key: 1,
     },
     {
-      href: "register",
+      href: "/register",
       text: "Register",
       className: "menu-item-link register-btn",
       key: 2,
@@ -34,8 +34,10 @@ const Navbarmenu = () => {
 
   const createNavItem = ({ href, text, className, key }) => (
     <NavItem className="menu-item" key={key}>
-      <NavLink href={href} className={className}>
+      <NavLink >
+        <Link to={href} className={className}>
         <span className="borderbottom">{text}</span>
+        </Link>
       </NavLink>
     </NavItem>
   );
