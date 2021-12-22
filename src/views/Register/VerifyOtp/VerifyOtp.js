@@ -18,7 +18,7 @@ const VerifyOtp = ({verifyOtp,setOtp,otp}) => {
                 <Col md={12}>
                   <div className='signuptitle'>
                     <span>Enter OTP</span>
-                    <p>OTP has been send to the mobile entered by you</p>
+                    <p>OTP has been sent to the mobile number entered by you</p>
                   </div>
                 </Col>
               </Row>
@@ -53,10 +53,10 @@ const VerifyOtp = ({verifyOtp,setOtp,otp}) => {
                   
                 </Row>
                  <Row className='resentotp'>
-                    <Col md={4}>
+                    <Col md={5}>
                        <a href='#'>Resent OTP</a>
                     </Col>
-                    <Col md={6} className='mr-right'>
+                    <Col md={2} className='mr-right'>
                        <p>09:59</p>
                     </Col>
                 </Row>

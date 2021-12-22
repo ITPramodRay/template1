@@ -18,7 +18,7 @@ const VerifyLoginOtp = ({ verifyOtp, setOtp, otp }) => {
           <Col md={12}>
             <div className="signuptitle">
               <span>Enter OTP</span>
-              <p>OTP has been send to the mobile entered by you</p>
+              <p>OTP has been sent to the mobile number entered by you</p>
             </div>
           </Col>
         </Row>
