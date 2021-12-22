@@ -3,7 +3,7 @@ import { Container, Row, Col, Form, Input, Label } from "reactstrap";
 
 import Life99Logo from "../../../assets/images/Life99Logo.svg";
 
-const SignUp = ({ handleSetRegister }) => {
+const SignUp = ({ handleSetRegister,registerUser }) => {
   return (
     <>
       <Container>
@@ -20,7 +20,7 @@ const SignUp = ({ handleSetRegister }) => {
             </div>
           </Col>
         </Row>
-        <Form className="signupfrm">
+        <div className="signupfrm">
           <Row>
             <Col md={6}>
               <Label>First Name</Label>
@@ -82,7 +82,7 @@ const SignUp = ({ handleSetRegister }) => {
           </Row>
           <Row>
             <Col md={12}>
-              <input type="submit" name="Submit" />
+              <input type="submit" name="Submit" onClick={registerUser} />
             </Col>
           </Row>
           <Row>
@@ -92,7 +92,7 @@ const SignUp = ({ handleSetRegister }) => {
               </div>
             </Col>
           </Row>
-        </Form>
+        </div>
       </Container>
     </>
   );
