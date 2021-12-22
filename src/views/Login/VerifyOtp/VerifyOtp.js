@@ -12,6 +12,7 @@ const VerifyLoginOtp = ({ verifyOtp, setOtp, otp }) => {
           <Col md={12}>
             <div className="Logo">
               <img src={Life99Logo} alt="Life99" title="Life99" />
+              <h2>Demo Text</h2>
             </div>
           </Col>
           <Col md={12}>

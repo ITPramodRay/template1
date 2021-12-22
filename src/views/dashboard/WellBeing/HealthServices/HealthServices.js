@@ -7,7 +7,7 @@ const  HealthServices = () => {
   return (
     <>
         <HealthServicesPC />
-        {/* <HealthServicesMV /> */}
+        <HealthServicesMV />
     </>
   );
 }
