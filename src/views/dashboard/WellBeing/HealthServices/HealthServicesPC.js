@@ -12,7 +12,7 @@ import SwiperCore, { Pagination } from 'swiper';
 SwiperCore.use([Pagination]);
 const HealthServicesPC = () => {
   const pagination = {
-    // clickable: true,
+    clickable: true,
   };
   return (
     <>

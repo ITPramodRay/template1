@@ -54,7 +54,7 @@ const Login = () => {
       await api(baseUrl)
         .post("api-mdm/auth/login", loginUserData)
         .then((res) => {
-          history.push(dashboardPaths["dashboard"]);
+          history.push('/dashboard/wellBeing');
         })
         .catch((res) =>
           setErrorToast(Object.values(res)["2"]["data"]["message"])
