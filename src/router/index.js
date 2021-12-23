@@ -25,13 +25,13 @@ function WaitingComponent(Component) {
 export default function AppRouter({ ...props }) {
   const mainRoues = [
     {
-      path: "/dashboard",
-      component: WaitingComponent(DashBoardPage),
+      path: "/welcome",
+      component: WaitingComponent(LandingPage),
       exact: true,
     },
     {
-      path: "/welcome",
-      component: WaitingComponent(LandingPage),
+      path: "/dashboard/wellBeing",
+      component: WaitingComponent(WellBeing),
       exact: true,
     },
   ];
