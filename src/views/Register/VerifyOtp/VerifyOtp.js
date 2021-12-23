@@ -12,7 +12,7 @@ const VerifyOtp = ({ verifyOtp, setOtp, otp, err }) => {
           <Col md={12}>
             <div className="Logo">
               <img src={Life99Logo} alt="Life99" title="Life99" />
-              <h6 style={{color:"red"}}>{err}</h6>
+              <h6 style={{ color: "red" }}>{err}</h6>
             </div>
           </Col>
           <Col md={12}>
@@ -30,23 +30,6 @@ const VerifyOtp = ({ verifyOtp, setOtp, otp, err }) => {
               onChange={setOtp}
               numInputs={4}
             />
-
-            {/* <Col md={5}> 
-                    <Row>
-                      <Col md={3}>                     
-                          <Input type="text" name="otp" onChange={(e)=>setOtp(prevState=>({...prevState,digit1:e.target.value}))} />
-                      </Col>
-                      <Col md={3}>                     
-                          <Input type="text" name="otp" onChange={(e)=>setOtp(prevState=>({...prevState,digit2:e.target.value}))} />
-                      </Col>
-                      <Col md={3}>                     
-                          <Input type="text" name="otp" onChange={(e)=>setOtp(prevState=>({...prevState,digit3:e.target.value}))} />
-                      </Col>
-                      <Col md={3}>                     
-                          <Input type="text" name="otp" onChange={(e)=>setOtp(prevState=>({...prevState,digit4:e.target.value}))} />
-                      </Col>
-                    </Row>
-                  </Col>   */}
           </Row>
           <Row className="resentotp">
             <Col md={5}>

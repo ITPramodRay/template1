@@ -45,25 +45,26 @@ const Testimonial = () => {
               responsive={responsive}
             >
               {testimonialCms.cards.map((value, key) => {
-               
                 return (
                   <div className="" key={key}>
                     <Container>
-                      <div className="users-block" style={{backgroundColor:`${value.backgroundColor}`}}>
-                        <p className="saying">
-                         {value.saying1}
-                        </p>
-                        <p className="saying">
-                          {value.saying2}
-                        </p>
+                      <div
+                        className="users-block"
+                        style={{ backgroundColor: `${value.backgroundColor}` }}
+                      >
+                        <p className="saying">{value.saying1}</p>
+                        <p className="saying">{value.saying2}</p>
                         <div className="d-flex user-information">
                           <div className="user-image">
                             <img src={User1} alt="user" title="title" />
                           </div>
                           <div className="user-detail">
-                            <p className="user-name">{value.userDetails.name}</p>
+                            <p className="user-name">
+                              {value.userDetails.name}
+                            </p>
                             <p className="user-position">
-                              {value.userDetails.position} <br /> {value.userDetails.companyName}
+                              {value.userDetails.position} <br />{" "}
+                              {value.userDetails.companyName}
                             </p>
                           </div>
                         </div>
