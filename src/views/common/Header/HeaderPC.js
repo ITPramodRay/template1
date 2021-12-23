@@ -23,22 +23,22 @@ const HeaderPC = ({activepath}) => {
         <div className="nav-bar">
           <ul>
             <li>
-              <Link className={activepath===dashboardPaths.dashboard?"active_link":""}>Dashboard</Link>
+              <Link to={dashboardPaths.dashboard} className={activepath===dashboardPaths.dashboard?"active_link":""}>Dashboard</Link>
             </li>
             <li>
-              <Link className={activepath===dashboardPaths.invest?"active_link":""}>Invest</Link>
+              <Link to={dashboardPaths.invest} className={activepath===dashboardPaths.invest?"active_link":""}>Invest</Link>
             </li>
             <li>
-              <Link className={activepath===dashboardPaths.plan?"active_link":""}>Plan</Link>
+              <Link to={dashboardPaths.plan} className={activepath===dashboardPaths.plan?"active_link":""}>Plan</Link>
             </li>
             <li>
-              <Link className={activepath===dashboardPaths.advisory?"active_link":""}>Advisory</Link>
+              <Link to={dashboardPaths.advisory} className={activepath===dashboardPaths.advisory?"active_link":""}>Advisory</Link>
             </li>
             <li>
-              <Link className={activepath===dashboardPaths.learn?"active_link":""}>Learn</Link>
+              <Link to={dashboardPaths.learn} className={activepath===dashboardPaths.learn?"active_link":""}>Learn</Link>
             </li>
             <li>
-              <Link className={activepath===dashboardPaths.wellbeing?"active_link":""}>
+              <Link to={dashboardPaths.wellbeing} className={activepath===dashboardPaths.wellbeing?"active_link":""}>
                 Wellbeing
               </Link>
             </li>
