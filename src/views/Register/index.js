@@ -59,6 +59,7 @@ const SignUp = () => {
     axios.post("https://api-uat.life99.in/api-mdm/auth/validateotp-setpassword",data)
     .then(res=>{
       console.log(res.data)
+      setError("")
       registerUser();
     })
     .catch(err=>{
@@ -89,6 +90,7 @@ const SignUp = () => {
     .then(res=>{
       console.log(res.data)
       setRegisterUserData({...registerUserData,temporaryIndividualId:res.data.userData.temporary_individual_id})
+      setError("")
       setViewComponent("verifyOtp");
     })
     .catch(err=>{

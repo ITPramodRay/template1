@@ -20,7 +20,7 @@ const LoginPage = ({
           <Col md={12}>
             <div className="Logo">
               <img src={Life99Logo} alt="Life99" title="Life99" />
-              <h2>{errorToast}</h2>
+              <h2 className="error_text">{errorToast}</h2>
             </div>
           </Col>
           <Col md={12}>
