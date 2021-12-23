@@ -10,7 +10,7 @@ import axios from "axios"
 
 const SignUp = () => {
   
-
+  const [error,setError] = useState('')
   const [viewComponent, setViewComponent] = useState("signupForm");
   const [registerUserData, setRegisterUserData] = useState({
     masterEmployerId:'587baca6-9246-4551-b1e4-c6f46e42e613',
@@ -45,7 +45,7 @@ const SignUp = () => {
       console.log(res.data)
       setViewComponent("setPassword");
     })
-    .catch(err=>console.error(err))
+    .catch(err=>console.log(err.response))
   }
 
   const verifyOtp = () => {
@@ -61,7 +61,10 @@ const SignUp = () => {
       console.log(res.data)
       registerUser();
     })
-    .catch(err=>console.log(err))
+    .catch(err=>{
+      setError(err.response.data.message)
+      console.log(err.response.data)
+    })
   };
 
   const setPassword = (password, confirmPassword) => {
@@ -88,7 +91,10 @@ const SignUp = () => {
       setRegisterUserData({...registerUserData,temporaryIndividualId:res.data.userData.temporary_individual_id})
       setViewComponent("verifyOtp");
     })
-    .catch(err=>console.log(err))
+    .catch(err=>{
+      console.log(err.response)
+      setError(err.response.data.message.split(":")[1])
+    })
     // setViewComponent("verifyOtp");
   }
 
@@ -99,10 +105,10 @@ const SignUp = () => {
         <section className="signupmain">
           <div className="signleft">
             {viewComponent === "signupForm" && (
-              <Signupfrm handleSetRegister={handleSetRegister} registerUser={handleRegistration} />
+              <Signupfrm handleSetRegister={handleSetRegister} err={error} registerUser={handleRegistration} />
             )}
             {viewComponent === "verifyOtp" && (
-              <VerifyOtp verifyOtp={verifyOtp} otp={Otp} setOtp={setOtp} />
+              <VerifyOtp verifyOtp={verifyOtp} err={error} otp={Otp} setOtp={setOtp} />
             )}
             {viewComponent === "setPassword" && (
               <SetPassword setPassword={setPassword} />
