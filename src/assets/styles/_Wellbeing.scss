@@ -17,6 +17,7 @@
 .base_card_We {
   padding: 0rem 5rem;
   background-color: #f2f3f7;
+  overflow-x: hidden;
 }
 
 //healthgoals
@@ -376,7 +377,7 @@
       top: 3rem;
       left: 2rem;
       align-items: flex-start;
-      .main_text{
+      .main_text {
         font-weight: 600;
         font-size: 26.8034px;
         line-height: 40px;
@@ -408,14 +409,67 @@
   }
 }
 
-.PhysicalWellbeingPC{
-  .plancard_base{
+.PhysicalWellbeingPC {
+  .plancard_base {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    justify-content: space-between;
+    gap: 2rem;
+    .plancard_iteam {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      background: linear-gradient(134.14deg, #1a3e6d 0.61%, #2d6fc6 101.43%);
+      border-radius: 16px;
+      .left_text_card {
+        h4 {
+          font-weight: 600;
+          font-size: 36px;
+          line-height: 54px;
+          color: #fff;
+        }
+        p {
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 24px;
+          color: #ffffff;
+        }
+      }
+      .right_text_card {
+        h3{
+          font-weight: 600;
+          font-size: 65.3684px;
+          line-height: 79px;
+          color: #fff;
+        }
+      }
+    }
   }
-  .plancard_base{
+}
+.PhysicalWellbeing_sider{
+  .img_slider{
+    img{
+      border-radius: 16px 16px 0px 0px;
+    }
+  }
+  .down_text{
+    background-color: #fff;
+    border-radius: 0px 0px 16px 16px;
+    height: 120px;
     display: flex;
+   h2{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: left;
+    padding: 1rem; 
+   }
+  }
+}
+.OtherSlider_img{
+  img{
+    width: 50px;
   }
 }
 
@@ -444,7 +498,7 @@
   .exclusivefeaturesPC {
     display: none;
   }
-  .PhysicalWellbeingPC{
+  .PhysicalWellbeingPC {
     display: none;
   }
 }
