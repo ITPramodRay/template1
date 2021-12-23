@@ -10,8 +10,9 @@ import ScrollToTop from "./scrollToTop";
 
 const LandingPage = React.lazy(() => import("../views/landing"));
 const DashBoardPage = React.lazy(() => import("../views/dashboard"));
-const WellBeing = React.lazy(() =>
-  import("../views/dashboard/WellBeing/WellBeing")
+
+const Invest = React.lazy(() =>
+  import("../views/dashboard/Invest/Invest")
 );
 
 function WaitingComponent(Component) {
@@ -32,6 +33,11 @@ export default function AppRouter({ ...props }) {
     {
       path: "/dashboard/wellBeing",
       component: WaitingComponent(WellBeing),
+      exact: true,
+    },
+    {
+      path: "/dashboard/invest",
+      component: WaitingComponent(Invest),
       exact: true,
     },
   ];

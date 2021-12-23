@@ -88,7 +88,7 @@ const SignUp = ({ handleSetRegister,registerUser }) => {
           </Row>
           <Row>
             <Col md={12}>
-              <div>
+              <div className="regalready">
                 Already On Life99? <a href="/">Login</a>
               </div>
             </Col>
