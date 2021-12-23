@@ -20,7 +20,7 @@ const VerifyOtp = ({verifyOtp,setOtp,otp}) => {
                   </div>
                 </Col>
               </Row>
-              <Form>
+              <div>
               
                 <Row>
                   
@@ -64,7 +64,7 @@ const VerifyOtp = ({verifyOtp,setOtp,otp}) => {
                     </Col>
                 </Row>
                 
-              </Form>
+              </div>
             </Container>
       </ >
 

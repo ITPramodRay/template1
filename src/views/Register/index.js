@@ -6,8 +6,17 @@ import SetPassword from "./SetPassword/SetPassword";
 import Loading from "./Loading";
 import Otprightimg from "../../assets/images/Otpright.svg";
 import { Link } from "react-router-dom";
+import axios from "axios"
+
 const SignUp = () => {
+  
+
   const [viewComponent, setViewComponent] = useState("signupForm");
+  const [registerUserData, setRegisterUserData] = useState({
+    masterEmployerId:'587baca6-9246-4551-b1e4-c6f46e42e613',
+    temporaryIndividualId:''
+  })
+  
   const [registerForm, setRegisterForm] = useState({
     firstName: "",
     lastName: "",
@@ -15,12 +24,44 @@ const SignUp = () => {
     age: "",
     income: "",
   });
+
   const [registerUserError, setRegisterUserError] = useState({});
-  const [otp, setOtp] = useState("");
+  const [Otp, setOtp] = useState("");
+
+
+  const registerUser = () => {
+    let data = {
+      masterEmployerId: registerUserData.masterEmployerId,
+      jsonArrayObj:{
+        individual_professional_email: registerForm.mobEmail,
+        otp: Otp,
+        individual_first_name: registerForm.firstName,
+        individual_last_name: registerForm.lastName,
+
+      }
+   }
+    axios.post("https://api-uat.life99.in/api-mdm/individual/onBoardEmployees",data)
+    .then(res=>{
+      console.log(res.data)
+      setViewComponent("setPassword");
+    })
+    .catch(err=>console.error(err))
+  }
 
   const verifyOtp = () => {
-    alert(otp);
-    setViewComponent("setPassword");
+    console.log(Otp)
+
+   let data = {
+      otp: Otp,
+      temporaryIndividualId: registerUserData.temporaryIndividualId,
+      isReferral: false
+   }
+    axios.post("https://api-uat.life99.in/api-mdm/auth/validateotp-setpassword",data)
+    .then(res=>{
+      console.log(res.data)
+      registerUser();
+    })
+    .catch(err=>console.log(err))
   };
 
   const setPassword = (password, confirmPassword) => {
@@ -35,7 +76,20 @@ const SignUp = () => {
   };
 
   const handleRegistration = () => {
-    setViewComponent("verifyOtp");
+    console.log(registerForm,"this is the data")
+    let data= {
+      email:registerForm.mobEmail,
+      mobile:new Date().getTime(),
+      isReferral: false
+    }
+    axios.post("https://api-uat.life99.in/api-mdm/auth/verify-on-board-user-v2",data)
+    .then(res=>{
+      console.log(res.data)
+      setRegisterUserData({...registerUserData,temporaryIndividualId:res.data.userData.temporary_individual_id})
+      setViewComponent("verifyOtp");
+    })
+    .catch(err=>console.log(err))
+    // setViewComponent("verifyOtp");
   }
 
   return (
@@ -48,7 +102,7 @@ const SignUp = () => {
               <Signupfrm handleSetRegister={handleSetRegister} registerUser={handleRegistration} />
             )}
             {viewComponent === "verifyOtp" && (
-              <VerifyOtp verifyOtp={verifyOtp} otp={otp} setOtp={setOtp} />
+              <VerifyOtp verifyOtp={verifyOtp} otp={Otp} setOtp={setOtp} />
             )}
             {viewComponent === "setPassword" && (
               <SetPassword setPassword={setPassword} />
