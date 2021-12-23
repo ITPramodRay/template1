@@ -3,7 +3,8 @@ import { Container, Row, Col, Form, Input, Label } from "reactstrap";
 
 import Life99Logo from "../../../assets/images/Life99Logo.svg";
 
-const SignUp = ({ handleSetRegister,registerUser }) => {
+const SignUp = ({ handleSetRegister,registerUser,err }) => {
+  
   return (
     <>
       <Container>
@@ -11,7 +12,7 @@ const SignUp = ({ handleSetRegister,registerUser }) => {
           <Col md={12}>
             <div className="Logo">
               <img src={Life99Logo} alt="Life99" title="Life99" />
-              <h2>Demo Text</h2>
+              <h6 style={{color:"red"}}>{err}</h6>
             </div>
           </Col>
           <Col md={12}>
