@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
 import '../../../../assets/styles/Slider/_HealthServices.scss';
 import 'swiper/modules/navigation/navigation.scss';
 import 'swiper/modules/pagination/pagination.scss';
+
 import Carddoctor from '../../../../assets/images/HealthArticles_card-img.svg';
 
 
