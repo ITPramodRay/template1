@@ -17,7 +17,6 @@ const Testimonial = () => {
         </Container>
 
         <Row className="m-0 users-slider">
-          
           <InfiniteCarousel
             breakpoints={[
               {
