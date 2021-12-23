@@ -2,7 +2,8 @@ import React, { Suspense } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Loader from "../views/common/loader";
-import { loadingPageRouters } from "../views/landing/LandingRouter";
+import { landingPageRouters } from "../views/landing/LandingRouter";
+import { dashboardPageRouters } from "../views/dashboard/dashboardRouters";
 import { loginAndRegisterPageRouters } from "../views/Register/RegisteRouter";
 import { loginPageRouters } from "../views/Login/LoginRouter";
 import LoaderWrapper from "./loaderWrapper";
@@ -46,7 +47,8 @@ export default function AppRouter({ ...props }) {
 
   let allRoutes = [
     ...mainRoues,
-    ...loadingPageRouters,
+    ...landingPageRouters,
+    ...dashboardPageRouters,
     ...loginAndRegisterPageRouters,
     ...loginPageRouters,
   ];
@@ -59,6 +61,7 @@ export default function AppRouter({ ...props }) {
             <ScrollToTop>
               <Switch>
                 {allRoutes.map((value, index) => {
+               
                   return (
                     <Route
                       exact={value.exact}

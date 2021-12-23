@@ -1,6 +1,9 @@
-import React, { lazy } from "react";
+import React, { lazy, Suspense } from "react";
 import { useHistory } from "react-router-dom";
 import { Container } from "reactstrap";
+import Skeleton from '@mui/material/Skeleton';
+import "react-multi-carousel/lib/styles.css";
+
 
 
 const Mainbanner = lazy(() => import("./AppBanner/Mainbanner"));
@@ -18,13 +21,18 @@ const ServiesMobile = lazy(() => import("./Services/Service-Mobile"));
 const Testimonials = lazy(() => import("./Testimonials/Testimonials"));
 const Navbar = lazy(() => import("../common/Header/Navbarmenu"));
 
+
+
 const LandingPage = () => {
   const history = useHistory();
+
   return (
     <>
       <Navbar />
       <div className="desktopView">
-        <Mainbanner />
+      <Suspense fallback={<Skeleton variant="rectangular" width={210} height={118} />}>
+
+        <Mainbanner /></Suspense>
       </div>
       <div className="mobileView">
         <MainbannerMobile />
@@ -48,8 +56,12 @@ const LandingPage = () => {
           <ServiesMobile />{" "}
         </div>
       </Container>
-      <Recommended />
-      <Testimonials />
+      <Suspense fallback={<Skeleton variant="rectangular" width={210} height={118} />}>
+        <Recommended />
+      </Suspense>
+      <Suspense fallback={<Skeleton variant="rectangular" width={210} height={118} />}>
+        <Testimonials />
+      </Suspense>
       <Container fluid={true}>
         <Ads />
       </Container>

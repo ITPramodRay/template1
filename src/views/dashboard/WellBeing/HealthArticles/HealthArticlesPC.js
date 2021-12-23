@@ -4,11 +4,9 @@ import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
 import '../../../../assets/styles/Slider/_HealthServices.scss';
 import 'swiper/modules/navigation/navigation.scss';
 import 'swiper/modules/pagination/pagination.scss';
-import Slidercard from '../../../../assets/images/Wellbeing_Add_Card.svg';
+
 import Carddoctor from '../../../../assets/images/HealthArticles_card-img.svg';
 
-import SwiperCore, { Pagination } from 'swiper';
-import Ads from '../../../landing/Ad/Ads';
 
 const  HealthArticlesPC = () => {
   

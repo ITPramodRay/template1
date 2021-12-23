@@ -28,7 +28,7 @@ const SignUp = () => {
   const [registerUserError, setRegisterUserError] = useState({});
   const [Otp, setOtp] = useState("");
 
-
+  console.log(process.env.REACT_APP_API_DOMAIN,"this is the api domain")
   const registerUser = () => {
     let data = {
       masterEmployerId: registerUserData.masterEmployerId,
@@ -37,7 +37,6 @@ const SignUp = () => {
         otp: Otp,
         individual_first_name: registerForm.firstName,
         individual_last_name: registerForm.lastName,
-
       }
    }
     axios.post("https://api-uat.life99.in/api-mdm/individual/onBoardEmployees",data)

@@ -91,7 +91,7 @@ const Login = () => {
           setErrorToast(Object.values(res)["2"]["data"]["message"])
         );
     }
-  };
+  }; 
 
   // prompt user to fill passoword when clicked on forget password with emial
   const handleForgetPassword = async (pageView) => {
