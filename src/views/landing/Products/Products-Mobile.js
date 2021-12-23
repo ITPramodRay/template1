@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Col, Container, Row, Button } from 'reactstrap';
 import InfiniteCarousel from 'react-leaf-carousel';
+import "react-multi-carousel/lib/styles.css";
 
 
 import Nps from '../../../assets/images/nps.svg';

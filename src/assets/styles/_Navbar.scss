@@ -76,7 +76,11 @@
         color: $darkblue;
       }
     }
+    a.login-btn{
+      color:$white;
+    }
   }
+
 }
 
 @media only screen and (max-width: 767px) {

@@ -2,19 +2,6 @@ import React, { lazy } from "react";
 import { useHistory } from "react-router-dom";
 import { Container } from "reactstrap";
 
-// import Mainbanner from "./AppBanner/Mainbanner";
-// import MainbannerMobile from "./AppBanner/Mainbanner-Mobile";
-// import Footer from "../common/Footer/Footer";
-// import Ads from "./Ad/Ads";
-// import Faq from "./FAQ/Faq";
-// import FaqMobile from "./FAQ/Faq-Mobile";
-// import PrepareRetirement from "./PlanRetirment/PrepareRetirement";
-// import Products from "./Products/Products";
-// import ProductsMobile from "./Products/Products-Mobile";
-// import Recommended from "./Recommended/Recommended";
-// import Servies from "./Services/Services";
-// import ServiesMobile from "./Services/Service-Mobile";
-// import Testimonials from "./Testimonials/Testimonials";
 
 const Mainbanner = lazy(() => import("./AppBanner/Mainbanner"));
 const MainbannerMobile = lazy(() => import("./AppBanner/Mainbanner-Mobile"));
