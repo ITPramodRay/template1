@@ -24,7 +24,7 @@ export default class Faq extends Component {
                       className="img-fluid foooter-logo"
                     />
                   </Col>
-                  <Col sm={2}>
+                  <Col sm={3}>
                     <Link to="#" className="footer-link">
                       Dashboard
                     </Link>

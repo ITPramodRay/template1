@@ -52,7 +52,7 @@ class Mainbanner extends Component {
                 <div className="slider-block">
                   <div className="section banner-section">
                     <Container className="retirement-container">
-                      <Row className="title-row retirment-row  align-items-center">
+                      <Row className="retirment-row  align-items-center">
                         <Col sm={12} className="">
                           <h1 className="banner-text">
                             Be smart with
@@ -98,7 +98,7 @@ class Mainbanner extends Component {
                 <div className="slider-block">
                   <div className="section banner-section">
                     <Container className="retirement-container">
-                      <Row className="title-row retirment-row  align-items-center">
+                      <Row className="retirment-row  align-items-center">
                         <Col sm={12} className="">
                           <h1 className="banner-text">
                             Be smart with your <br />
@@ -141,7 +141,7 @@ class Mainbanner extends Component {
                 <div className="slider-block">
                   <div className="section banner-section">
                     <Container className="retirement-container">
-                      <Row className="title-row retirment-row  align-items-center">
+                      <Row className="retirment-row  align-items-center">
                         <Col sm={12} className="">
                           <h1 className="banner-text">
                             Be smart with your <br />

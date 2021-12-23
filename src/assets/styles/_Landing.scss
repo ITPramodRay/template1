@@ -40,10 +40,10 @@
 .banner-section {
   background: linear-gradient(313deg, #1a3e6d 0.61%, #2d6fc6 101.43%);
   padding-top: 60px;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
   .banner-text {
-    font-size: 64px;
-    line-height: 84px;
+    font-size: 56px;
+    line-height: 74px;
     font-weight: 600;
     color: $white;
     a {
@@ -57,7 +57,7 @@
   .employee-block {
     padding-top: 30px;
     .total-employee {
-      font-size: 40.5753px;
+      font-size: 32px;
       line-height: 61px;
       font-weight: 600;
       letter-spacing: -0.253595px;
@@ -65,14 +65,14 @@
       padding: 0px 7px;
     }
     .plus-sign {
-      font-size: 40.5753px;
+      font-size: 36px;
       line-height: 61px;
       font-weight: 600;
       color: #0bb8e4;
     }
     .employee-tagline {
-      font-size: 14px;
-      line-height: 21px;
+      font-size: 11px;
+      line-height: 22px;
       font-weight: 500;
       text-transform: capitalize;
       color: $white;
@@ -85,6 +85,7 @@
     padding: 10px;
     border-radius: 8px;
     margin-top: 15px;
+    display: inline-block;
   }
   .banner-download-application {
     margin-top: 53px;
@@ -105,14 +106,14 @@
 // Prepare Retirement-Section
 .prepare-retirement-section {
   .title-text {
-    @include title(36px, 54px, 600, $darkblue);
+    @include title(32px, 40px, 600, $darkblue);
   }
   .react-tabs__tab-list {
     border-bottom: none;
     .react-tabs__tab {
       display: block !important;
-      font-size: 24px;
-      line-height: 36px;
+      font-size: 19px;
+      line-height: 29px;
       font-weight: 500;
       color: $darkblue;
       border-top: none;
@@ -125,10 +126,11 @@
         width: 30px;
         height: 30px;
         margin-right: 30px;
+        float: left;
       }
-      span {
-        display: inline-flex;
-      }
+      // span {
+      //   display: inline-flex;
+      // }
       &::before {
         content: "";
         position: absolute;
@@ -144,7 +146,7 @@
           content: "";
           position: absolute;
           left: 0px;
-          width: 100%;
+          width: 60%;
           height: 2px;
           background: $skyblue;
           transition: ease-in 1s;
@@ -182,7 +184,7 @@
     .title-row {
       padding-bottom: 0px;
       .title-text {
-        @include title(36px, 54px, 600, $darkblue);
+        @include title(32px, 48px, 600, $darkblue);
       }
     }
     .explore-btn {
@@ -195,22 +197,23 @@
       width: 20%;
     }
     .products-box {
-      margin-top: 60px;
+      margin-top:40px;
       position: relative;
       .products-detail {
         background: #ffffff;
-        padding: 60px 15px;
+        padding: 36px 15px;
         border-radius: 15px;
         filter: drop-shadow(0px 37px 29px rgba(213, 213, 213, 0.2));
         .comingsoon-img {
           position: absolute;
-          top: 16px;
+          top: 8px;
           right: 0px;
-          width: 120px;
+          width: 90px;
         }
         .product-img {
-          width: 80px;
-          height: 80px;
+          width:60px;
+          height:60px;
+          margin-top: 8px;
         }
         .products-category {
           color: $lightblue;
@@ -218,7 +221,7 @@
           line-height: 24px;
           font-weight: 600;
           text-transform: uppercase;
-          padding: 10px 0px 0px 0px;
+          padding: 15px 0px 0px 0px;
           margin-bottom: 0px;
         }
       }
@@ -229,7 +232,7 @@
 // Services Section
 .services-section {
   .title-text {
-    @include title(36px, 54px, 600, $darkblue);
+    @include title(32px, 40px, 600, $darkblue);
     padding-bottom: 30px;
   }
   .services-detail {
@@ -239,7 +242,7 @@
       @include title(18px, 27px, 600, $darkblue);
     }
     .services-description {
-      @include title(18px, 27px, normal, $lightgray);
+      @include title(16px, 27px, normal, $lightgray);
       display: block;
       padding-top: 5px;
       padding-bottom: 8px;
@@ -256,7 +259,7 @@
   background: #e5f4ff;
   padding: 100px 0px;
   .title-text {
-    @include title(36px, 54px, 600, $darkblue);
+    @include title(32px, 40px, 600, $darkblue);
   }
   .Recommended-slider {
     .react-multi-carousel-list {
@@ -264,7 +267,7 @@
       margin-top: -64px;
       .react-multiple-carousel__arrow--left {
         top: 0;
-        left: 88%;
+        left: 87%;
         background: $white;
       }
       .react-multiple-carousel__arrow--left::before {
@@ -300,11 +303,7 @@
         padding: 0px 30px 0px 0px;
         .cardbox {
           padding: 20px 20px;
-          background: linear-gradient(
-            340.78deg,
-            #4aaac1 2.17%,
-            #206f82 114.02%
-          );
+          background: linear-gradient(340.78deg, #4aaac1 2.17%, #206f82 114.02%);
           border-radius: 12.9221px;
           .card-img-top {
             width: 120px;
@@ -313,16 +312,16 @@
           .card-body {
             padding: 0px;
             .card-title {
-              @include title(29px, 44px, normal, $white);
+              @include title(24px, 36px, normal, $white);
               padding-top: 20px;
             }
             .card-text {
-              @include title(14.5px, 19px, normal, $white);
+              @include title(13px, 19px, normal, $white);
               padding-top: 10px;
+                  min-height: 80px;
             }
             .recommended-btn {
-              font-size: 17px;
-              font-weight: 600;
+              font-size: 14px;
               line-height: 24px;
               background: $darkblue;
               box-shadow: 0px 6px 12px -4px rgba(0, 82, 103, 0.32);
@@ -341,16 +340,22 @@
 .Users-section {
   .title-row {
     .title-text {
-      @include title(36px, 54px, 600, $darkblue);
+      @include title(32px, 40px, 600, $darkblue);
     }
   }
-  .users-slider { 
+  .react-multi-carousel-list {
+    margin-top: -86px;
+  }
+  .react-multi-carousel-track {
+    padding-top: 105px;
+  }
+  .users-slider {
     .users-block {
       background: #f5e2ba;
       border-radius: 16px;
-      padding: 30px 50px;
+      padding: 30px 36px;
       .saying {
-        font-size: 18px;
+        font-size: 14px;
         line-height: 30px;
         font-weight: 500;
         color: $darkgray;
@@ -373,9 +378,11 @@
         }
       }
     }
-    .InfiniteCarouselArrowNext {
+
+    .InfiniteCarouselArrowNext,
+    .react-multiple-carousel__arrow--right {
       right: 112px;
-      top: -64px;
+      top: 2px;
       background: $powderblue;
       min-width: 46px;
       min-height: 46px;
@@ -384,7 +391,8 @@
         display: none;
       }
     }
-    .InfiniteCarouselArrowNext::before {
+    .InfiniteCarouselArrowNext::before,
+    .react-multiple-carousel__arrow--right::before {
       content: "";
       background-image: url("../images/nextarrow.png");
       position: absolute;
@@ -396,10 +404,11 @@
       display: block;
       padding: 10px;
     }
-    .InfiniteCarouselArrowPrev {
-      left: 86%;
+    .InfiniteCarouselArrowPrev,
+    .react-multiple-carousel__arrow--left {
+      left: 80%;
       right: auto;
-      top: -65px;
+      top: 0;
       background: $powderblue;
       min-width: 46px;
       min-height: 46px;
@@ -408,7 +417,8 @@
         display: none;
       }
     }
-    .InfiniteCarouselArrowPrev::before {
+    .InfiniteCarouselArrowPrev::before,
+    .react-multiple-carousel__arrow--left::before {
       content: "";
       background-image: url("../images/backarrow.png");
       position: absolute;
@@ -426,12 +436,7 @@
 .retirment-section {
   padding: 150px 0px;
   .retirement-container {
-    background: linear-gradient(
-      198deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(64, 156, 179, 1) 0%,
-      rgba(44, 128, 148, 1) 52%
-    );
+    background: linear-gradient(198deg, rgba(2, 0, 36, 1) 0%, rgba(64, 156, 179, 1) 0%, rgba(44, 128, 148, 1) 52%);
     border-radius: 12px;
     padding: 60px 0px;
     position: relative;
@@ -443,7 +448,7 @@
         left: 0px;
       }
       .title-text {
-        @include title(54px, 69px, 600, $white);
+        @include title(46px, 58px, 600, $white);
       }
       .download-application {
         margin-top: 40px;
@@ -530,12 +535,12 @@
   background: $powderwhite;
   padding: 50px 0px 36px 0px;
   .foooter-logo {
-    width: 200px;
-    height: 60px;
+    // width: 200px;
+    // height: 60px;
   }
   a {
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 16px;
+    line-height: 22px;
     font-weight: 500;
     color: $darkblue;
     display: block;
@@ -543,7 +548,7 @@
     text-decoration: none;
   }
   .footer-social-text {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 27px;
     font-weight: 500;
     color: $darkblue;
@@ -558,8 +563,7 @@
     }
   }
   .copyright-text {
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 16px;
     font-weight: 500;
     color: $darkblue;
     padding-top: 45px;
@@ -581,8 +585,8 @@
     }
     .react-tabs__tab-list {
       .react-tabs__tab {
-        font-size: 14px;
-        line-height: 21px;
+        font-size: 13px;
+        line-height: 20px;
         padding: 13px 13px;
         .tab-image {
           width: 18px;
@@ -616,9 +620,12 @@
   bottom: 40px;
 }
 .gif_scroll {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
+    position: relative;
+    bottom:100px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
   img {
     width: 50px;
   }
