@@ -61,7 +61,7 @@ export default function AppRouter({ ...props }) {
             <ScrollToTop>
               <Switch>
                 {allRoutes.map((value, index) => {
-                  console.log(value,"these are the paths")
+               
                   return (
                     <Route
                       exact={value.exact}
