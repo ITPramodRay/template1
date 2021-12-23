@@ -5,6 +5,7 @@ export const LoginAndRegisterPagePaths = {
   loginPage: "/login",
   forgetPassword: "/forgetpassword",
   RegisterPage: "/register",
+  UpdatePassword: "/updatePassword",
 };
 
 export const dashboardPaths = {

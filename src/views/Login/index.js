@@ -12,6 +12,7 @@ import LoginValidation from "./LoginValidation";
 
 const Login = () => {
   const [viewCompoment, setViewComponent] = useState("LoginPage");
+  const [otpValue, setOtpValue] = useState("");
   const [loginUserData, setLoginUserData] = useState({
     email: "",
     login_type: "employee",
@@ -54,7 +55,7 @@ const Login = () => {
       await api(baseUrl)
         .post("api-mdm/auth/login", loginUserData)
         .then((res) => {
-          history.push('/dashboard/wellBeing');
+          history.push("/dashboard/wellBeing");
         })
         .catch((res) =>
           setErrorToast(Object.values(res)["2"]["data"]["message"])
@@ -68,19 +69,34 @@ const Login = () => {
     } else {
       setViewComponent(pageView);
       handleSentOtp();
+      window.history.replaceState(null, "", `/?ForgetPassword`);
     }
   };
 
+  const handleVerifyOtpToken = async (otpToken) => {
+    let otpTokenVerifier = { forgotPasswordToken: otpToken };
+    await api(baseUrl)
+      .post("api-mdm/auth/verify-forgot-password-token", otpTokenVerifier)
+      .then((res) => res.data.statusCode === 200 && console.log(res.data))
+      .catch((res) =>
+        setErrorToast(Object.values(res)["2"]["data"]["message"])
+      );
+  };
+
   const handleForgetPasswordOtp = async () => {
-    if (loginUserData.otp !== "") {
+    if (otpValue !== "") {
       let forgetOtpVerfiyObj = {
         email: loginUserData.email,
-        otp: loginUserData.otp,
+        otp: otpValue,
       };
-      await api(baseUrl).post(
-        "api-mdm/auth/forgot-password",
-        forgetOtpVerfiyObj
-      );
+      await api(baseUrl)
+        .post("api-mdm/auth/forgot-password", forgetOtpVerfiyObj)
+        .then((res) => {
+          res.data.statusCode === 200 && handleVerifyOtpToken(res.data.data);
+        })
+        .catch((res) =>
+          setErrorToast(Object.values(res)["2"]["data"]["message"])
+        );
     }
   };
 
@@ -90,7 +106,7 @@ const Login = () => {
         <div className="signleft">
           {viewCompoment === "LoginPage" && (
             <LoginPage
-              optLogin={loginUserData.otpBased}
+              loginUserData={loginUserData}
               handleOtpLogin={handleOtpLogin}
               handleLoginValues={handleLoginValues}
               handleForgetPassword={handleForgetPassword}
@@ -101,8 +117,11 @@ const Login = () => {
           )}
           {viewCompoment === "ForgetPassword" && (
             <VerifyLoginOtp
-              handleLoginValues={handleLoginValues}
               handleForgetPasswordOtp={handleForgetPasswordOtp}
+              otpValue={otpValue}
+              setOtpValue={setOtpValue}
+              handleSentOtp={handleSentOtp}
+              errorToast={errorToast}
             />
           )}
         </div>
