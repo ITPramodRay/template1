@@ -2,17 +2,42 @@
 
 // Color & Font-Family
 @import './webapp-variables';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 
 // Common
 @import './Mixin';
 
+//slider
+@import './Slider/SliderMain';
 // Header
 @import './Navbar';
 
 // Landing Page
-@import './Landing';
 @import './Landing-mobile';
+@import './Landing';
 @import './SignInUp';
 
 
+//Wellbing page
+@import './Wellbeing';
+@import './InvestDashboard';
 
+
+
+.desktopView{
+    margin:0;
+    padding:0;
+    display:block;
+    @media only screen and (max-width: 600px) {
+    display:none;
+     }
+}
+.mobileView{
+    margin:0;
+    padding:0;
+    display:none;
+    @media only screen and (max-width: 600px) {
+        display:block;
+         }
+}

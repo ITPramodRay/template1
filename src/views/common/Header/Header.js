@@ -1,12 +1,14 @@
 import React from "react"
-import MVHeader from "./MVHeader";
-import PCHeader from "./PCHeader";
-
+import HeaderMV from "./HeaderMV";
+import HeaderPC from "./HeaderPC";
+import { useLocation } from "react-router-dom";
 const AppHeader = () => {
+    const location = useLocation()
+    
     return (
       <>
-        <MVHeader />
-        <PCHeader/>
+        <HeaderMV activepath={location.pathname} />
+        <HeaderPC activepath={location.pathname} />
       </>
     );
   };

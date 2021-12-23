@@ -25,8 +25,11 @@
     }
 }
 .Logo{
-    width: 100px;
+    width: 100%;
     margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .signuptitle {
     span{
@@ -43,7 +46,7 @@
 
 .resentotp{
     padding-top:30px;
-    padding-bottom:46px;
+    padding-bottom:30px;
     color:#005E9E;
     font-weight:500;
     a{
@@ -63,7 +66,7 @@
 .setpassword{
     padding-top:28px;
     Label{
-        color: #10002E;
+        color: #1A3E6D;
         font-weight: 600;
         font-size: 14px;
         line-height:10px;
@@ -74,7 +77,7 @@
         border: 1px solid #D5D4DC;
         box-sizing: border-box;
         border-radius: 8px;
-        color: #10002E;
+        color: #1A3E6D;
         outline:none;
         box-shadow:none;
         margin-bottom:16px;
@@ -86,18 +89,19 @@
 
 .signupfrm{
     Label{
-        color: #10002E;
+        color: #1A3E6D;
         font-weight: 600;
         font-size: 14px;
         line-height:10px;
         letter-spacing: 0.4px;
     }
-    input[type='text']{
+    input[type='text'],
+    input[type='number']{
         background: #FFFFFF;
         border: 1px solid #D5D4DC;
         box-sizing: border-box;
         border-radius: 8px;
-        color: #10002E;
+        color: #1A3E6D;
         outline:none;
         box-shadow:none;
         margin-bottom:16px;
@@ -111,6 +115,65 @@
         border-radius: 40px;
         border:none;
         margin-top:40px;
+        margin-bottom:20px;
+    }
+    a{
+        color:#005e9e;
+        font-weight:bold;
+    }
+}
+.regalready{
+    color: #5C616F;
+    font-size:14px;
+    font-weight:bold;
+    a{
+        color:#005e9e;
+        margin: 0 0 0 4px;
+    }
+}
+
+// Login
+.loginfrm{
+    .loginotptitle{
+        h4{
+            font-size:14px;
+            font-weight:600;
+            color:#1E3F6D;
+            width:100%;
+        }
+    }
+    Label{
+        color: #10002E;
+        font-weight: 600;
+        font-size: 14px;
+        line-height:10px;
+        letter-spacing: 0.4px;
+    }
+    input[type='text'],
+    input[type='number']{
+        background: #FFFFFF;
+        border: 1px solid #D5D4DC;
+        box-sizing: border-box;
+        border-radius: 8px;
+        color: #10002E;
+        outline:none;
+        box-shadow:none;
+    }
+
+    .loginbtn{
+        padding:12px 32px;
+        color:#FFF;
+        background: #1A3E6D;
+        box-shadow: 0px 8px 16px -6px rgba(0, 82, 103, 0.32);
+        border-radius: 40px;
+        border:none;
+        margin-top:30px;
+        margin-bottom:20px;
+    }
+    a{
+        color:#005E9E;
+        font-size:12px;
+        font-weight:bold;
     }
 }
 
@@ -139,17 +202,15 @@
     }
 
     .medialbox{
-        position: relative;
         z-index: 999;
-        width: 270px;
+        width: 300px;
         height: 100%;
         margin: 0 auto;
-        top: 50%;
-        left: 0;
-        right: 0;
+        display: flex;
+        flex-direction: column;
         img{
-            position: relative;
-            left: 70px;
+            // position: relative;
+            // left: 70px;
         }
         span{
             width: 100%;
@@ -170,4 +231,42 @@
             display: inline-block;
         }
     }
+}
+
+.otpInput{
+    margin-right: 1rem;
+    input{
+        width:75px !important;
+        height:75px;
+        padding: 0.5rem 0rem;
+        outline: none;
+        border-style: none;
+        background: #FFFFFF;
+        border: 1.29px solid #CDD4DB;
+        box-shadow: 0px 10.32px 30.96px -7.74px rgba(0, 0, 0, 0.04);
+        border-radius: 10.32px;
+        color: #040C22;
+        font-weight: normal;
+        font-size: 31.28px;
+    }
+}
+.BTN_intro{
+    padding: 12px 32px;
+    color: #FFF;
+    background: #1A3E6D;
+    box-shadow: 0px 8px 16px -6px (0 82 103 / 32%);
+    border-radius: 40px;
+    border: none;
+    margin-top: 40px;
+}
+.reg_text{
+    font-weight: 500;
+    font-size: 14px;
+    color: #5C616F;
+}
+
+
+.error_text{
+    font-size: 1rem;
+    color: red  ;
 }

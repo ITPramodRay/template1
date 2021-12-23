@@ -1,16 +1,69 @@
-import React,{useEffect,useState,lazy} from 'react';
-import { Link, useHistory } from "react-router-dom";
+import React, { lazy } from "react";
+import { useHistory } from "react-router-dom";
+import { Container } from "reactstrap";
 
-const Home = lazy(()=>import("./components/index"))
-const Navbar = lazy(()=>import("../common/Header/Navbarmenu"))
 
-export default function LandingPage({ ...props }) {
+const Mainbanner = lazy(() => import("./AppBanner/Mainbanner"));
+const MainbannerMobile = lazy(() => import("./AppBanner/Mainbanner-Mobile"));
+const Footer = lazy(() => import("../common/Footer/Footer"));
+const Ads = lazy(() => import("./Ad/Ads"));
+const Faq = lazy(() => import("./FAQ/Faq"));
+const FaqMobile = lazy(() => import("./FAQ/Faq-Mobile"));
+const PrepareRetirement = lazy(() => import("./PlanRetirment/PrepareRetirement"));
+const Products = lazy(() => import("./Products/Products"));
+const ProductsMobile = lazy(() => import("./Products/Products-Mobile"));
+const Recommended = lazy(() => import("./Recommended/Recommended"));
+const Servies = lazy(() => import("./Services/Services"));
+const ServiesMobile = lazy(() => import("./Services/Service-Mobile"));
+const Testimonials = lazy(() => import("./Testimonials/Testimonials"));
+const Navbar = lazy(() => import("../common/Header/Navbarmenu"));
+
+const LandingPage = () => {
   const history = useHistory();
   return (
-   <>
-   <Navbar/>
-   <Home/>
-   {/* <PlanRetirment/> */}
-   </>
+    <>
+      <Navbar />
+      <div className="desktopView">
+        <Mainbanner />
+      </div>
+      <div className="mobileView">
+        <MainbannerMobile />
+      </div>
+      <Container>
+        <PrepareRetirement />
+      </Container>
+      <Container fluid={true} className="products-container">
+        <div className="desktopView">
+          <Products />
+        </div>
+        <div className="mobileView">
+          <ProductsMobile />
+        </div>
+      </Container>
+      <Container fluid={true}>
+        <div className="desktopView">
+          <Servies />{" "}
+        </div>
+        <div className="mobileView">
+          <ServiesMobile />{" "}
+        </div>
+      </Container>
+      <Recommended />
+      <Testimonials />
+      <Container fluid={true}>
+        <Ads />
+      </Container>
+      <Container fluid={true}>
+        <div className="desktopView">
+          <Faq />
+        </div>
+        <div className="mobileView">
+          <FaqMobile />
+        </div>
+      </Container>
+      <Footer />
+    </>
   );
-}
+};
+
+export default LandingPage;
