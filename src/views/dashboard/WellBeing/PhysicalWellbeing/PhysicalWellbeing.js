@@ -1,18 +1,78 @@
 import React from 'react';
 
-import Glass from '../../../../assets/images/Barbell.svg';
-import close from '../../../../assets/images/X.svg';
-import addicon from '../../../../assets/images/Add icon.svg';
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
+import '../../../../assets/styles/Slider/SliderMain.scss';
+import 'swiper/modules/navigation/navigation.scss';
+import 'swiper/modules/pagination/pagination.scss';
+
 
 const  PhysicalWellbeing = () => {
-  
+    const pagination = {
+        clickable: true,
+      };
   return (
     <>
         <div className='PhysicalWellbeingPC'>
             <p className='title'>Physical Well being</p>
-            <div className=' row'>
+            <div className='row'>
                 <div className=' col-3'>
-                    <h1>hiii</h1>
+                <Swiper
+              slidesPerView={1}
+              spaceBetween={15}
+              pagination={pagination}
+              className='mySwiper'
+            >
+              <SwiperSlide>
+                <div className='PhysicalWellbeing_sider'>
+                    <div className='img_slider'>
+                        <img src='https://picsum.photos/200'></img>
+                    </div>
+                    <div className='down_text'>
+                        <h2>The relationship between physical and mental health: A mediation analysis</h2>
+                    </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+              <div className='PhysicalWellbeing_sider'>
+                    <div className='img_slider'>
+                        <img src='https://picsum.photos/200'></img>
+                    </div>
+                    <div className='down_text'>
+                        <h2>The relationship between physical and mental health: A mediation analysis</h2>
+                    </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+              <div className='PhysicalWellbeing_sider'>
+                    <div className='img_slider'>
+                        <img src='https://picsum.photos/200'></img>
+                    </div>
+                    <div className='down_text'>
+                        <h2>The relationship between physical and mental health: A mediation analysis</h2>
+                    </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+              <div className='PhysicalWellbeing_sider'>
+                    <div className='img_slider'>
+                        <img src='https://picsum.photos/200'></img>
+                    </div>
+                    <div className='down_text'>
+                        <h2>The relationship between physical and mental health: A mediation analysis</h2>
+                    </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+              <div className='PhysicalWellbeing_sider'>
+                    <div className='img_slider'>
+                        <img src='https://picsum.photos/200'></img>
+                    </div>
+                    <div className='down_text'>
+                        <h2>The relationship between physical and mental health: A mediation analysis</h2>
+                    </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
                 </div>
                 <div className='col-9 plancard_base'>
                    <div className='plancard_iteam'>
