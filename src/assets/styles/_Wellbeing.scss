@@ -437,7 +437,7 @@
         }
       }
       .right_text_card {
-        h3{
+        h3 {
           font-weight: 600;
           font-size: 65.3684px;
           line-height: 79px;
@@ -447,29 +447,36 @@
     }
   }
 }
-.PhysicalWellbeing_sider{
-  .img_slider{
-    img{
+.PhysicalWellbeing_sider {
+  .img_slider {
+    img {
       border-radius: 16px 16px 0px 0px;
     }
   }
-  .down_text{
+  .down_text {
     background-color: #fff;
     border-radius: 0px 0px 16px 16px;
     height: 120px;
     display: flex;
-   h2{
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: left;
-    padding: 1rem; 
-   }
+    h2 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: left;
+      padding: 1rem;
+    }
   }
 }
-.OtherSlider_img{
-  img{
+.OtherSlider_img {
+  img {
     width: 50px;
+  }
+  h2 {
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #263238;
   }
 }
 

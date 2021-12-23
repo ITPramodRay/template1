@@ -7,45 +7,45 @@ import 'swiper/modules/pagination/pagination.scss';
 
 import Otherslider from '../../../../assets/images/Other_slider.svg';
 
-import SwiperCore, {
-    Navigation
-  } from 'swiper'; 
-  SwiperCore.use([Navigation]);    
+import SwiperCore, { Navigation } from 'swiper';
+SwiperCore.use([Navigation]);
 
-const  Others = () => {
-     
-  
+const Others = () => {
   return (
     <>
-        <div className='OtherSlider desktopView mb-5'>
+      <div className='OtherSlider desktopView mb-5'>
         <p className='title'>Explore Other categories</p>
         <div className=' row'>
           <div className=' col-12'>
-            <Swiper  slidesPerView={3} spaceBetween={30} className='mySwiper'>
+            <Swiper slidesPerView={3} spaceBetween={30} className='mySwiper'>
               <SwiperSlide>
                 <div className='OtherSlider_img'>
-                    <img src={Otherslider}></img>
-                    <h2>Senior Care</h2>
+                  <img src={Otherslider}></img>
+                  <h2>Senior Care</h2>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-              <div className='EmotionalMentalWellbeing_card_base'>
-                    <img src={Otherslider}></img>
+                <div className='OtherSlider_img'>
+                  <img src={Otherslider}></img>
+                  <h2>Senior Care</h2>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-              <div className='EmotionalMentalWellbeing_card_base'>
-                    <img src={Otherslider}></img>
+                <div className='OtherSlider_img'>
+                  <img src={Otherslider}></img>
+                  <h2>Senior Care</h2>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-              <div className='EmotionalMentalWellbeing_card_base'>
-                    <img src={Otherslider}></img>
+                <div className='OtherSlider_img'>
+                  <img src={Otherslider}></img>
+                  <h2>Senior Care</h2>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-              <div className='EmotionalMentalWellbeing_card_base'>
-                    <img src={Otherslider}></img>
+                <div className='OtherSlider_img'>
+                  <img src={Otherslider}></img>
+                  <h2>Senior Care</h2>
                 </div>
               </SwiperSlide>
             </Swiper>
@@ -54,5 +54,5 @@ const  Others = () => {
       </div>
     </>
   );
-}
+};
 export default Others;
