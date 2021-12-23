@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { Container } from "reactstrap";
 import Skeleton from '@mui/material/Skeleton';
 import "react-multi-carousel/lib/styles.css";
-import {getState} from "react-redux"
+
 
 
 const Mainbanner = lazy(() => import("./AppBanner/Mainbanner"));
@@ -25,8 +25,7 @@ const Navbar = lazy(() => import("../common/Header/Navbarmenu"));
 
 const LandingPage = () => {
   const history = useHistory();
-  const storeData = getState()
-  console.log(storeData,"this is the data")
+
   return (
     <>
       <Navbar />
