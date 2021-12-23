@@ -37,7 +37,6 @@ const SignUp = () => {
         otp: Otp,
         individual_first_name: registerForm.firstName,
         individual_last_name: registerForm.lastName,
-
       }
    }
     axios.post("https://api-uat.life99.in/api-mdm/individual/onBoardEmployees",data)
