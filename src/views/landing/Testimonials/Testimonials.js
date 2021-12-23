@@ -5,6 +5,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 import User1 from "../../../assets/images/user1.svg";
+import { testimonialCms } from "../landingCMS";
 
 const Testimonial = () => {
   const responsive = {
@@ -32,7 +33,7 @@ const Testimonial = () => {
         <Container>
           <Row className="title-row align-items-center">
             <Col sm={12}>
-              <h3 className="title-text">What our users are saying</h3>
+              <h3 className="title-text">{testimonialCms.sectionHeading}</h3>
             </Col>
           </Row>
         </Container>
