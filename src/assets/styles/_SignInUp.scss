@@ -7,6 +7,14 @@
     background:#F2F3F7;
     padding:50px 50px;
     min-height:100vh;
+    span{
+        button{
+            line-height:1;
+            padding:0;
+            font-size:1rem;
+            text-transform: unset;
+        }
+    }
 }
 .signright{
     width:40%;
@@ -269,4 +277,32 @@
 .error_text{
     font-size: 1rem;
     color: red  ;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .signupmain{
+        .signleft{
+            width:100%;
+            padding:50px 20px;
+        }
+    }
+    .otpInput input{
+        width: 100% !important;
+        height: 100%;
+    }
+    .signright{
+        display:none;
+    }
+    .signupfrm input[type='submit'], 
+    .loginfrm .loginbtn,
+    .subbtn{
+        width:100%;
+    }
+    .signleft{
+        background:$white;
+    }
+    .signleft .otpInput:last-child{
+        margin-right:0;
+    }
 }
