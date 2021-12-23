@@ -30,6 +30,7 @@ const LoginPage = ({
             </div>
           </Col>
         </Row>
+        <div className="loginfrm">
         <Row>
           <Col md={6}>
             <Label>Mobile/Email</Label>
@@ -91,16 +92,15 @@ const LoginPage = ({
 
         <Row className="mt-4">
           <Col md={12}>
-            <span>Login with OTP</span>
-            <br></br>
-            <span>
+            <div className="loginotptitle">
+              <h4>Login with OTP</h4>
               <Switch onClick={(e) => handleOtpLogin()} />
-            </span>
+              </div>
           </Col>
         </Row>
         <Row>
           <Col md={12}>
-            <Button variant="contained" onClick={(e) => handleLoginUser()}>
+            <Button className="loginbtn" variant="contained" onClick={(e) => handleLoginUser()}>
               LogIn
             </Button>
           </Col>
@@ -115,7 +115,9 @@ const LoginPage = ({
             </div>
           </Col>
         </Row>
+        </div>
       </Container>
+
     </>
   );
 };

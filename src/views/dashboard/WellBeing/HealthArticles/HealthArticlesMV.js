@@ -23,7 +23,7 @@ const  HealthArticlesMV = () => {
         <div className='top_hg'>
           <h2 className='M_title'>Health Services & Offers</h2>
         </div>
-        <div className='down_hg mt-5'>
+        <div className='down_hg mt-3'>
         <Swiper
             slidesPerView={1.2}
             spaceBetween={15}

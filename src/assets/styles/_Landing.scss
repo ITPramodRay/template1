@@ -342,7 +342,7 @@
       @include title(36px, 54px, 600, $darkblue);
     }
   }
-  .users-slider {
+  .users-slider { 
     .users-block {
       background: #f5e2ba;
       border-radius: 16px;
@@ -562,6 +562,9 @@
     color: $darkblue;
     padding-top: 45px;
   }
+}
+.accordion-item{
+  background-color:transparent;
 }
 @media only screen and (max-width: 767px) {
   .prepare-retirement-section {

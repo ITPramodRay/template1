@@ -1,3 +1,6 @@
+@import './webapp-variables';
+@import "./Mixin";
+
 @media only screen and (max-width: 767px) {
   // Banner
   .banner-section {
