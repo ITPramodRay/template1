@@ -1,6 +1,7 @@
 // import "./assets/styles/app.scss";
+
 import AppRouter from "./router";
-import store from "./store";
+import store from "./store/index";
 import { Encrypt } from "./modules";
 import { Provider } from "react-redux";
 import { ToastContainer } from "react-toastify";
@@ -15,6 +16,7 @@ store.subscribe(() => {
 });
 
 function App() {
+  console.log(store,"this is the store")
   return (
     <Provider store={store}>
       <ToastContainer

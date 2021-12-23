@@ -20,4 +20,5 @@ if (persistantStorage == "ENABLED") {
     ? Decrypt(sessionStorage._store, "local")
     : {};
 }
+
 export default createStore(rootReducer, persistantStore, middleware);
