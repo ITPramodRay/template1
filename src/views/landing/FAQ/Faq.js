@@ -2,7 +2,7 @@ import React from "react";
 import { Accordion, AccordionItem } from "react-light-accordion";
 import "react-light-accordion/demo/css/index.css";
 import { Col, Container, Row } from "reactstrap";
-
+import {faqCms} from '../landingCMS'
 const Faq = () => {
   return (
     <>
@@ -10,7 +10,7 @@ const Faq = () => {
         <Container>
           <Row className="title-row align-items-center">
             <Col sm={12} className="text-center">
-              <h3 className="title-text">Frequently Asked Questions</h3>
+              <h3 className="title-text">{faqCms.sectionHeading}</h3>
             </Col>
           </Row>
           <Col sm={11} className="mx-auto">

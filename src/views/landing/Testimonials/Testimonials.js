@@ -3,6 +3,7 @@ import InfiniteCarousel from "react-leaf-carousel";
 import { Col, Container, Row } from "reactstrap";
 
 import User1 from "../../../assets/images/user1.svg";
+import { testimonialCms } from "../landingCMS";
 
 const Testimonial = () => {
   return (
@@ -11,13 +12,12 @@ const Testimonial = () => {
         <Container>
           <Row className="title-row align-items-center">
             <Col sm={12}>
-              <h3 className="title-text">What our users are saying</h3>
+              <h3 className="title-text">{testimonialCms.sectionHeading}</h3>
             </Col>
           </Row>
         </Container>
 
         <Row className="m-0 users-slider">
-          
           <InfiniteCarousel
             breakpoints={[
               {
@@ -57,146 +57,28 @@ const Testimonial = () => {
             slidesToShow={3}
             scrollOnDevice={true}
           >
-            <div className="users-block">
-              <p className="saying">
-                Our entire team is on the same page and moves faster. Slite lets
-                LogDNA staff operate as a
-              </p>
-              <p className="saying">
-                single team across multiple timezones and functions
-              </p>
-              <div className="d-flex user-information">
-                <div className="user-image">
-                  <img src={User1} alt="user" title="title" />
-                </div>
-                <div className="user-detail">
-                  <p className="user-name">Ashish Kashyap</p>
-                  <p className="user-position">
-                    Co-Founder & CEO <br /> INDWealth
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="users-block">
-              <p className="saying">
-                Our entire team is on the same page and moves faster. Slite lets
-                LogDNA staff operate as a
-              </p>
-              <p className="saying">
-                single team across multiple timezones and functions
-              </p>
-              <div className="d-flex user-information">
-                <div className="user-image">
-                  <img src={User1} alt="user" title="title" />
-                </div>
-                <div className="user-detail">
-                  <p className="user-name">Ashish Kashyap</p>
-                  <p className="user-position">
-                    Co-Founder & CEO <br /> INDWealth
-                  </p>
+            {" "}
+            {testimonialCms.cards.map((value, key) => (
+              <div key={key} className="users-block" style={{backgroundColor: `${value.backgroundColor}`}}>
+                <p className="saying">
+                 {value.saying1}
+                </p>
+                <p className="saying">
+                  {value.saying2}
+                </p>
+                <div className="d-flex user-information">
+                  <div className="user-image">
+                    <img src={User1} alt="user" title="title" />
+                  </div>
+                  <div className="user-detail">
+                    <p className="user-name">{value.userDetails.name}</p>
+                    <p className="user-position">
+                      Co-Founder & CEO <br /> INDWealth
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="users-block">
-              <p className="saying">
-                Our entire team is on the same page and moves faster. Slite lets
-                LogDNA staff operate as a
-              </p>
-              <p className="saying">
-                single team across multiple timezones and functions
-              </p>
-              <div className="d-flex user-information">
-                <div className="user-image">
-                  <img src={User1} alt="user" title="title" />
-                </div>
-                <div className="user-detail">
-                  <p className="user-name">Ashish Kashyap</p>
-                  <p className="user-position">
-                    Co-Founder & CEO <br /> INDWealth
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="users-block">
-              <p className="saying">
-                Our entire team is on the same page and moves faster. Slite lets
-                LogDNA staff operate as a
-              </p>
-              <p className="saying">
-                single team across multiple timezones and functions
-              </p>
-              <div className="d-flex user-information">
-                <div className="user-image">
-                  <img src={User1} alt="user" title="title" />
-                </div>
-                <div className="user-detail">
-                  <p className="user-name">Ashish Kashyap</p>
-                  <p className="user-position">
-                    Co-Founder & CEO <br /> INDWealth
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="users-block">
-              <p className="saying">
-                Our entire team is on the same page and moves faster. Slite lets
-                LogDNA staff operate as a
-              </p>
-              <p className="saying">
-                single team across multiple timezones and functions
-              </p>
-              <div className="d-flex user-information">
-                <div className="user-image">
-                  <img src={User1} alt="user" title="title" />
-                </div>
-                <div className="user-detail">
-                  <p className="user-name">Ashish Kashyap</p>
-                  <p className="user-position">
-                    Co-Founder & CEO <br /> INDWealth
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="users-block">
-              <p className="saying">
-                Our entire team is on the same page and moves faster. Slite lets
-                LogDNA staff operate as a
-              </p>
-              <p className="saying">
-                single team across multiple timezones and functions
-              </p>
-              <div className="d-flex user-information">
-                <div className="user-image">
-                  <img src={User1} alt="user" title="title" />
-                </div>
-                <div className="user-detail">
-                  <p className="user-name">Ashish Kashyap</p>
-                  <p className="user-position">
-                    Co-Founder & CEO <br /> INDWealth
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="users-block">
-              <p className="saying">
-                Our entire team is on the same page and moves faster. Slite lets
-                LogDNA staff operate as a
-              </p>
-              <p className="saying">
-                single team across multiple timezones and functions
-              </p>
-              <div className="d-flex user-information">
-                <div className="user-image">
-                  <img src={User1} alt="user" title="title" />
-                </div>
-                <div className="user-detail">
-                  <p className="user-name">Ashish Kashyap</p>
-                  <p className="user-position">
-                    Co-Founder & CEO <br /> INDWealth
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
           </InfiniteCarousel>
         </Row>
       </div>
