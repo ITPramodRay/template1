@@ -42,9 +42,6 @@ const VerifyLoginOtp = ({
           <Col md={4}>
             <Link onClick={() => handleSentOtp()}>Resent OTP</Link>
           </Col>
-          <Col md={6} className="mr-right">
-            <p>09:59</p>
-          </Col>
         </Row>
         <Row>
           <Col md={12}>

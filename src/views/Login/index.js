@@ -1,14 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, lazy, useEffect } from "react";
 import Otprightimg from "../../assets/images/Otpright.svg";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 
 import api from "../../utils/axios";
-import LoginPage from "./LoginPage/Login";
-import VerifyLoginOtp from "./VerifyOtp/VerifyOtp";
+
 import { encryptPassword } from "../../utils/Utils";
-import { dashboardPaths } from "../../utils/RoutingConstants";
+import {
+  dashboardPaths,
+  LoginAndRegisterPagePaths,
+} from "../../utils/RoutingConstants";
 import LoginValidation from "./LoginValidation";
+
+const LoginPage = lazy(() => import("./LoginPage/Login"));
+const VerifyLoginOtp = lazy(() => import("./VerifyOtp/VerifyOtp"));
 
 const Login = () => {
   const [viewCompoment, setViewComponent] = useState("LoginPage");
@@ -23,9 +28,11 @@ const Login = () => {
 
   const [errorToast, setErrorToast] = useState("");
   const [validationError, setValidationError] = useState({});
+  const [passwordType, setPasswordType] = useState("password");
   const history = useHistory();
   let baseUrl = "https://api-uat.life99.in/";
 
+  // set value for login
   const handleLoginValues = (field, value) => {
     let tempLoginUserData = { ...loginUserData };
     tempLoginUserData[field] = value;
@@ -33,22 +40,45 @@ const Login = () => {
     handleValidation();
   };
 
+  // login page validation
   const handleValidation = () => {
     let LoginValidationError = LoginValidation(loginUserData, viewCompoment);
     setValidationError(LoginValidationError);
     return LoginValidationError;
   };
 
+  // turn on and off opt switch as per Api response
+  const handleOtpSwitchOffOn = (message, type) => {
+    setLoginUserData({ ...loginUserData, otpBased: type });
+    setErrorToast(message);
+  };
+
+  // send request for login otp and forget password otp
   const handleSentOtp = async () => {
     let userEmail = { emailId: loginUserData.email };
-    await api(baseUrl).post("api-mdm/auth/send-login-otp", userEmail);
+    await api(baseUrl)
+      .post("api-mdm/auth/send-login-otp", userEmail)
+      .then((res) =>
+        res.data.statusCode !== "404" && res.data.status == "Failure"
+          ? handleOtpSwitchOffOn(res.data.message, false)
+          : handleOtpSwitchOffOn("", true)
+      )
+      .catch((res) =>
+        handleOtpSwitchOffOn(Object.values(res)["2"]["data"]["message"], false)
+      );
   };
 
+  // works on switch for login with otp
   const handleOtpLogin = async () => {
-    setLoginUserData({ ...loginUserData, otpBased: !loginUserData.otpBased });
-    !loginUserData.otpBased && handleSentOtp();
+    if (handleValidation()["email"] == undefined) {
+      !loginUserData.otpBased && handleSentOtp();
+    }
+    if (loginUserData.otpBased) {
+      setLoginUserData({ ...loginUserData, otpBased: false });
+    }
   };
 
+  // login
   const handleLoginUser = async () => {
     if (Object.keys(handleValidation()).length === 0) {
       loginUserData["password"] = encryptPassword(loginUserData["password"]);
@@ -63,6 +93,7 @@ const Login = () => {
     }
   };
 
+  // prompt user to fill passoword when clicked on forget password with emial
   const handleForgetPassword = async (pageView) => {
     if (loginUserData.email === "") {
       setValidationError({ ...validationError, email: "Please fill email" });
@@ -73,16 +104,24 @@ const Login = () => {
     }
   };
 
+  // check jwd token and redirect user to login page
   const handleVerifyOtpToken = async (otpToken) => {
     let otpTokenVerifier = { forgotPasswordToken: otpToken };
     await api(baseUrl)
       .post("api-mdm/auth/verify-forgot-password-token", otpTokenVerifier)
-      .then((res) => res.data.statusCode === 200 && console.log(res.data))
+      .then((res) => {
+        res.data.status === "Valid Token" &&
+          history.push({
+            pathname: LoginAndRegisterPagePaths["UpdatePassword"],
+            state: { token: res.data.token },
+          });
+      })
       .catch((res) =>
         setErrorToast(Object.values(res)["2"]["data"]["message"])
       );
   };
 
+  // sends otp when click on forget password
   const handleForgetPasswordOtp = async () => {
     if (otpValue !== "") {
       let forgetOtpVerfiyObj = {
@@ -100,6 +139,11 @@ const Login = () => {
     }
   };
 
+  // show and hides passoword
+  const handlePasswordShowHide = (type) => {
+    type == "show" ? setPasswordType("text") : setPasswordType("password");
+  };
+
   return (
     <>
       <section className="signupmain">
@@ -113,6 +157,8 @@ const Login = () => {
               handleLoginUser={handleLoginUser}
               errorToast={errorToast}
               validationError={validationError}
+              passwordType={passwordType}
+              handlePasswordShowHide={handlePasswordShowHide}
             />
           )}
           {viewCompoment === "ForgetPassword" && (

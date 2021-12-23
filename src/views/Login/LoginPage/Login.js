@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Container, Input, Label, Row } from "reactstrap";
-import { Switch, Button } from "@mui/material";
+import { Switch, Button, Link } from "@mui/material";
+import { useHistory } from "react-router-dom";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 import Life99Logo from "../../../assets/images/Life99Logo.svg";
+import { LoginAndRegisterPagePaths } from "../../../utils/RoutingConstants";
 
 const LoginPage = ({
   loginUserData,
@@ -12,7 +16,10 @@ const LoginPage = ({
   handleLoginUser,
   errorToast,
   validationError,
+  handlePasswordShowHide,
+  passwordType,
 }) => {
+  const history = useHistory();
   return (
     <>
       <Container>
@@ -37,7 +44,6 @@ const LoginPage = ({
               <Input
                 type="text"
                 name="mobemail"
-                autocomplete="off"
                 onChange={(e) => handleLoginValues("email", e.target.value)}
                 value={loginUserData.email}
               />
@@ -49,13 +55,24 @@ const LoginPage = ({
               <Col md={6}>
                 <Label>Password</Label>
                 <Input
-                  type="password"
+                  type={passwordType}
                   name="passoword"
                   onChange={(e) =>
                     handleLoginValues("password", e.target.value)
                   }
                   value={loginUserData.password}
                 />
+
+                {passwordType === "password" ? (
+                  <VisibilityOffIcon
+                    onClick={() => handlePasswordShowHide("show")}
+                  />
+                ) : (
+                  <RemoveRedEyeIcon
+                    onClick={() => handlePasswordShowHide("hide")}
+                  />
+                )}
+
                 <p>{validationError && validationError["password"]}</p>
               </Col>
             </Row>
@@ -97,10 +114,17 @@ const LoginPage = ({
           </Row>
 
           <Row className="mt-4">
-            <Col md={12}>
+            <Col md={4}>
               <div className="loginotptitle">
                 <h4>Login with OTP</h4>
-                <Switch onClick={(e) => handleOtpLogin()} />
+                <Switch
+                  disabled={loginUserData.email == ""}
+                  checked={loginUserData.otpBased}
+                  onClick={(e) => handleOtpLogin()}
+                />
+                {loginUserData.email == "" && (
+                  <Button onClick={(e) => handleOtpLogin()}></Button>
+                )}
               </div>
             </Col>
           </Row>
@@ -119,9 +143,13 @@ const LoginPage = ({
             <Col md={12}>
               <div className="reg_text">
                 New user?{" "}
-                <a href="/">
+                <Link
+                  onClick={() =>
+                    history.push(LoginAndRegisterPagePaths.RegisterPage)
+                  }
+                >
                   <b>Register now</b>
-                </a>
+                </Link>
               </div>
             </Col>
           </Row>
