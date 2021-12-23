@@ -60,7 +60,7 @@ const Login = () => {
           setErrorToast(Object.values(res)["2"]["data"]["message"])
         );
     }
-  };
+  }; 
 
   const handleForgetPassword = async (pageView) => {
     if (loginUserData.email === "") {
