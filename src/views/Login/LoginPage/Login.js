@@ -47,7 +47,7 @@ const LoginPage = ({
             <Col md={6}>
               <Label>Password</Label>
               <Input
-                type="text"
+                type="password"
                 name="passoword"
                 onChange={(e) => handleLoginValues("password", e.target.value)}
               />
