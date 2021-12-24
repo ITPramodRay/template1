@@ -3,6 +3,7 @@ import { Col, Container, Row } from "reactstrap";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { testimonialCms } from "../landingCMS";
 
 import User1 from "../../../assets/images/user1.svg";
 
@@ -45,69 +46,6 @@ const Testimonial = () => {
               containerClass="carousel-container"
               responsive={responsive}
             >
-<<<<<<< HEAD
-              <div className="">
-                <Container>
-                  <div className="users-block">
-                    <p className="saying">
-                      Our entire team is on the same page and moves faster. Slite lets
-                      LogDNA staff operate as a
-              </p>
-                    <p className="saying">
-                      single team across multiple timezones and functions
-              </p>
-                    <div className="d-flex user-information">
-                      <div className="user-image">
-                        <img src={User1} alt="user" title="title" />
-                      </div>
-                      <div className="user-detail">
-                        <p className="user-name">Ashish Kashyap</p>
-                        <p className="user-position">
-                          Co-Founder & CEO <br /> INDWealth
-                  </p>
-                      </div>
-                    </div>
-                  </div>
-                </Container>
-              </div>
-              <div className="">
-                <Container>
-                  <div className="users-block">
-                    <p className="saying">
-                      Our entire team is on the same page and moves faster. Slite lets
-                      LogDNA staff operate as a
-              </p>
-                    <p className="saying">
-                      single team across multiple timezones and functions
-              </p>
-                    <div className="d-flex user-information">
-                      <div className="user-image">
-                        <img src={User1} alt="user" title="title" />
-                      </div>
-                      <div className="user-detail">
-                        <p className="user-name">Ashish Kashyap</p>
-                        <p className="user-position">
-                          Co-Founder & CEO <br /> INDWealth
-                  </p>
-                      </div>
-                    </div>
-                  </div>
-                </Container>
-              </div>
-              <div className="">
-                <Container>
-                  <div className="users-block">
-                    <p className="saying">
-                      Our entire team is on the same page and moves faster. Slite lets
-                      LogDNA staff operate as a
-              </p>
-                    <p className="saying">
-                      single team across multiple timezones and functions
-              </p>
-                    <div className="d-flex user-information">
-                      <div className="user-image">
-                        <img src={User1} alt="user" title="title" />
-=======
               {testimonialCms.cards.map((value, key) => {
                 return (
                   <div className="" key={key}>
@@ -132,66 +70,11 @@ const Testimonial = () => {
                             </p>
                           </div>
                         </div>
->>>>>>> 523186d152efc0c596d6ed3abc525be772dedd66
                       </div>
-                      <div className="user-detail">
-                        <p className="user-name">Ashish Kashyap</p>
-                        <p className="user-position">
-                          Co-Founder & CEO <br /> INDWealth
-                  </p>
-                      </div>
-                    </div>
+                    </Container>
                   </div>
-                </Container>
-              </div>
-              <div className="">
-                <Container>
-                  <div className="users-block">
-                    <p className="saying">
-                      Our entire team is on the same page and moves faster. Slite lets
-                      LogDNA staff operate as a
-              </p>
-                    <p className="saying">
-                      single team across multiple timezones and functions
-              </p>
-                    <div className="d-flex user-information">
-                      <div className="user-image">
-                        <img src={User1} alt="user" title="title" />
-                      </div>
-                      <div className="user-detail">
-                        <p className="user-name">Ashish Kashyap</p>
-                        <p className="user-position">
-                          Co-Founder & CEO <br /> INDWealth
-                  </p>
-                      </div>
-                    </div>
-                  </div>
-                </Container>
-              </div>
-              <div className="">
-                <Container>
-                  <div className="users-block">
-                    <p className="saying">
-                      Our entire team is on the same page and moves faster. Slite lets
-                      LogDNA staff operate as a
-              </p>
-                    <p className="saying">
-                      single team across multiple timezones and functions
-              </p>
-                    <div className="d-flex user-information">
-                      <div className="user-image">
-                        <img src={User1} alt="user" title="title" />
-                      </div>
-                      <div className="user-detail">
-                        <p className="user-name">Ashish Kashyap</p>
-                        <p className="user-position">
-                          Co-Founder & CEO <br /> INDWealth
-                  </p>
-                      </div>
-                    </div>
-                  </div>
-                </Container>
-              </div>
+                );
+              })}
 
             </Carousel>;
         </div>

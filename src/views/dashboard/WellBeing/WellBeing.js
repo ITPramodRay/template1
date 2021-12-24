@@ -1,5 +1,7 @@
 import React from 'react';
 import AppDownload from '../../common/AppDownload/AppDownload';
+import AppDownloadMV from '../../common/AppDownload/AppDownloadMV';
+import AppDownloadPC from '../../common/AppDownload/AppDownloadPC';
 import Footer from '../../common/Footer/Footer';
 
 import CardHead from './CardHead/CardHead';
@@ -27,8 +29,9 @@ export default function WellBeing({ ...props }) {
           <PhysicalWellbeing />
           <EmotionalMentalWellbeing />
           <Others />
+          <AppDownloadMV/>
         </div>
-        <AppDownload />
+        <AppDownloadPC />
         <Footer/>
     </>
   );
