@@ -8,7 +8,7 @@ import Linkedin from "../../../assets/images/LinkedIN.svg";
 import Youtube from "../../../assets/images/Youtube.svg";
 import Twitter from "../../../assets/images/Twitter.svg";
 
-export default class Faq extends Component {
+export default class Footer extends Component {
   render() {
     return (
       <Fragment>
@@ -24,7 +24,7 @@ export default class Faq extends Component {
                       className="img-fluid foooter-logo"
                     />
                   </Col>
-                  <Col sm={2}>
+                  <Col sm={3}>
                     <Link to="#" className="footer-link">
                       Dashboard
                     </Link>

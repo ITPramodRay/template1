@@ -43,8 +43,8 @@ const Mainbanner = () => {
             <div className="slider-block">
               <div className="section banner-section">
                 <Container className="retirement-container">
-                  <Row className="title-row retirment-row  align-items-center">
-                    <Col sm={7} className="">
+                  <Row className="retirment-row  align-items-center">
+                    <Col sm={7} className="p-0">
                       <Carousel
                         additionalTransfrom={0}
                         arrows={false}

@@ -16,7 +16,7 @@ const Banner = () => {
             <Fragment>
                 <div className="section banner-section">
                     <Container className='retirement-container'>
-                        <Row className="title-row retirment-row  align-items-center">
+                        <Row className="retirment-row  align-items-center">
                             <Col sm={7} className=''>
                                 <h1 className="banner-text">
                                     Be smart with<br />
@@ -72,14 +72,10 @@ const Banner = () => {
                                     </Col>
                                 </Row>
                             </Col>
-
                         </Row>
-
                     </Container>
-
                 </div>
             </Fragment >
-
         );
     
 }
