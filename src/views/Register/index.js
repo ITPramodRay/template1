@@ -126,6 +126,9 @@ const SignUp = () => {
 
   const setPassword = (password, confirmPassword) => {
     if(password !== confirmPassword){
+      if(password.length<=8){
+        setError("password should be 8 characters long")
+      }
       setError("password and re-enter password must be same")
       return
     }
