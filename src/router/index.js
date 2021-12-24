@@ -16,7 +16,12 @@ const Invest = React.lazy(() =>
 const WellBeing = React.lazy(() =>
   import("../views/dashboard/WellBeing/WellBeing")
 );
-
+const error404 = React.lazy(() =>
+  import("../views/common/Error/Error404")
+);
+const InternetError = React.lazy(() =>
+  import("../views/common/Error/InternetError")
+);
 
 function WaitingComponent(Component) {
   return (props) => (
@@ -41,6 +46,16 @@ export default function AppRouter({ ...props }) {
     {
       path: "/dashboard/invest",
       component: WaitingComponent(Invest),
+      exact: true,
+    },
+    {
+      path: "/404error",
+      component: WaitingComponent(error404),
+      exact: true,
+    },
+    {
+      path: "/interneterror",
+      component: WaitingComponent(InternetError),
       exact: true,
     },
   ];
