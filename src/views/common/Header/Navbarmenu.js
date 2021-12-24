@@ -7,6 +7,7 @@ import {
   NavbarBrand,
   NavItem,
   NavLink,
+  Col,
   Row,
 } from "reactstrap";
 import { Link } from "react-router-dom"
@@ -56,6 +57,7 @@ const Navbarmenu = () => {
       <div className="headermain">
         <Container>
           <Row>
+            <Col md={12}>
             <Navbar expand="md">
               <NavbarBrand href="/" className="logoimg">
                 <svg
@@ -138,6 +140,7 @@ const Navbarmenu = () => {
                 {links.map(createNavItem)}
               </Nav>
             </Navbar>
+            </Col>
           </Row>
         </Container>
       </div>

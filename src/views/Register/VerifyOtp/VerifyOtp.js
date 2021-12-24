@@ -49,12 +49,12 @@ const VerifyOtp = ({ verifyOtp, setOtp, otp, err }) => {
                   </Col>   */}
           </Row>
           <Row className="resentotp">
-            <Col md={5}>
+            <div className="col-md-9 col-9" >
               <a href="#">Resent OTP</a>
-            </Col>
-            <Col md={2} className="mr-right">
+            </div>
+            <div className="mr-right col-md-3 col-3">
               <p>09:59</p>
-            </Col>
+            </div>
           </Row>
           <Row>
             <Col md={12}>
