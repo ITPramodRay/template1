@@ -3,7 +3,7 @@ import { Container, Row, Col, Form, Input } from "reactstrap";
 
 import Life99Logo from "../../../assets/images/Life99Logo.svg";
 import OtpInput from "react-otp-input";
-
+import Timer from "../../common/timer";
 const VerifyOtp = ({ verifyOtp, setOtp, otp, err }) => {
   return (
     <>
@@ -36,7 +36,10 @@ const VerifyOtp = ({ verifyOtp, setOtp, otp, err }) => {
               <a href="#">Resent OTP</a>
             </div>
             <div className="mr-right col-md-3 col-3">
-              <p>09:59</p>
+              
+                <p><Timer/></p>
+
+              
             </div>
           </Row>
           <Row>
