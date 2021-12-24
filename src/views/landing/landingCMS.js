@@ -119,7 +119,6 @@ export const testimonialCms = {
                 companyName: "INDWealth"
             },
            backgroundColor: "#E4C9EC"
-
           }
     ]
 }

@@ -28,7 +28,7 @@ const Timer = (props) => {
         <>
         { minutes === 0 && seconds === 0
             ? null
-            : <p> {minutes}:{seconds < 10 ?  `0${seconds}` : seconds}</p> 
+            : <p className='timer_text'> {minutes}:{seconds < 10 ?  `0${seconds}` : seconds}</p> 
         }
         </>
     )
