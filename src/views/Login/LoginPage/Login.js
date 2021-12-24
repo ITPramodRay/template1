@@ -21,7 +21,6 @@ const LoginPage = ({
   passwordType,
   timer,
 }) => {
-  console.log(timer);
   const history = useHistory();
   return (
     <>
@@ -50,7 +49,9 @@ const LoginPage = ({
                 onChange={(e) => handleLoginValues("email", e.target.value)}
                 value={loginUserData.email}
               />
-              <p>{validationError && validationError["email"]}</p>
+              <p className="error_text">
+                {validationError && validationError["email"]}
+              </p>
             </Col>
           </Row>
           {loginUserData.otpBased === false ? (
@@ -76,7 +77,9 @@ const LoginPage = ({
                   />
                 )}
 
-                <p>{validationError && validationError["password"]}</p>
+                <p className="error_text">
+                  {validationError && validationError["password"]}
+                </p>
               </Col>
             </Row>
           ) : (
@@ -89,7 +92,9 @@ const LoginPage = ({
                   onChange={(e) => handleLoginValues("otp", e.target.value)}
                   value={loginUserData.otp}
                 />
-                <p>{validationError && validationError["otp"]}</p>
+                <p className="error_text">
+                  {validationError && validationError["otp"]}
+                </p>
               </Col>
             </Row>
           )}
@@ -114,11 +119,11 @@ const LoginPage = ({
                 </>
               )}
             </Col>
-            <Col>
+            <Col md={4}>
               {timer && loginUserData.otpBased && (
-                <p>
+                <Link>
                   <Timer />
-                </p>
+                </Link>
               )}
             </Col>
           </Row>

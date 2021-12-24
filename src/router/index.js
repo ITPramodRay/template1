@@ -6,15 +6,10 @@ import { landingPageRouters } from "../views/landing/LandingRouter";
 import { dashboardPageRouters } from "../views/dashboard/dashboardRouters";
 import { loginAndRegisterPageRouters } from "../views/Register/RegisteRouter";
 import { loginPageRouters } from "../views/Login/LoginRouter";
+// import { errorPageRouters } from "../views/common/Error/ErrorRoutes";
 import LoaderWrapper from "./loaderWrapper";
 import ScrollToTop from "./scrollToTop";
 import PrivateRoute from "./PrivateRoute";
-
-const LandingPage = React.lazy(() => import("../views/landing"));
-const Invest = React.lazy(() => import("../views/dashboard/Invest/Invest"));
-const WellBeing = React.lazy(() =>
-  import("../views/dashboard/WellBeing/WellBeing")
-);
 
 function WaitingComponent(Component) {
   return (props) => (
@@ -29,6 +24,7 @@ export default function AppRouter({ ...props }) {
     ...landingPageRouters,
     ...loginAndRegisterPageRouters,
     ...loginPageRouters,
+    // ...errorPageRouters,
   ];
 
   let allPrivateRoutes = [...dashboardPageRouters];

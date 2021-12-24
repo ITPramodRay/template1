@@ -76,20 +76,34 @@
     }
   }
 }
-.AppbannerMV{
-  margin: 1.5rem !important;
-  background-image: url(../images/AppBanner_mobile-01.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  color: #fff;
-    h2{
+
+.AppbannerMV {
+  position: relative;
+  .appbanner_mv_bg {
+    width: 100%;
+  }
+  .data_app_banner {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    display: flex;
+    h4 {
       font-weight: 600;
       font-size: 22px;
-    } 
-   .btn_div{
-    img{
-      width: 60px;
+      color: #ffffff;
     }
-   }
+    .img_btn{
+      display: flex;
+      gap: 20px;
+      img{
+        width: 80px;
+      }
+    }
+  }
+}
+.error_text{
+  font-size: 1rem;
+  color: red  ;
 }
