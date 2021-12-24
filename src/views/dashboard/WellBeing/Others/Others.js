@@ -52,6 +52,47 @@ const Others = () => {
           </div>
         </div>
       </div>
+
+      {/* mobile view */}
+      <div className='OtherSlider mobileView mb-0'>
+        <p className='title'>Explore Other categories</p>
+        <div className=' row'>
+          <div className=' col-12'>
+            <Swiper slidesPerView={1.2} spaceBetween={30} className='mySwiper'>
+              <SwiperSlide>
+                <div className='OtherSlider_img'>
+                  <img src={Otherslider}></img>
+                  <h2>Senior Care</h2>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className='OtherSlider_img'>
+                  <img src={Otherslider}></img>
+                  <h2>Senior Care</h2>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className='OtherSlider_img'>
+                  <img src={Otherslider}></img>
+                  <h2>Senior Care</h2>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className='OtherSlider_img'>
+                  <img src={Otherslider}></img>
+                  <h2>Senior Care</h2>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className='OtherSlider_img'>
+                  <img src={Otherslider}></img>
+                  <h2>Senior Care</h2>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

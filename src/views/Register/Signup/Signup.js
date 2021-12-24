@@ -12,7 +12,6 @@ const SignUp = ({ handleSetRegister, registerUser, err }) => {
           <Col md={12}>
             <div className="Logo">
               <img src={Life99Logo} alt="Life99" title="Life99" />
-              <h6 style={{ color: "red" }}>{err}</h6>
             </div>
           </Col>
           <Col md={12}>
@@ -31,6 +30,7 @@ const SignUp = ({ handleSetRegister, registerUser, err }) => {
                 name="firstname"
                 onChange={(e) => handleSetRegister("firstName", e.target.value)}
               />
+              <h6 className="error_text"></h6>
             </Col>
             <Col md={6}>
               <Label>Last Name</Label>
@@ -39,6 +39,7 @@ const SignUp = ({ handleSetRegister, registerUser, err }) => {
                 name="lastname"
                 onChange={(e) => handleSetRegister("lastName", e.target.value)}
               />
+              <h6 className="error_text"></h6>
             </Col>
           </Row>
           <Row>
@@ -49,6 +50,7 @@ const SignUp = ({ handleSetRegister, registerUser, err }) => {
                 name="mobemail"
                 onChange={(e) => handleSetRegister("mobEmail", e.target.value)}
               />
+              <h6 className="error_text">{err}</h6>
             </Col>
             <Col md={6}>
               <Label>Age</Label>
@@ -57,6 +59,7 @@ const SignUp = ({ handleSetRegister, registerUser, err }) => {
                 name="age"
                 onChange={(e) => handleSetRegister("age", e.target.value)}
               />
+              <h6 className="error_text"></h6>
             </Col>
           </Row>
 
@@ -68,6 +71,7 @@ const SignUp = ({ handleSetRegister, registerUser, err }) => {
                 name="mobemail"
                 onChange={(e) => handleSetRegister("mobile", e.target.value)}
               />
+              <h6 className="error_text"></h6>
             </Col>
             <Col md={6}>
               <Label>Income</Label>
@@ -76,6 +80,7 @@ const SignUp = ({ handleSetRegister, registerUser, err }) => {
                 name="income"
                 onChange={(e) => handleSetRegister("income", e.target.value)}
               />
+              <h6 className="error_text"></h6>
             </Col>
           </Row>
           <Row>

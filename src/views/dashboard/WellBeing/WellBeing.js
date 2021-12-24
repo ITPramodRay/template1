@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 
-const AppDownload = lazy(() => import("../../common/AppDownload/AppDownload"));
+const AppDownloadPC = lazy(() => import("../../common/AppDownload/AppDownloadPC"));
+const AppDownloadMV = lazy(() => import("../../common/AppDownload/AppDownloadMV"));
 const Footer = lazy(() => import("../../common/Footer/Footer"));
 
 const CardHead = lazy(() => import("./CardHead/CardHead"));
@@ -55,9 +56,12 @@ export default function WellBeing({ ...props }) {
         <Suspense>
           <Others />
         </Suspense>
+        <Suspense>
+        <AppDownloadMV />
+      </Suspense>
       </div>
       <Suspense>
-        <AppDownload />
+        <AppDownloadPC />
       </Suspense>
 
       <Footer />
