@@ -5,6 +5,8 @@ export const LoginAndRegisterPagePaths = {
   loginPage: "/login",
   forgetPassword: "/forgetpassword",
   RegisterPage: "/register",
+  verifyOtp: "/register/verifyOtp",
+  setPassword: "/register/setPassword",
   UpdatePassword: "/updatePassword",
 };
 
