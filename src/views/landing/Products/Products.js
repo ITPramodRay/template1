@@ -16,13 +16,13 @@ const Products = () => {
       <div className="section products-section">
         <Container>
           <Row className="title-row align-items-center">
-            <Col sm={10}>
+            <Col sm={10} lg={9}>
               <h3 className="title-text">
                 Range of investment
                 <br /> products for all your needs
               </h3>
             </Col>
-            <Col sm={2} className="text-right">
+            <Col sm={2} lg={3} className="text-right">
               <Button className="explore-btn">Explore Now</Button>
             </Col>
           </Row>

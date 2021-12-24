@@ -11,7 +11,7 @@ const Ads = () => {
       <div className="section retirment-section">
         <Container className="retirement-container">
           <Row className="title-row retirment-row  align-items-center">
-            <Col sm={8} className="mx-auto">
+            <Col sm={8} lg={8} className="mx-auto">
               <img
                 src={Curve}
                 alt="Curve"
