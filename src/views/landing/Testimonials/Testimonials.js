@@ -45,6 +45,7 @@ const Testimonial = () => {
               containerClass="carousel-container"
               responsive={responsive}
             >
+<<<<<<< HEAD
               <div className="">
                 <Container>
                   <div className="users-block">
@@ -106,6 +107,32 @@ const Testimonial = () => {
                     <div className="d-flex user-information">
                       <div className="user-image">
                         <img src={User1} alt="user" title="title" />
+=======
+              {testimonialCms.cards.map((value, key) => {
+                return (
+                  <div className="" key={key}>
+                    <Container>
+                      <div
+                        className="users-block"
+                        style={{ backgroundColor: `${value.backgroundColor}` }}
+                      >
+                        <p className="saying">{value.saying1}</p>
+                        <p className="saying">{value.saying2}</p>
+                        <div className="d-flex user-information">
+                          <div className="user-image">
+                            <img src={User1} alt="user" title="title" />
+                          </div>
+                          <div className="user-detail">
+                            <p className="user-name">
+                              {value.userDetails.name}
+                            </p>
+                            <p className="user-position">
+                              {value.userDetails.position} <br />{" "}
+                              {value.userDetails.companyName}
+                            </p>
+                          </div>
+                        </div>
+>>>>>>> 523186d152efc0c596d6ed3abc525be772dedd66
                       </div>
                       <div className="user-detail">
                         <p className="user-name">Ashish Kashyap</p>
