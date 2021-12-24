@@ -30,7 +30,7 @@ const Login = () => {
   const [errorToast, setErrorToast] = useState("");
   const [validationError, setValidationError] = useState({});
   const [passwordType, setPasswordType] = useState("password");
-  const [timer, setTimer] = useState({ minutes: 10, seconds: 0 });
+  const [timer, setTimer] = useState(false);
   const history = useHistory();
   let baseUrl = "https://api-uat.life99.in/";
 
@@ -53,7 +53,7 @@ const Login = () => {
   const handleOtpSwitchOffOn = (message, type) => {
     setLoginUserData({ ...loginUserData, otpBased: type });
     setErrorToast(message);
-    setInterval(timerCountDown, 1000);
+    type && setTimer(true);
   };
 
   // send request for login otp and forget password otp
@@ -154,25 +154,6 @@ const Login = () => {
     type == "show" ? setPasswordType("text") : setPasswordType("password");
   };
 
-  const timerCountDown = () => {
-    let tempTimer = { ...timer };
-    if (tempTimer.seconds > 0) {
-      tempTimer.seconds = tempTimer.seconds - 1;
-    }
-    if (tempTimer.seconds === 0) {
-      if (tempTimer.minutes === 0) {
-        clearInterval(timerCountDown);
-        tempTimer.minutes = 10;
-        tempTimer.seconds = 0;
-      } else {
-        clearInterval(timerCountDown);
-        tempTimer.minutes = tempTimer.minutes - 1;
-        tempTimer.seconds = 59;
-      }
-    }
-    setTimer(tempTimer);
-  };
-
   return (
     <>
       <section className="signupmain">
@@ -198,6 +179,7 @@ const Login = () => {
               setOtpValue={setOtpValue}
               handleSentOtp={handleSentOtp}
               errorToast={errorToast}
+              timer={timer}
             />
           )}
         </div>

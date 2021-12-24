@@ -1,12 +1,9 @@
 import React from "react";
 import { Col, Container, Row } from "reactstrap";
-
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
 import User1 from "../../../assets/images/user1.svg";
 import { testimonialCms } from "../landingCMS";
-
 const Testimonial = () => {
   const responsive = {
     superLargeDesktop: {
@@ -75,12 +72,10 @@ const Testimonial = () => {
                 );
               })}
             </Carousel>
-            ;
           </div>
         </Container>
       </div>
     </>
   );
 };
-
 export default Testimonial;

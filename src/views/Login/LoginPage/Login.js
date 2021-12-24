@@ -7,6 +7,7 @@ import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 import Life99Logo from "../../../assets/images/Life99Logo.svg";
 import { LoginAndRegisterPagePaths } from "../../../utils/RoutingConstants";
+import Timer from "../../common/timer";
 
 const LoginPage = ({
   loginUserData,
@@ -114,7 +115,11 @@ const LoginPage = ({
               )}
             </Col>
             <Col>
-              <p>{`${timer.minutes}:${timer.seconds}`}</p>
+              {timer && loginUserData.otpBased && (
+                <p>
+                  <Timer />
+                </p>
+              )}
             </Col>
           </Row>
 
