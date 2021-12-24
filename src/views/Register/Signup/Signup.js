@@ -2,9 +2,9 @@ import React from "react";
 import { Container, Row, Col, Form, Input, Label } from "reactstrap";
 
 import Life99Logo from "../../../assets/images/Life99Logo.svg";
-import {Link} from 'react-router-dom'
-const SignUp = ({ handleSetRegister,registerUser,err }) => {
-  
+import { Link } from "react-router-dom";
+import Timer from "../../common/timer";
+const SignUp = ({ handleSetRegister, registerUser, err }) => {
   return (
     <>
       <Container>
@@ -12,7 +12,7 @@ const SignUp = ({ handleSetRegister,registerUser,err }) => {
           <Col md={12}>
             <div className="Logo">
               <img src={Life99Logo} alt="Life99" title="Life99" />
-              <h6 style={{color:"red"}}>{err}</h6>
+              <h6 style={{ color: "red" }}>{err}</h6>
             </div>
           </Col>
           <Col md={12}>
@@ -59,7 +59,16 @@ const SignUp = ({ handleSetRegister,registerUser,err }) => {
               />
             </Col>
           </Row>
+
           <Row>
+            <Col md={6}>
+              <Label>Mobile number</Label>
+              <Input
+                type="text"
+                name="mobemail"
+                onChange={(e) => handleSetRegister("mobile", e.target.value)}
+              />
+            </Col>
             <Col md={6}>
               <Label>Income</Label>
               <Input

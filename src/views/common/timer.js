@@ -1,37 +1,37 @@
-import React,{useRef} from "react";
+import React from 'react'
+import { useState, useEffect } from 'react';
 
-function Timer() {
-    const timerRef = useRef(null)
-  function countdown(elementName, minutes, seconds) {
-    var element, endTime, hours, mins, msLeft, time;
+const Timer = (props) => {
+    const {initialMinute = 0,initialSeconds = 0} = props;
+    const [ minutes, setMinutes ] = useState(10);
+    const [seconds, setSeconds ] =  useState(initialSeconds);
+    useEffect(()=>{
+    let myInterval = setInterval(() => {
+            if (seconds > 0) {
+                setSeconds(seconds - 1);
+            }
+            if (seconds === 0) {
+                if (minutes === 0) {
+                    clearInterval(myInterval)
+                } else {
+                    setMinutes(minutes - 1);
+                    setSeconds(59);
+                }
+            } 
+        }, 1000)
+        return ()=> {
+            clearInterval(myInterval);
+          };
+    });
 
-    function twoDigits(n) {
-      return n <= 9 ? "0" + n : n;
-    }
-
-    function updateTimer() {
-      msLeft = endTime - +new Date();
-      if (msLeft < 1000) {
-        timerRef.current.innerHTML = "Time is up!";
-      } else {
-        time = new Date(msLeft);
-        hours = time.getUTCHours();
-        mins = time.getUTCMinutes();
-        timerRef.current.innerHTML =
-          (hours ? hours + ":" + twoDigits(mins) : mins) +
-          ":" +
-          twoDigits(time.getUTCSeconds());
-        setTimeout(updateTimer, time.getUTCMilliseconds() + 500);
-      }
-    }
-
-    // element = document.getElementById(elementName);
-    endTime = +new Date() + 1000 * (60 * minutes + seconds) + 500;
-    updateTimer();
-  }
-
-  countdown("ten-countdown", 10, 0);
-  return <div ref={timerRef} id="ten-countdown"></div>;
+    return (
+        <>
+        { minutes === 0 && seconds === 0
+            ? null
+            : <p> {minutes}:{seconds < 10 ?  `0${seconds}` : seconds}</p> 
+        }
+        </>
+    )
 }
 
 export default Timer;

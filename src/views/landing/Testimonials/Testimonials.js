@@ -72,7 +72,6 @@ const Testimonial = () => {
                 );
               })}
             </Carousel>
-            ;
           </div>
         </Container>
       </div>

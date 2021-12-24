@@ -1,35 +1,66 @@
-import React from 'react';
-import AppDownload from '../../common/AppDownload/AppDownload';
-import Footer from '../../common/Footer/Footer';
+import React, { lazy, Suspense } from "react";
 
-import CardHead from './CardHead/CardHead';
-import EmotionalMentalWellbeing from './EmotionalMentalWellbeing/EmotionalMentalWellbeing';
-import ExclusiveFeatures from './ExclusiveFeatures/ExclusiveFeatures';
-import HealthArticles from './HealthArticles/HealthArticles';
-import HealthGoals from './HealthGoals/HealthGoals';
-import HealthScore from './HealthScore/HealthScore';
-import HealthServices from './HealthServices/HealthServices';
-import Others from './Others/Others';
-import PhysicalWellbeing from './PhysicalWellbeing/PhysicalWellbeing';
+const AppDownload = lazy(() => import("../../common/AppDownload/AppDownload"));
+const Footer = lazy(() => import("../../common/Footer/Footer"));
+
+const CardHead = lazy(() => import("./CardHead/CardHead"));
+const EmotionalMentalWellbeing = lazy(() =>
+  import("./EmotionalMentalWellbeing/EmotionalMentalWellbeing")
+);
+const ExclusiveFeatures = lazy(() =>
+  import("./ExclusiveFeatures/ExclusiveFeatures")
+);
+const HealthArticles = lazy(() => import("./HealthArticles/HealthArticles"));
+const HealthGoals = lazy(() => import("./HealthGoals/HealthGoals"));
+const HealthScore = lazy(() => import("./HealthScore/HealthScore"));
+const HealthServices = lazy(() => import("./HealthServices/HealthServices"));
+const Others = lazy(() => import("./Others/Others"));
+const PhysicalWellbeing = lazy(() =>
+  import("./PhysicalWellbeing/PhysicalWellbeing")
+);
 
 export default function WellBeing({ ...props }) {
-  
   return (
     <>
-      
-        <CardHead/>
-        <div className='base_card_We'>
+      <CardHead />
+      <div className="base_card_We">
+        <Suspense>
           <HealthGoals />
+        </Suspense>
+
+        <Suspense>
           <HealthServices />
+        </Suspense>
+
+        <Suspense>
           <HealthArticles />
+        </Suspense>
+
+        <Suspense>
           <HealthScore />
+        </Suspense>
+
+        <Suspense>
           <ExclusiveFeatures />
+        </Suspense>
+
+        <Suspense>
           <PhysicalWellbeing />
+        </Suspense>
+
+        <Suspense>
           <EmotionalMentalWellbeing />
+        </Suspense>
+
+        <Suspense>
           <Others />
-        </div>
+        </Suspense>
+      </div>
+      <Suspense>
         <AppDownload />
-        <Footer/>
+      </Suspense>
+
+      <Footer />
     </>
   );
 }

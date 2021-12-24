@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Form, Input, Label } from "reactstrap";
+import { Button } from "@mui/material";
 
 import Life99Logo from "../../../assets/images/Life99Logo.svg";
 
-const SetPassword = ({ setPassword }) => {
+const SetPassword = ({ setPassword,err }) => {
   const [password, setPass] = useState(null);
   const [confirmPassword, setConfirmPassword] = useState(null);
   return (
@@ -13,7 +14,8 @@ const SetPassword = ({ setPassword }) => {
           <Col md={12}>
             <div className="Logo">
               <img src={Life99Logo} alt="Life99" title="Life99" />
-              <h2>Demo Text</h2>
+              <h6 style={{ color: "red" }}>{err}</h6>
+
             </div>
           </Col>
           <Col md={12}>
@@ -22,12 +24,12 @@ const SetPassword = ({ setPassword }) => {
             </div>
           </Col>
         </Row>
-        <Form className="setpassword">
+        <div className="setpassword">
           <Row>
             <Col md={6}>
               <Label>Enter Password</Label>
               <Input
-                type="password"
+                type="text"
                 name="password"
                 onChange={(e) => setPass(e.target.value)}
               />
@@ -37,7 +39,7 @@ const SetPassword = ({ setPassword }) => {
             <Col md={6}>
               <Label>Re-Enter Password</Label>
               <Input
-                type="password"
+                type="text"
                 name="repassword"
                 onChange={(e) => setConfirmPassword(e.target.value)}
               />
@@ -45,15 +47,13 @@ const SetPassword = ({ setPassword }) => {
           </Row>
           <Row>
             <Col md={12}>
-              <input
+              <Button
                 className="subbtn"
-                type="submit"
-                name="Submit"
                 onClick={() => setPassword(password, confirmPassword)}
-              />
+              >Submit</Button> 
             </Col>
           </Row>
-        </Form>
+        </div>
       </Container>
     </>
   );
