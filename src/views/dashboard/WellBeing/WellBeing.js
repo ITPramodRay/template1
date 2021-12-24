@@ -1,4 +1,6 @@
 import React from 'react';
+import AppDownload from '../../common/AppDownload/AppDownload';
+import Footer from '../../common/Footer/Footer';
 
 import CardHead from './CardHead/CardHead';
 import EmotionalMentalWellbeing from './EmotionalMentalWellbeing/EmotionalMentalWellbeing';
@@ -26,6 +28,8 @@ export default function WellBeing({ ...props }) {
           <EmotionalMentalWellbeing />
           <Others />
         </div>
+        <AppDownload />
+        <Footer/>
     </>
   );
 }

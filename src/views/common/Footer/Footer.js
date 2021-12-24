@@ -8,7 +8,7 @@ import Linkedin from "../../../assets/images/LinkedIN.svg";
 import Youtube from "../../../assets/images/Youtube.svg";
 import Twitter from "../../../assets/images/Twitter.svg";
 
-export default class Faq extends Component {
+export default class Footer extends Component {
   render() {
     return (
       <Fragment>
