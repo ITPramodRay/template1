@@ -18,7 +18,9 @@ const LoginPage = ({
   validationError,
   handlePasswordShowHide,
   passwordType,
+  timer,
 }) => {
+  console.log(timer);
   const history = useHistory();
   return (
     <>
@@ -92,7 +94,7 @@ const LoginPage = ({
           )}
 
           <Row>
-            <Col md={12}>
+            <Col md={6}>
               {loginUserData.otpBased === false ? (
                 <span>
                   <Button
@@ -110,6 +112,9 @@ const LoginPage = ({
                   </span>
                 </>
               )}
+            </Col>
+            <Col>
+              <p>{`${timer.minutes}:${timer.seconds}`}</p>
             </Col>
           </Row>
 

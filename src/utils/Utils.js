@@ -1,4 +1,5 @@
 import aesjs from "aes-js";
+import { storageFactory } from "storage-factory";
 
 const paddSpaces = (password) => {
   while (password.length < 16) {
@@ -21,3 +22,16 @@ export const encryptPassword = (password) => {
     return "";
   }
 };
+
+export const isLogin = () => {
+  let token = localStorage.getItem("loginToken");
+  console.log(token);
+  let checkLogin = false;
+  if (token !== undefined && token !== null) {
+    checkLogin = true;
+  }
+  console.log(checkLogin);
+  return checkLogin;
+};
+
+export const local = storageFactory(() => localStorage);

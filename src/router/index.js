@@ -8,15 +8,13 @@ import { loginAndRegisterPageRouters } from "../views/Register/RegisteRouter";
 import { loginPageRouters } from "../views/Login/LoginRouter";
 import LoaderWrapper from "./loaderWrapper";
 import ScrollToTop from "./scrollToTop";
+import PrivateRoute from "./PrivateRoute";
 
 const LandingPage = React.lazy(() => import("../views/landing"));
-const Invest = React.lazy(() =>
-  import("../views/dashboard/Invest/Invest")
-);
+const Invest = React.lazy(() => import("../views/dashboard/Invest/Invest"));
 const WellBeing = React.lazy(() =>
   import("../views/dashboard/WellBeing/WellBeing")
 );
-
 
 function WaitingComponent(Component) {
   return (props) => (
@@ -27,31 +25,13 @@ function WaitingComponent(Component) {
 }
 
 export default function AppRouter({ ...props }) {
-  const mainRoues = [
-    {
-      path: "/welcome",
-      component: WaitingComponent(LandingPage),
-      exact: true,
-    },
-    {
-      path: "/dashboard/wellBeing",
-      component: WaitingComponent(WellBeing),
-      exact: true,
-    },
-    {
-      path: "/dashboard/invest",
-      component: WaitingComponent(Invest),
-      exact: true,
-    },
-  ];
-
-  let allRoutes = [
-    ...mainRoues,
+  let allPublicRoutes = [
     ...landingPageRouters,
-    ...dashboardPageRouters,
     ...loginAndRegisterPageRouters,
     ...loginPageRouters,
   ];
+
+  let allPrivateRoutes = [...dashboardPageRouters];
 
   return (
     <div className="app-router">
@@ -60,10 +40,20 @@ export default function AppRouter({ ...props }) {
           <Router>
             <ScrollToTop>
               <Switch>
-                {allRoutes.map((value, index) => {
-               
+                {allPublicRoutes.map((value, index) => {
                   return (
                     <Route
+                      exact={value.exact}
+                      path={value.path}
+                      component={WaitingComponent(value.component)}
+                      key={index}
+                    />
+                  );
+                })}
+
+                {allPrivateRoutes.map((value, index) => {
+                  return (
+                    <PrivateRoute
                       exact={value.exact}
                       path={value.path}
                       component={WaitingComponent(value.component)}
