@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col, Form, Input, Label } from "reactstrap";
 
 import Life99Logo from "../../../assets/images/Life99Logo.svg";
-
+import {Link} from 'react-router-dom'
 const SignUp = ({ handleSetRegister,registerUser,err }) => {
   
   return (
@@ -90,7 +90,7 @@ const SignUp = ({ handleSetRegister,registerUser,err }) => {
           <Row>
             <Col md={12}>
               <div className="regalready">
-                Already On Life99? <a href="/">Login</a>
+                Already On Life99? <Link to="/login">Login</Link>
               </div>
             </Col>
           </Row>

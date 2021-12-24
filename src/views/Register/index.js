@@ -7,6 +7,7 @@ import Loading from "./Loading";
 import Otprightimg from "../../assets/images/Otpright.svg";
 import { Link } from "react-router-dom";
 import axios from "axios"
+import api from "../../utils/axios";
 
 const SignUp = () => {
   
@@ -27,6 +28,8 @@ const SignUp = () => {
 
   const [registerUserError, setRegisterUserError] = useState({});
   const [Otp, setOtp] = useState("");
+
+  let baseUrl = "https://api-uat.life99.in/";
 
   console.log(process.env.REACT_APP_API_DOMAIN,"this is the api domain")
   const registerUser = () => {
@@ -88,15 +91,15 @@ const SignUp = () => {
     axios.post("https://api-uat.life99.in/api-mdm/auth/verify-on-board-user-v2",data)
     .then(res=>{
       console.log(res.data)
-      setRegisterUserData({...registerUserData,temporaryIndividualId:res.data.userData.temporary_individual_id})
+      setRegisterUserData({...registerUserData,temporaryIndividualId:res?.data?.userData?.temporary_individual_id})
       setError("")
       setViewComponent("verifyOtp");
     })
     .catch(err=>{
-      console.log(err.response)
+      console.log(err,"this is error")
       setError(err.response.data.message.split(":")[1])
     })
-    // setViewComponent("verifyOtp");
+   
   }
 
   return (
