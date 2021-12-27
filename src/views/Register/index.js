@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import api from "../../utils/axios";
 import { useLocation,useHistory } from "react-router-dom";
+import validate from "../../utils/validation";
 import { local } from "../../utils/Utils";
 
 
@@ -138,12 +139,13 @@ const SignUp = () => {
   // This function will set the user password
   const setPassword = (password, confirmPassword) => {
     if (password !== confirmPassword) {
-      if (password.length <= 8) {
-        setError("password should be 8 characters long");
-      }
       setError("password and re-enter password must be same");
       return;
     }
+    if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password)) {
+      setError(" Password should be 8 character long and should contains each of the following :upper case letter, lower case letter, number, special character!!");
+      return;
+    } 
     console.log(registerUserData.individual_id, "this is the individual id");
     let data = {
       password: confirmPassword,
@@ -182,17 +184,27 @@ const SignUp = () => {
   const handleSetRegister = (field, value) => {
     let tempRegisterUser = { ...registerForm };
     tempRegisterUser[field] = value;
+    setError({...error, [field]:""})
     setRegisterForm(tempRegisterUser);
   };
 
   // This function will send the OTP to given mobile number or email address
   const handleRegistration = () => {
     console.log(registerForm, "this is the data");
+    let err = validate({
+      ...registerForm,
+      phone: registerForm.mobile,
+      email: registerForm.mobEmail
+    })
+    setError(err)
+
     let data = {
       email: registerForm.mobEmail,
       mobile: new Date().getTime(),
       isReferral: false,
     };
+    console.log(err,"these are the errors")
+    if (Object.entries(err).length === 0) {
     axios
       .post(
         "https://api-uat.life99.in/api-mdm/auth/verify-on-board-user-v2",
@@ -223,7 +235,7 @@ const SignUp = () => {
       .catch((err) => {
         console.log(err, "this is error");
         setError(err.response.data.message.split(":")[1]);
-      });
+      });}
   };
 
   return (

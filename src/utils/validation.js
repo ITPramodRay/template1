@@ -3,11 +3,11 @@ import validator from 'validator';
 
 export default function validate(formData) {
     const errors = {};
-    // console.log(formData, 'this is the formdata');
+    console.log(formData, 'this is the formdata');
     if (formData.email?.length <= 0) {
-        errors.email = 'Email address is required';
+        errors.mobEmail = 'Email address is required';
     } else if (!validator.isEmail(formData.email)) {
-        errors.email = 'Enter valid email';
+        errors.mobEmail = 'Enter valid email';
     }
     if (formData.termsAndCondition !== undefined && !formData.termsAndCondition) {
         errors.termsAndCondition = 'Please agree to terms and conditions';
@@ -21,11 +21,11 @@ export default function validate(formData) {
     }
 
     if (formData.firstName?.length <= 0) {
-        errors.firstname = 'Firt name is required';
+        errors.firstName = 'Firt name is required';
     }
     
     if (formData.lastName?.length <= 0) {
-        errors.lastname = ' Last name is required';
+        errors.lastName = ' Last name is required';
     }
     // if (!/^[a-zA-Z ]+$/.test(formData.yourName)) {
     //     errors.yourName = 'Name should only have alphabets';
@@ -35,15 +35,20 @@ export default function validate(formData) {
     // }
 
     
-
-    if (formData.phone && formData.phone && !/^\d*\.?\d*$/.test(formData.phone)) {
-        errors.phone = 'Mobile number must be in numbers';
+    if(formData.age?.length === 0){
+        errors.age = "Age is required"
     }
-    if (formData.phone && formData.phone?.length < 10) {
+    if(formData.income?.length === 0){
+        errors.income = "Income is required"
+    }
+    if (formData.phone !== undefined && !/^\d*\.?\d*$/.test(formData.phone)) {
+        errors.mobile = 'Mobile number must be in numbers';
+    }
+    if (formData.phone?.length < 10) {
         if (formData.phone?.length <= 0) {
-            errors.phone = 'Mobile number is required';
+            errors.mobile = 'Mobile number is required';
         } else {
-            errors.phone = 'Enter valid mobile number';
+            errors.mobile = 'Enter valid mobile number';
         }
     }
     return errors;
