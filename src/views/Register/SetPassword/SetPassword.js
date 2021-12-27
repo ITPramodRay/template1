@@ -49,6 +49,7 @@ const SetPassword = ({ setPassword,err }) => {
             <Col md={12}>
               <Button
                 className="subbtn"
+                variant="contained"
                 onClick={() => setPassword(password, confirmPassword)}
               >Submit</Button> 
             </Col>

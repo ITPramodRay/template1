@@ -8,10 +8,13 @@ import Otprightimg from "../../assets/images/Otpright.svg";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import api from "../../utils/axios";
-import { useLocation } from "react-router-dom";
+import { useLocation,useHistory } from "react-router-dom";
+import { local } from "../../utils/Utils";
+
 
 const SignUp = () => {
   const location = useLocation();
+  const history = useHistory();
   const [error, setError] = useState("");
   const [viewComponent, setViewComponent] = useState("signupForm");
   const [registerUserData, setRegisterUserData] = useState({
@@ -155,15 +158,21 @@ const SignUp = () => {
         data
       )
       .then((res) => {
+        setViewComponent("loading");
+
         setRegisterUserData({
           ...registerUserData,
           token: res?.data?.token,
         });
+        console.log(res.data,"this i the data")
+        local.setItem("loginToken", res?.data?.data?.token);
+        local.setItem("individualInfo", res?.data?.data?.individualInfo);
+        setTimeout(()=>history.push("/dashboard"),2500)
         setError("");
-        setViewComponent("loading");
+        
       })
       .catch((err) => {
-        setError(err?.response?.message);
+        setError(err?.response?.data?.message);
         console.log(err.response);
       });
   };
