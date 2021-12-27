@@ -22,10 +22,11 @@ const Plan = () => {
           </div>
         </div>
       </div>
+      <AppDownloadPC />
       <div className='desktopView'>
         <Footer />
       </div>
-      <AppDownloadPC />
+      
       
       <div className='base_card_We Plan_mv'>
         <GoalPlannerCard />
