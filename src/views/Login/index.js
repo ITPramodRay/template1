@@ -11,6 +11,7 @@ import {
   LoginAndRegisterPagePaths,
 } from "../../utils/RoutingConstants";
 import LoginValidation from "./LoginValidation";
+import { local } from "../../utils/Utils";
 
 const LoginPage = lazy(() => import("./LoginPage/Login"));
 const VerifyLoginOtp = lazy(() => import("./VerifyOtp/VerifyOtp"));
@@ -29,6 +30,7 @@ const Login = () => {
   const [errorToast, setErrorToast] = useState("");
   const [validationError, setValidationError] = useState({});
   const [passwordType, setPasswordType] = useState("password");
+  const [timer, setTimer] = useState(false);
   const history = useHistory();
   let baseUrl = "https://api-uat.life99.in/";
 
@@ -51,6 +53,7 @@ const Login = () => {
   const handleOtpSwitchOffOn = (message, type) => {
     setLoginUserData({ ...loginUserData, otpBased: type });
     setErrorToast(message);
+    type && setTimer(true);
   };
 
   // send request for login otp and forget password otp
@@ -78,6 +81,14 @@ const Login = () => {
     }
   };
 
+  const onLoginSuccess = (res) => {
+    let token = res.data.data.token;
+    let individualInfo = JSON.stringify(res.data.data.individualInfo);
+    local.setItem("loginToken", token);
+    local.setItem("individualInfo", individualInfo);
+    history.push("/dashboard");
+  };
+
   // login
   const handleLoginUser = async () => {
     if (Object.keys(handleValidation()).length === 0) {
@@ -85,13 +96,16 @@ const Login = () => {
       await api(baseUrl)
         .post("api-mdm/auth/login", loginUserData)
         .then((res) => {
-          history.push("/dashboard");
+          onLoginSuccess(res);
         })
-        .catch((res) =>
-          setErrorToast(Object.values(res)["2"]["data"]["message"])
-        );
+        .catch((res) => onLoginError(res));
     }
-  }; 
+  };
+
+  const onLoginError = (res) => {
+    setLoginUserData({ ...loginUserData, password: "" });
+    setErrorToast(Object.values(res)["2"]["data"]["message"]);
+  };
 
   // prompt user to fill passoword when clicked on forget password with emial
   const handleForgetPassword = async (pageView) => {
@@ -116,9 +130,7 @@ const Login = () => {
             state: { token: res.data.token },
           });
       })
-      .catch((res) =>
-        setErrorToast(Object.values(res)["2"]["data"]["message"])
-      );
+      .catch((res) => onLoginError(res));
   };
 
   // sends otp when click on forget password
@@ -133,9 +145,7 @@ const Login = () => {
         .then((res) => {
           res.data.statusCode === 200 && handleVerifyOtpToken(res.data.data);
         })
-        .catch((res) =>
-          setErrorToast(Object.values(res)["2"]["data"]["message"])
-        );
+        .catch((res) => onLoginError(res));
     }
   };
 
@@ -159,6 +169,7 @@ const Login = () => {
               validationError={validationError}
               passwordType={passwordType}
               handlePasswordShowHide={handlePasswordShowHide}
+              timer={timer}
             />
           )}
           {viewCompoment === "ForgetPassword" && (
@@ -168,6 +179,7 @@ const Login = () => {
               setOtpValue={setOtpValue}
               handleSentOtp={handleSentOtp}
               errorToast={errorToast}
+              timer={timer}
             />
           )}
         </div>

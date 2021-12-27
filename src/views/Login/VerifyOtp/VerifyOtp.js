@@ -4,6 +4,7 @@ import { Col, Container, Form, Row, Input } from "reactstrap";
 import OtpInput from "react-otp-input";
 import { Link } from "@mui/material";
 
+import Timer from "../../common/timer";
 import Life99Logo from "../../../assets/images/Life99Logo.svg";
 
 const VerifyLoginOtp = ({
@@ -41,6 +42,9 @@ const VerifyLoginOtp = ({
         <Row className="resentotp">
           <Col md={4}>
             <Link onClick={() => handleSentOtp()}>Resent OTP</Link>
+          </Col>
+          <Col md={6}>
+            <Timer />
           </Col>
         </Row>
         <Row>

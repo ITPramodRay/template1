@@ -18,3 +18,8 @@ export const dashboardPaths = {
   learn: "/learn",
   wellbeing: "/wellbeing",
 };
+
+export const errorPaths = {
+  fourZeroFour: "/404",
+  internetError: "/internetError",
+};
