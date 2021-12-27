@@ -9,7 +9,7 @@ export default function validate(formData) {
     } else if (!validator.isEmail(formData.email)) {
         errors.email = 'Enter valid email';
     }
-    if (formData.termsAndCondition != undefined && !formData.termsAndCondition) {
+    if (formData.termsAndCondition !== undefined && !formData.termsAndCondition) {
         errors.termsAndCondition = 'Please agree to terms and conditions';
     }
     if (formData.password?.length === 0) {
@@ -20,24 +20,26 @@ export default function validate(formData) {
         errors.password = 'Passwords should be same';
     }
 
-    // if (formData.firstName?.length <= 0) {
-    //     errors.firstname = 'Firt name is required';
-    // }
-    if (!/^[a-zA-Z ]+$/.test(formData.yourName)) {
-        errors.yourName = 'Name should only have alphabets';
-        if (formData.yourName?.length <= 0) {
-            errors.yourName = 'Name is required';
-        }
+    if (formData.firstName?.length <= 0) {
+        errors.firstname = 'Firt name is required';
     }
-
-    // if (formData.lastName?.length <= 0) {
-    //     errors.lastname = ' Last name is required';
+    
+    if (formData.lastName?.length <= 0) {
+        errors.lastname = ' Last name is required';
+    }
+    // if (!/^[a-zA-Z ]+$/.test(formData.yourName)) {
+    //     errors.yourName = 'Name should only have alphabets';
+    //     if (formData.yourName?.length <= 0) {
+    //         errors.yourName = 'Name is required';
+    //     }
     // }
 
-    if (formData.phone && !/^\d*\.?\d*$/.test(formData.phone)) {
+    
+
+    if (formData.phone && formData.phone && !/^\d*\.?\d*$/.test(formData.phone)) {
         errors.phone = 'Mobile number must be in numbers';
     }
-    if (formData.phone?.length < 10) {
+    if (formData.phone && formData.phone?.length < 10) {
         if (formData.phone?.length <= 0) {
             errors.phone = 'Mobile number is required';
         } else {

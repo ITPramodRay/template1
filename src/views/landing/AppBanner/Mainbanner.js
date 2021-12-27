@@ -50,14 +50,8 @@ const Mainbanner = () => {
                         arrows={false}
                         autoPlay={true}
                         autoPlaySpeed={5000}
-                        centerMode={false}
                         containerClass="container-with-dots"
-                        dotListClass=""
-                        draggable
-                        focusOnSelect={false}
                         infinite
-                        itemClass=""
-                        keyBoardControl
                         minimumTouchDrag={80}
                         renderDotsOutside={false}
                         showDots={false}
@@ -81,16 +75,21 @@ const Mainbanner = () => {
                           <div className="employee-block">
                             <div className="d-flex">
                               <img
-                                src={MainbannerCms.userStatistics.stat1.icon || RetirementPeople}
+                                src={
+                                  MainbannerCms.userStatistics.stat1.icon ||
+                                  RetirementPeople
+                                }
                                 alt="RetirementPeople"
                                 title="RetirementPeople"
                                 className=""
                               ></img>
-                              <span className="total-employee">{MainbannerCms.userStatistics.stat1.countText}</span>
+                              <span className="total-employee">
+                                {MainbannerCms.userStatistics.stat1.countText}
+                              </span>
                               <span className="plus-sign">+</span>
                             </div>
                             <p className="employee-tagline">
-                            {MainbannerCms.userStatistics.stat1.text}{" "}
+                              {MainbannerCms.userStatistics.stat1.text}{" "}
                             </p>
                           </div>
                         </Col>
@@ -98,16 +97,21 @@ const Mainbanner = () => {
                           <div className="employee-block">
                             <div className="d-flex">
                               <img
-                                src={MainbannerCms.userStatistics.stat2.icon || UseingEmployee}
+                                src={
+                                  MainbannerCms.userStatistics.stat2.icon ||
+                                  UseingEmployee
+                                }
                                 alt="UseingEmployee"
                                 title="UseingEmployee"
                                 className=""
                               ></img>
-                              <span className="total-employee">{MainbannerCms.userStatistics.stat2.countText}</span>
+                              <span className="total-employee">
+                                {MainbannerCms.userStatistics.stat2.countText}
+                              </span>
                               <span className="plus-sign">+</span>
                             </div>
                             <p className="employee-tagline">
-                            {MainbannerCms.userStatistics.stat2.text}
+                              {MainbannerCms.userStatistics.stat2.text}
                             </p>
                           </div>
                         </Col>
@@ -115,15 +119,22 @@ const Mainbanner = () => {
                           <div className="employee-block">
                             <div className="d-flex">
                               <img
-                                src={MainbannerCms.userStatistics.stat3.icon || HappyEmployee}
+                                src={
+                                  MainbannerCms.userStatistics.stat3.icon ||
+                                  HappyEmployee
+                                }
                                 alt="HappyEmployee"
                                 title="HappyEmployee"
                                 className=""
                               ></img>
-                              <span className="total-employee">{MainbannerCms.userStatistics.stat3.countText}</span>
+                              <span className="total-employee">
+                                {MainbannerCms.userStatistics.stat3.countText}
+                              </span>
                               <span className="plus-sign">+</span>
                             </div>
-                            <p className="employee-tagline">{MainbannerCms.userStatistics.stat3.text} </p>
+                            <p className="employee-tagline">
+                              {MainbannerCms.userStatistics.stat3.text}{" "}
+                            </p>
                           </div>
                         </Col>
                       </Row>

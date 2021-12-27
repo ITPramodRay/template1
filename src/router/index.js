@@ -90,9 +90,11 @@ export default function AppRouter({ ...props }) {
                     />
                   );
                 })}
+
                 <Route>
                  {WaitingComponent(error404)}
                 </Route>
+                
               </Switch>
             </ScrollToTop>
           </Router>
