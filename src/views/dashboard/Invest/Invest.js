@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container,Row,Col } from 'reactstrap';
 
-import InvestTitle from './InvestTitle';
+import CardHead from '../../common/CardHead/CardHead';
 import InvestCard from './InvestCard';
 import InvestLeftPanel from './InvestLeftPanel';
 
@@ -10,8 +10,7 @@ export default function Invest({ ...props }) {
   
   return (
     <>
-       <InvestTitle />
-       
+       <CardHead />
        <div>
         <Container>
           <Row>

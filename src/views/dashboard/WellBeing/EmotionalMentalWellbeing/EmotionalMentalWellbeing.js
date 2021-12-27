@@ -24,7 +24,7 @@ const EmotionalMentalWellbeing = () => {
             <Swiper
               navigation={true}
               slidesPerView={1}
-              spaceBetween={80}
+              spaceBetween={150}
               className='mySwiper'
             >
               <SwiperSlide>
