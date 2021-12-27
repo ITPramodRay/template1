@@ -7,7 +7,7 @@ import Appstore from '../../../assets/images/Apple.svg';
 const AppDownloadPC = () => {
   return (
     <>
-      <div className='desktopView AppdannerPC  mb-5'>
+      <div className='desktopView AppdannerPC'>
         {/* <div className='img_div'>
           <img src={Appbanner}></img>
         </div> */}
