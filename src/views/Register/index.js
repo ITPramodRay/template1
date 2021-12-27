@@ -208,6 +208,7 @@ const SignUp = () => {
           setError("Email id already exists");
           return;
         }
+        setError("")
         setViewComponent("verifyOtp");
       })
       .catch((err) => {
