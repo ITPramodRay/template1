@@ -5,6 +5,9 @@ export const LoginAndRegisterPagePaths = {
   loginPage: "/login",
   forgetPassword: "/forgetpassword",
   RegisterPage: "/register",
+  verifyOtp: "/register/verifyOtp",
+  setPassword: "/register/setPassword",
+  UpdatePassword: "/updatePassword",
 };
 
 export const dashboardPaths = {
@@ -14,4 +17,9 @@ export const dashboardPaths = {
   advisory: "/advisory",
   learn: "/learn",
   wellbeing: "/wellbeing",
+};
+
+export const errorPaths = {
+  fourZeroFour: "/404",
+  internetError: "/internetError",
 };

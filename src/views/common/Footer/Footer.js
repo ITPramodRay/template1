@@ -8,13 +8,13 @@ import Linkedin from "../../../assets/images/LinkedIN.svg";
 import Youtube from "../../../assets/images/Youtube.svg";
 import Twitter from "../../../assets/images/Twitter.svg";
 
-export default class Faq extends Component {
+export default class Footer extends Component {
   render() {
     return (
       <Fragment>
         <div className="section footer-section">
           <Container>
-            <Row>
+            <Row className="mobile_footer">
               <Col sm={7}>
                 <Row className="">
                   <Col sm={4}>
@@ -24,7 +24,7 @@ export default class Faq extends Component {
                       className="img-fluid foooter-logo"
                     />
                   </Col>
-                  <Col sm={2}>
+                  <Col sm={3} className="mobile_footer_linkgroup">
                     <Link to="#" className="footer-link">
                       Dashboard
                     </Link>
@@ -41,7 +41,7 @@ export default class Faq extends Component {
                       Lean
                     </Link>
                   </Col>
-                  <Col sm={5}>
+                  <Col sm={5} className="">
                     <Link to="#" className="footer-link">
                       Terms & Conditions
                     </Link>
@@ -60,7 +60,7 @@ export default class Faq extends Component {
                   </Col>
                 </Row>
               </Col>
-              <Col sm={5}>
+              <Col sm={5} className="mobile-connected">
                 <p className="footer-social-text">Stay connected to us</p>
                 <Link to="#" className="footer-social-link">
                   <img

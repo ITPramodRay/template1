@@ -1,67 +1,50 @@
-import React from "react";
-import { Container, Row, Col, Form, Input } from "reactstrap";
+import React from 'react';
+import { Container, Row, Col, Form, Input } from 'reactstrap';
 
-import Life99Logo from "../../../assets/images/Life99Logo.svg";
-import OtpInput from "react-otp-input";
-
+import Life99Logo from '../../../assets/images/Life99Logo.svg';
+import OtpInput from 'react-otp-input';
+import Timer from '../../common/timer';
 const VerifyOtp = ({ verifyOtp, setOtp, otp, err }) => {
   return (
     <>
       <Container>
         <Row>
           <Col md={12}>
-            <div className="Logo">
-              <img src={Life99Logo} alt="Life99" title="Life99" />
-              <h6 style={{color:"red"}}>{err}</h6>
+            <div className='Logo'>
+              <img src={Life99Logo} alt='Life99' title='Life99' />
             </div>
           </Col>
           <Col md={12}>
-            <div className="signuptitle">
+            <div className='signuptitle'>
               <span>Enter OTP</span>
               <p>OTP has been sent to the mobile number entered by you</p>
             </div>
           </Col>
         </Row>
+        <Row className='otp_row'>
+        <OtpInput
+            className='otpInput'
+            value={otp}
+            onChange={setOtp}
+            numInputs={4}
+          />
+          <h6 className='error_text'>{err}</h6>
+          <div className='resentotp'>
+            <a href='#'>Resent OTP</a>
+            <p >
+              <Timer />
+            </p>
+          </div>
+        </Row>
         <div>
-          <Row>
-            <OtpInput
-              className="otpInput"
-              value={otp}
-              onChange={setOtp}
-              numInputs={4}
-            />
+          
 
-            {/* <Col md={5}> 
-                    <Row>
-                      <Col md={3}>                     
-                          <Input type="text" name="otp" onChange={(e)=>setOtp(prevState=>({...prevState,digit1:e.target.value}))} />
-                      </Col>
-                      <Col md={3}>                     
-                          <Input type="text" name="otp" onChange={(e)=>setOtp(prevState=>({...prevState,digit2:e.target.value}))} />
-                      </Col>
-                      <Col md={3}>                     
-                          <Input type="text" name="otp" onChange={(e)=>setOtp(prevState=>({...prevState,digit3:e.target.value}))} />
-                      </Col>
-                      <Col md={3}>                     
-                          <Input type="text" name="otp" onChange={(e)=>setOtp(prevState=>({...prevState,digit4:e.target.value}))} />
-                      </Col>
-                    </Row>
-                  </Col>   */}
-          </Row>
-          <Row className="resentotp">
-            <Col md={5}>
-              <a href="#">Resent OTP</a>
-            </Col>
-            <Col md={2} className="mr-right">
-              <p>09:59</p>
-            </Col>
-          </Row>
           <Row>
             <Col md={12}>
               <input
-                className="subbtn"
-                type="submit"
-                name="Submit"
+                className='subbtn'
+                type='submit'
+                name='Submit'
                 onClick={verifyOtp}
               />
             </Col>

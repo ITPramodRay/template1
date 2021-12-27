@@ -1,10 +1,19 @@
 import React, { useState } from "react";
 import { Button } from "@mui/material";
 import { Col, Container, Form, Row, Input } from "reactstrap";
+import OtpInput from "react-otp-input";
+import { Link } from "@mui/material";
 
+import Timer from "../../common/timer";
 import Life99Logo from "../../../assets/images/Life99Logo.svg";
 
-const VerifyLoginOtp = ({ handleLoginValues, handleForgetPasswordOtp }) => {
+const VerifyLoginOtp = ({
+  handleForgetPasswordOtp,
+  setOtpValue,
+  otpValue,
+  handleSentOtp,
+  errorToast,
+}) => {
   return (
     <>
       <Container>
@@ -12,7 +21,7 @@ const VerifyLoginOtp = ({ handleLoginValues, handleForgetPasswordOtp }) => {
           <Col md={12}>
             <div className="Logo">
               <img src={Life99Logo} alt="Life99" title="Life99" />
-              <h2>Demo Text</h2>
+              <h2>{errorToast}</h2>
             </div>
           </Col>
           <Col md={12}>
@@ -23,18 +32,19 @@ const VerifyLoginOtp = ({ handleLoginValues, handleForgetPasswordOtp }) => {
           </Col>
         </Row>
         <Row>
-          <Input
-            type="text"
-            name="otp"
-            onChange={(e) => handleLoginValues("otp", e.target.value)}
+          <OtpInput
+            className="otpInput"
+            value={otpValue}
+            numInputs={4}
+            onChange={setOtpValue}
           />
         </Row>
         <Row className="resentotp">
           <Col md={4}>
-            <a href="#">Resent OTP</a>
+            <Link onClick={() => handleSentOtp()}>Resent OTP</Link>
           </Col>
-          <Col md={6} className="mr-right">
-            <p>09:59</p>
+          <Col md={6}>
+            <Timer />
           </Col>
         </Row>
         <Row>

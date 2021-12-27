@@ -8,36 +8,45 @@
 // Common
 @import './Mixin';
 
+@import './error';
 //slider
 @import './Slider/SliderMain';
 // Header
 @import './Navbar';
 
 // Landing Page
-@import './Landing-mobile';
 @import './Landing';
+@import './Landing-mobile';
 @import './SignInUp';
 
 
 //Wellbing page
 @import './Wellbeing';
 @import './InvestDashboard';
+@import './plan';
+@import './Mailmverify';
 
 
 
 .desktopView{
-    margin:0;
-    padding:0;
     display:block;
     @media only screen and (max-width: 600px) {
     display:none;
      }
 }
 .mobileView{
-    margin:0;
-    padding:0;
     display:none;
     @media only screen and (max-width: 600px) {
         display:block;
          }
+}
+
+#timer{
+    display:inline;
+    padding: 5px;
+    color: #004853;
+    font-family: Verdana, sans-serif, Arial;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
 }

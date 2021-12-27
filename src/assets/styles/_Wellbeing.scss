@@ -10,13 +10,13 @@
     font-weight: 600;
     line-height: 36px;
     color: #fff;
-    padding-left: 5rem;
   }
 }
 //base
 .base_card_We {
   padding: 0rem 5rem;
   background-color: #f2f3f7;
+  overflow-x: hidden;
 }
 
 //healthgoals
@@ -212,6 +212,11 @@
 }
 .MVhelthservices {
   display: none;
+  .head_text_div {
+    img {
+      width: 100%;
+    }
+  }
   .sliderCard-HS-MV {
     .HS_card {
       display: flex;
@@ -376,7 +381,7 @@
       top: 3rem;
       left: 2rem;
       align-items: flex-start;
-      .main_text{
+      .main_text {
         font-weight: 600;
         font-size: 26.8034px;
         line-height: 40px;
@@ -408,14 +413,345 @@
   }
 }
 
-.PhysicalWellbeingPC{
-  .plancard_base{
+.exclusivefeaturesMV_slider_card {
+  width: 100%;
+  .text_div {
+    width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    position: absolute;
+    top: 3rem;
+    left: 2rem;
+    align-items: flex-start;
+    .main_text {
+      font-weight: 600;
+      font-size: 26.8034px;
+      line-height: 40px;
+      color: #fff;
+    }
+    p {
+      font-weight: normal;
+      font-size: 13.4017px;
+      line-height: 20px;
+      color: #fff9f9;
+      text-align: left;
+    }
+    .card_btn {
+      background: #1a3e6d;
+      box-shadow: 0px 5.9563px 11.9126px -4.46723px rgba(0, 82, 103, 0.32);
+      border-radius: 28px;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
-  .plancard_base{
+
+  .bg_img {
+    top: 0;
+    z-index: -1;
+  }
+}
+
+.PhysicalWellbeingPC {
+  .plancard_base {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    .plancard_iteam {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      background: linear-gradient(134.14deg, #1a3e6d 0.61%, #2d6fc6 101.43%);
+      border-radius: 16px;
+      .left_text_card {
+        h4 {
+          font-weight: 600;
+          font-size: 36px;
+          line-height: 54px;
+          color: #fff;
+        }
+        p {
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 24px;
+          color: #ffffff;
+        }
+      }
+      .right_text_card {
+        h3 {
+          font-weight: 600;
+          font-size: 65.3684px;
+          line-height: 79px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.PhysicalWellbeingMV {
+  .plancard_base {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    .plancard_iteam {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      background: linear-gradient(134.14deg, #1a3e6d 0.61%, #2d6fc6 101.43%);
+      border-radius: 16px;
+      .left_text_card {
+        h4 {
+          font-weight: 600;
+          font-size: 36px;
+          line-height: 54px;
+          color: #fff;
+        }
+        p {
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 24px;
+          color: #ffffff;
+        }
+      }
+      .right_text_card {
+        h3 {
+          font-weight: 600;
+          font-size: 65.3684px;
+          line-height: 79px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.PhysicalWellbeing_sider {
+  .img_slider {
+    img {
+      border-radius: 16px 16px 0px 0px;
+    }
+  }
+  .down_text {
+    background-color: #fff;
+    border-radius: 0px 0px 16px 16px;
+    height: 120px;
+    display: flex;
+    h2 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: left;
+      padding: 1rem;
+    }
+  }
+}
+.PhysicalWellbeing_sider_MV {
+  box-shadow: 3px 0px 6px rgba(0, 0, 0, 0.15);
+  .img_slider {
+    background-image: url('https://picsum.photos/200');
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    border-radius: 16px 16px 0px 0px;
+  }
+  .down_text {
+    background-color: #fff;
+    border-radius: 0px 0px 16px 16px;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    h2 {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 30px;
+      text-align: left;
+      padding: 1rem;
+    }
+  }
+}
+.Plan_card_item_mobile {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  border-radius: 16px;
+  background-color: #fff;
+  width: 100%;
+  height: min-content;
+  padding: 2.5rem 2.5rem;
+  h4 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: left;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid #373535;
+  }
+  p {
+    font-weight: normal;
+    font-size: 15.3523px;
+    line-height: 23px;
+    color: #373535;
+  }
+  .join-btn-mv {
+    background: #ffffff;
+    border: 1.88943px solid #005e9e;
+    box-shadow: 0px 3.41162px 13.6465px rgba(175, 175, 175, 0.25);
+    border-radius: 45.3463px;
+    outline: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 0.25rem 1.5rem;
+    color: #005e9e;
+  }
+}
+.OtherSlider_img {
+  img {
+    width: 50px;
+  }
+  h2 {
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #263238;
+  }
+}
+
+.EmotionalMentalWellbeing_card_base {
+  background-image: url(../images/EmotionalandMentalWellbeing.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 300px;
+}
+.EmotionalMentalWellbeing_card_base_MV {
+  background-image: url(../images/EmotionalMentalWellbeing_card_base_MV.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  text-align: left;
+  padding: 1rem 2rem;
+  h2 {
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    p {
+      font-weight: 600;
+      font-size: 24px;
+      color: #fff;
+      margin-bottom: 0px;
+    }
+    button {
+      background: #ffffff;
+      border-radius: 26px;
+      padding: 0.5rem 0.75rem;
+      outline: none;
+      border-style: none;
+      color: #005e9e;
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+}
+
+.healthscoreMV {
+  align-items: center;
+  .bg_healthscore {
+    background-image: url(../images/HS_bg_img.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 16px;
+    .top-text {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      h2 {
+        font-weight: bold;
+        font-size: 32px;
+        color: #16f6ff;
+        margin: 0;
+        padding-right: 1rem;
+      }
+      .rightline {
+        width: 1px;
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+      p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        color: #ffffff;
+        margin: 0;
+      }
+    }
+    .mid-text {
+      color: #fff;
+      h2 {
+        font-weight: bold;
+        font-size: 21px;
+        color: #ffffff;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #fff;
+      }
+      p {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+    .score_text {
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      .bs-text {
+        display: flex;
+        gap: 1rem;
+      }
+      p {
+        font-size: 14px;
+        line-height: 21px;
+        margin: 0;
+      }
+      h2 {
+        font-weight: bold;
+        font-size: 24px;
+      }
+    }
+    .scrore_btn {
+      width: 80%;
+      outline: none;
+      border-style: none;
+      background: #ffffff;
+      border-radius: 26px;
+      color: #2e98a4;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 0.5rem;
+    }
   }
 }
 
@@ -444,7 +780,7 @@
   .exclusivefeaturesPC {
     display: none;
   }
-  .PhysicalWellbeingPC{
+  .PhysicalWellbeingPC {
     display: none;
   }
 }

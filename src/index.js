@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./assets/styles/index.scss";
+import "react-multi-carousel/lib/styles.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import App from "./App";

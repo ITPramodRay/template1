@@ -7,7 +7,7 @@ import CalendarCheck from "../../../assets/images/CalendarCheck.svg";
 import MapPin from "../../../assets/images/MapPin.svg";
 import Rerirement from "../../../assets/images/rerirement.png";
 import Rocket from "../../../assets/images/Rocket.svg";
-
+import {planRetirementCms} from "../landingCMS"
 const Products = () => {
   return (
     <>
@@ -18,8 +18,7 @@ const Products = () => {
               <Col sm={6}>
                 <div className="title-row">
                   <h3 className="title-text">
-                    Life99 Prepares you for <br />
-                    retirement
+                    {planRetirementCms.sectionHeading}
                   </h3>
                 </div>
 
@@ -27,29 +26,28 @@ const Products = () => {
                   <Tab>
                     {" "}
                     <img
-                      src={CalendarCheck}
-                      alt="tab-image"
+                      src={planRetirementCms.point1.icon || CalendarCheck}
+                      alt="point1 icon"
                       className="img-fluid tab-image"
                     />
-                    <span>Check your retirement readiness</span>
+                    <span>{planRetirementCms.point1.text}</span>
                   </Tab>
                   <Tab>
                     <img
                       src={MapPin}
-                      alt="tab-image"
+                      alt="point2 icon"
                       className="img-fluid tab-image"
                     />
-                    <span>Track all your investments at one place</span>
+                    <span>{planRetirementCms.point2.text}</span>
                   </Tab>
                   <Tab>
                     <img
                       src={Rocket}
-                      alt="tab-image"
+                      alt="point3 icon"
                       className="img-fluid tab-image"
                     />
                     <span>
-                      Boost your financial awareness and <br />
-                      planning
+                    {planRetirementCms.point3.text}
                     </span>
                   </Tab>
                 </TabList>
@@ -57,21 +55,21 @@ const Products = () => {
               <Col sm={6} className="text-center">
                 <TabPanel>
                   <img
-                    src={Rerirement}
+                    src={planRetirementCms.point1.rightSideImage || Rerirement}
                     lt="Card image cap"
                     className="img-fluid preapre-image"
                   />
                 </TabPanel>
                 <TabPanel>
                   <img
-                    src={Rerirement}
+                    src={planRetirementCms.point2.rightSideImage || Rerirement}
                     lt="Card image cap"
                     className="img-fluid preapre-image"
                   />
                 </TabPanel>
                 <TabPanel>
                   <img
-                    src={Rerirement}
+                    src={planRetirementCms.point3.rightSideImage || Rerirement}
                     lt="Card image cap"
                     className="img-fluid preapre-image"
                   />
