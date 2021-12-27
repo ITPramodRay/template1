@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import AppHeader from "../common/Header/Header"
 import WellBeing from './WellBeing/WellBeing';
 import Invest from './Invest/Invest';
@@ -11,7 +11,7 @@ const  DashBoardPage = () => {
   const location = useLocation()
   return (
     <>
-    <AppHeader />
+    <AppHeader/>
    { location.pathname === dashboardPaths.wellbeing && <WellBeing />}
    { location.pathname === dashboardPaths.invest && <Invest />}
    { location.pathname === dashboardPaths.plan && <Plan />}

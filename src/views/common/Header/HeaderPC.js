@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import logohead from '../../../assets/images/head-logo.svg';
 import searchicon from '../../../assets/images/Search-icon.svg';
 import notification from '../../../assets/images/notification.svg';
@@ -9,6 +9,8 @@ import icon from '../../../assets/images/menu-icon.svg';
 import { Link } from 'react-router-dom';
 import { dashboardPaths } from '../../../utils/RoutingConstants';
 const HeaderPC = ({ activepath }) => {
+  const [openProfileSidebar,setOpenProfileSidebar] = useState(false)
+
   return (
     <>
       <div className='header_color'>
@@ -98,7 +100,7 @@ const HeaderPC = ({ activepath }) => {
                   </li>
                 </ul>
               </div>
-              <div className='right-head'>
+              <div className='right-head'  onClick={()=>setOpenProfileSidebar(prevState=>!prevState)}>
                 <img alt='' src={notification}></img>
                 <img
                   alt=''
@@ -113,7 +115,7 @@ const HeaderPC = ({ activepath }) => {
       </div>
 
 
-      <div className='profile_menu profile_menu_open'>
+      <div className={`profile_menu`}>
         <div className='head_base'>
           <img src={Following}></img>
           <div className='right_div'>
