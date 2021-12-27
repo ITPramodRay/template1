@@ -51,11 +51,7 @@ export default function AppRouter({ ...props }) {
     //   component: WaitingComponent(Invest),
     //   exact: true,
     // },
-    {
-      path: "/404error",
-      component: WaitingComponent(error404),
-      exact: true,
-    },
+   
     {
       path: "/interneterror",
       component: WaitingComponent(InternetError),
@@ -94,6 +90,9 @@ export default function AppRouter({ ...props }) {
                     />
                   );
                 })}
+                <Route>
+                 {WaitingComponent(error404)}
+                </Route>
               </Switch>
             </ScrollToTop>
           </Router>
