@@ -67,7 +67,7 @@ const LoginPage = ({
                   value={loginUserData.password}
                 />
 
-                {passwordType === "password" ? (
+                {/* {passwordType === "password" ? (
                   <VisibilityOffIcon
                     onClick={() => handlePasswordShowHide("show")}
                   />
@@ -75,7 +75,7 @@ const LoginPage = ({
                   <RemoveRedEyeIcon
                     onClick={() => handlePasswordShowHide("hide")}
                   />
-                )}
+                )} */}
 
                 <p className="error_text">
                   {validationError && validationError["password"]}
