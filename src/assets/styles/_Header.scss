@@ -126,23 +126,26 @@
   border-radius: 15px;
   width: 600px;
   position: absolute;
-  animation: profile 1s;  
   right: 0;
   z-index: 999;
+  animation: profile 1s;
+  // animation-direction: alternate; 
+    @keyframes profile {
+      0%{
+        right: -600px;
+        opacity: 0;
+      }
+      100%{
+        right: 0px;
+        opacity: 100;
+      }
+    }
   }
   .profile_menu_off{
     display: none !important;
   }
   .profile_menu_open{
     display: block !important;
-    @keyframes profile {
-      0%{
-        right: -600px;
-      }
-      100%{
-        right: 0px;
-      }
-    }
   
   .head_base {
     width: 100%;
