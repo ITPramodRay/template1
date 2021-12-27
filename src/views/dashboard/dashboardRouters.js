@@ -18,5 +18,10 @@ export const dashboardPageRouters = [
         component:dashboardPage,
         exact:true
     },
+    {
+        path: dashboardPaths.plan,
+        component:dashboardPage,
+        exact:true
+    },
 ]
 

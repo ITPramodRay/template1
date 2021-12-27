@@ -22,6 +22,9 @@ const error404 = React.lazy(() =>
 const InternetError = React.lazy(() =>
   import("../views/common/Error/InternetError")
 );
+const Mailmverify = React.lazy(() =>
+  import("../views/common/Error/Mailmverify")
+);
 
 function WaitingComponent(Component) {
   return (props) => (
@@ -38,16 +41,16 @@ export default function AppRouter({ ...props }) {
       component: WaitingComponent(LandingPage),
       exact: true,
     },
-    {
-      path: "/dashboard/wellBeing",
-      component: WaitingComponent(WellBeing),
-      exact: true,
-    },
-    {
-      path: "/dashboard/invest",
-      component: WaitingComponent(Invest),
-      exact: true,
-    },
+    // {
+    //   path: "/dashboard/wellBeing",
+    //   component: WaitingComponent(WellBeing),
+    //   exact: true,
+    // },
+    // {
+    //   path: "/dashboard/invest",
+    //   component: WaitingComponent(Invest),
+    //   exact: true,
+    // },
     {
       path: "/404error",
       component: WaitingComponent(error404),
@@ -56,6 +59,11 @@ export default function AppRouter({ ...props }) {
     {
       path: "/interneterror",
       component: WaitingComponent(InternetError),
+      exact: true,
+    },
+    {
+      path: "/emailverify",
+      component: WaitingComponent(Mailmverify),
       exact: true,
     },
   ];

@@ -1,9 +1,12 @@
 //dashbord-head-ui-pc
+.header_color{
+  background: #fff;
+}
 .Dashbord-header-PC {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5rem;
+    padding: 1rem 0rem;
     background:#FFF;
     .left-head {
       display: flex;
