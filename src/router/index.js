@@ -9,27 +9,7 @@ import { loginPageRouters } from "../views/Login/LoginRouter";
 // import { errorPageRouters } from "../views/common/Error/ErrorRoutes";
 import LoaderWrapper from "./loaderWrapper";
 import ScrollToTop from "./scrollToTop";
-<<<<<<< HEAD
 import PrivateRoute from "./PrivateRoute";
-=======
-
-const LandingPage = React.lazy(() => import("../views/landing"));
-const Invest = React.lazy(() =>
-  import("../views/dashboard/Invest/Invest")
-);
-const WellBeing = React.lazy(() =>
-  import("../views/dashboard/WellBeing/WellBeing")
-);
-const error404 = React.lazy(() =>
-  import("../views/common/Error/Error404")
-);
-const InternetError = React.lazy(() =>
-  import("../views/common/Error/InternetError")
-);
-const Mailmverify = React.lazy(() =>
-  import("../views/common/Error/Mailmverify")
-);
->>>>>>> aa7f9af6cc561d80667f0758064add622f5ee1ce
 
 function WaitingComponent(Component) {
   return (props) => (
@@ -40,41 +20,9 @@ function WaitingComponent(Component) {
 }
 
 export default function AppRouter({ ...props }) {
-<<<<<<< HEAD
-  let allPublicRoutes = [
-=======
-  const mainRoues = [
-    {
-      path: "/welcome",
-      component: WaitingComponent(LandingPage),
-      exact: true,
-    },
-    // {
-    //   path: "/dashboard/wellBeing",
-    //   component: WaitingComponent(WellBeing),
-    //   exact: true,
-    // },
-    // {
-    //   path: "/dashboard/invest",
-    //   component: WaitingComponent(Invest),
-    //   exact: true,
-    // },
-   
-    {
-      path: "/interneterror",
-      component: WaitingComponent(InternetError),
-      exact: true,
-    },
-    {
-      path: "/emailverify",
-      component: WaitingComponent(Mailmverify),
-      exact: true,
-    },
-  ];
+  const error404 = React.lazy(() => import("../views/common/Error/Error404"));
 
-  let allRoutes = [
-    ...mainRoues,
->>>>>>> aa7f9af6cc561d80667f0758064add622f5ee1ce
+  let allPublicRoutes = [
     ...landingPageRouters,
     ...loginAndRegisterPageRouters,
     ...loginPageRouters,
@@ -100,7 +48,6 @@ export default function AppRouter({ ...props }) {
                     />
                   );
                 })}
-<<<<<<< HEAD
 
                 {allPrivateRoutes.map((value, index) => {
                   return (
@@ -112,11 +59,7 @@ export default function AppRouter({ ...props }) {
                     />
                   );
                 })}
-=======
-                <Route>
-                 {WaitingComponent(error404)}
-                </Route>
->>>>>>> aa7f9af6cc561d80667f0758064add622f5ee1ce
+                <Route>{WaitingComponent(error404)}</Route>
               </Switch>
             </ScrollToTop>
           </Router>
