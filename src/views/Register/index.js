@@ -8,17 +8,17 @@ import Otprightimg from "../../assets/images/Otpright.svg";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import api from "../../utils/axios";
-import {useLocation} from 'react-router-dom'
+import { useLocation } from "react-router-dom";
 
 const SignUp = () => {
-  const location = useLocation()
+  const location = useLocation();
   const [error, setError] = useState("");
   const [viewComponent, setViewComponent] = useState("signupForm");
   const [registerUserData, setRegisterUserData] = useState({
     masterEmployerId: "587baca6-9246-4551-b1e4-c6f46e42e613",
     temporaryIndividualId: "",
     individual_id: "",
-    token:''
+    token: "",
   });
 
   const [registerForm, setRegisterForm] = useState({
@@ -36,6 +36,8 @@ const SignUp = () => {
   let baseUrl = "https://api-uat.life99.in/";
 
   console.log(process.env.REACT_APP_API_DOMAIN, "this is the api domain");
+
+  // This function will post users data to register api
   const registerUser = () => {
     let data = {
       masterEmployerId: registerUserData.masterEmployerId,
@@ -87,6 +89,7 @@ const SignUp = () => {
       .catch((err) => console.log(err.response));
   };
 
+  // This function will post OTP data to verify OTP
   const verifyOtp = () => {
     console.log(Otp);
 
@@ -113,26 +116,32 @@ const SignUp = () => {
 
   const updateRegistration = () => {
     let data = {
-      individual_id:registerUserData.individual_id
-    }
-    axios.post("https://api-uat.life99.in/api-mdm/auth/set-registration-source",data)
-    .then(res=>{
-      console.log(res,"this is the updateRegistration response")
-      .catch(err=>{
-        console.log(err.response,"this is the updateRegistration error")
-      })
-    })
-  }
+      individual_id: registerUserData.individual_id,
+    };
+    axios
+      .post(
+        "https://api-uat.life99.in/api-mdm/auth/set-registration-source",
+        data
+      )
+      .then((res) => {
+        console
+          .log(res, "this is the updateRegistration response")
+          .catch((err) => {
+            console.log(err.response, "this is the updateRegistration error");
+          });
+      });
+  };
 
+  // This function will set the user password
   const setPassword = (password, confirmPassword) => {
-    if(password !== confirmPassword){
-      if(password.length<=8){
-        setError("password should be 8 characters long")
+    if (password !== confirmPassword) {
+      if (password.length <= 8) {
+        setError("password should be 8 characters long");
       }
-      setError("password and re-enter password must be same")
-      return
+      setError("password and re-enter password must be same");
+      return;
     }
-    console.log(registerUserData.individual_id,"this is the individual id")
+    console.log(registerUserData.individual_id, "this is the individual id");
     let data = {
       password: confirmPassword,
       individual_id: registerUserData.individual_id,
@@ -152,7 +161,6 @@ const SignUp = () => {
         });
         setError("");
         setViewComponent("loading");
-
       })
       .catch((err) => {
         setError(err?.response?.message);
@@ -160,12 +168,15 @@ const SignUp = () => {
       });
   };
 
+
+  // on onChange event of register form inputs this function will change the field values of registerForm state
   const handleSetRegister = (field, value) => {
     let tempRegisterUser = { ...registerForm };
     tempRegisterUser[field] = value;
     setRegisterForm(tempRegisterUser);
   };
 
+  // This function will send the OTP to given mobile number or email address
   const handleRegistration = () => {
     console.log(registerForm, "this is the data");
     let data = {
@@ -184,10 +195,18 @@ const SignUp = () => {
           ...registerUserData,
           temporaryIndividualId: res?.data?.userData?.temporary_individual_id,
         });
-        console.log(res.data?.message ," ",`Email id "${registerForm.mobEmail}" is already in use. Click "OK" to login.`,"this is the")
-        if(res.data?.message === `Email id "${registerForm.mobEmail}" is already in use. Click "OK" to login.`){
+        console.log(
+          res.data?.message,
+          " ",
+          `Email id "${registerForm.mobEmail}" is already in use. Click "OK" to login.`,
+          "this is the"
+        );
+        if (
+          res.data?.message ===
+          `Email id "${registerForm.mobEmail}" is already in use. Click "OK" to login.`
+        ) {
           setError("Email id already exists");
-          return
+          return;
         }
         setViewComponent("verifyOtp");
       })

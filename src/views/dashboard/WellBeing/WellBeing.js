@@ -4,7 +4,7 @@ const AppDownloadPC = lazy(() => import("../../common/AppDownload/AppDownloadPC"
 const AppDownloadMV = lazy(() => import("../../common/AppDownload/AppDownloadMV"));
 const Footer = lazy(() => import("../../common/Footer/Footer"));
 
-const CardHead = lazy(() => import("./CardHead/CardHead"));
+const CardHead = lazy(() => import("../../common/CardHead/CardHead"));
 const EmotionalMentalWellbeing = lazy(() =>
   import("./EmotionalMentalWellbeing/EmotionalMentalWellbeing")
 );

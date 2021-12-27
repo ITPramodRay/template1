@@ -8,7 +8,8 @@ import {dashboardPaths} from "../../../utils/RoutingConstants"
 const HeaderPC = ({activepath}) => {
   return (
     <>
-    <div className="row">
+    <div className="header_color">
+    <div className="container">
     <div className="col-md-12">
       <header className="Dashbord-header-PC">
         <div className="left-head">
@@ -54,6 +55,7 @@ const HeaderPC = ({activepath}) => {
       </header>
       </div>
       </div>
+    </div>
     </>
   );
 };
