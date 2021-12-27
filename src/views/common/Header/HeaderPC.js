@@ -113,7 +113,7 @@ const HeaderPC = ({ activepath }) => {
       </div>
 
 
-      <div className='profile_menu profile_menu_open'>
+      <div className='profile_menu profile_menu_off'>
         <div className='head_base'>
           <img src={Following}></img>
           <div className='right_div'>
