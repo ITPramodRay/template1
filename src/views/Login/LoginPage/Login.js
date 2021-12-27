@@ -7,6 +7,7 @@ import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
 import Life99Logo from "../../../assets/images/Life99Logo.svg";
 import { LoginAndRegisterPagePaths } from "../../../utils/RoutingConstants";
+import Timer from "../../common/timer";
 
 const LoginPage = ({
   loginUserData,
@@ -18,6 +19,7 @@ const LoginPage = ({
   validationError,
   handlePasswordShowHide,
   passwordType,
+  timer,
 }) => {
   const history = useHistory();
   return (
@@ -47,7 +49,9 @@ const LoginPage = ({
                 onChange={(e) => handleLoginValues("email", e.target.value)}
                 value={loginUserData.email}
               />
-              <p className="error_text">{validationError && validationError["email"]}</p>
+              <p className="error_text">
+                {validationError && validationError["email"]}
+              </p>
             </Col>
           </Row>
           {loginUserData.otpBased === false ? (
@@ -73,7 +77,9 @@ const LoginPage = ({
                   />
                 )}
 
-                <p className="error_text">{validationError && validationError["password"]}</p>
+                <p className="error_text">
+                  {validationError && validationError["password"]}
+                </p>
               </Col>
             </Row>
           ) : (
@@ -86,13 +92,15 @@ const LoginPage = ({
                   onChange={(e) => handleLoginValues("otp", e.target.value)}
                   value={loginUserData.otp}
                 />
-                <p className="error_text">{validationError && validationError["otp"]}</p>
+                <p className="error_text">
+                  {validationError && validationError["otp"]}
+                </p>
               </Col>
             </Row>
           )}
 
           <Row>
-            <Col md={12}>
+            <Col md={6}>
               {loginUserData.otpBased === false ? (
                 <span>
                   <Button
@@ -109,6 +117,13 @@ const LoginPage = ({
                     you.
                   </span>
                 </>
+              )}
+            </Col>
+            <Col md={4}>
+              {timer && loginUserData.otpBased && (
+                <Link>
+                  <Timer />
+                </Link>
               )}
             </Col>
           </Row>
