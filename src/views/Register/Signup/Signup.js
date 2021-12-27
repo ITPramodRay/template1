@@ -5,6 +5,7 @@ import Life99Logo from "../../../assets/images/Life99Logo.svg";
 import { Link } from "react-router-dom";
 import Timer from "../../common/timer";
 const SignUp = ({ handleSetRegister, registerUser, err }) => {
+  
   return (
     <>
       <Container>
@@ -30,7 +31,7 @@ const SignUp = ({ handleSetRegister, registerUser, err }) => {
                 name="firstname"
                 onChange={(e) => handleSetRegister("firstName", e.target.value)}
               />
-              <h6 className="error_text"></h6>
+              <h6 className="error_text">{err?.firstName||""}</h6>
             </Col>
             <Col md={6}>
               <Label>Last Name</Label>
@@ -39,7 +40,7 @@ const SignUp = ({ handleSetRegister, registerUser, err }) => {
                 name="lastname"
                 onChange={(e) => handleSetRegister("lastName", e.target.value)}
               />
-              <h6 className="error_text"></h6>
+              <h6 className="error_text">{err?.lastName||""}</h6>
             </Col>
           </Row>
           <Row>
@@ -50,7 +51,7 @@ const SignUp = ({ handleSetRegister, registerUser, err }) => {
                 name="mobemail"
                 onChange={(e) => handleSetRegister("mobEmail", e.target.value)}
               />
-              <h6 className="error_text">{err}</h6>
+              <h6 className="error_text">{err.apiMessage || err.mobEmail || ""}</h6>
             </Col>
             <Col md={6}>
               <Label>Age</Label>
@@ -59,7 +60,7 @@ const SignUp = ({ handleSetRegister, registerUser, err }) => {
                 name="age"
                 onChange={(e) => handleSetRegister("age", e.target.value)}
               />
-              <h6 className="error_text"></h6>
+              <h6 className="error_text">{err.age || ''}</h6>
             </Col>
           </Row>
 
@@ -71,7 +72,7 @@ const SignUp = ({ handleSetRegister, registerUser, err }) => {
                 name="mobemail"
                 onChange={(e) => handleSetRegister("mobile", e.target.value)}
               />
-              <h6 className="error_text"></h6>
+              <h6 className="error_text">{err.mobile || ''}</h6>
             </Col>
             <Col md={6}>
               <Label>Income</Label>
@@ -80,7 +81,7 @@ const SignUp = ({ handleSetRegister, registerUser, err }) => {
                 name="income"
                 onChange={(e) => handleSetRegister("income", e.target.value)}
               />
-              <h6 className="error_text"></h6>
+              <h6 className="error_text">{err.income || ''}</h6>
             </Col>
           </Row>
           <Row>

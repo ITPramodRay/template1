@@ -14,7 +14,6 @@ const SetPassword = ({ setPassword,err }) => {
           <Col md={12}>
             <div className="Logo">
               <img src={Life99Logo} alt="Life99" title="Life99" />
-              <h6 style={{ color: "red" }}>{err}</h6>
 
             </div>
           </Col>
@@ -44,6 +43,8 @@ const SetPassword = ({ setPassword,err }) => {
                 onChange={(e) => setConfirmPassword(e.target.value)}
               />
             </Col>
+            <h6 style={{ color: "red" }}>{err}</h6>
+
           </Row>
           <Row>
             <Col md={12}>
