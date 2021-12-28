@@ -12,19 +12,17 @@ import PreapprovedInsurance from './preApprovedInsurance/PreapprovedInsurance';
 
 import Subscribe from "../dashboard/MainDashboard/Subscribe";
 
-import Verifyaccount from './verifyAccount/Verifyaccount';
-import Servicecorner from './serviceCorner/Servicecorner';
-import Calculators from './calculator/Calculators';
-import Offerdetail from '../dashboard/Offerdetail';
 import { myProfilePaths } from '../../utils/RoutingConstants';
 import {useLocation} from "react-router-dom"
 import SideBar from './sideBar/sideBar';
+import AppHeader from '../common/Header/Header';
 const Myaccount = () =>{
      const location = useLocation();
     console.log(location.pathname,"this is loading")
 
         return (
             <Fragment>
+                <AppHeader />
                 <div className="my-account-dashbaord">
                     <Container>
                     <div className="myaccount-component  Personal-details-component">
@@ -44,10 +42,10 @@ const Myaccount = () =>{
                         </Container>
                 </div> 
                 {/* add differtent rout screen */}
-                { location.pathname === myProfilePaths.verifyAccount && <Verifyaccount />}
+                {/* { location.pathname === myProfilePaths.verifyAccount && <Verifyaccount />}
                 { location.pathname === myProfilePaths.serviceCorner && <Servicecorner />}
                 { location.pathname === myProfilePaths.calculator && <Calculators />}
-                { location.pathname === myProfilePaths.offerDetails && <Offerdetail />}
+                { location.pathname === myProfilePaths.offerDetails && <Offerdetail />} */}
 
             </Fragment >
 

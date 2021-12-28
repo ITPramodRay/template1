@@ -19,6 +19,7 @@ import whatsapp from "../../../assets/images/myaccount/whatsapp.svg";
 import {useHistory,useLocation} from "react-router-dom"
 import { myProfilePaths } from '../../../utils/RoutingConstants';
 
+
 function SideBar() {
     const history = useHistory()
     const location = useLocation()

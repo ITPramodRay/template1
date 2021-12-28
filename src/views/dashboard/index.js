@@ -3,7 +3,6 @@ import AppHeader from "../common/Header/Header"
 import WellBeing from './WellBeing/WellBeing';
 import Invest from './Invest/Invest';
 import Dashbordpage from './MainDashboard/index'
-import Offerdetail from './Offerdetail'
 import { useLocation } from 'react-router-dom';
 import {dashboardPaths} from "../../utils/RoutingConstants"
 import Plan from '../Plan/Plan';
