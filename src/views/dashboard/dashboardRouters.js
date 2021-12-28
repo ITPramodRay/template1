@@ -23,4 +23,9 @@ export const dashboardPageRouters = [
     component: dashboardPage,
     exact: true,
   },
+  {
+    path: dashboardPaths.myprofile,
+    component: dashboardPage,
+    exact: true,
+  },
 ];

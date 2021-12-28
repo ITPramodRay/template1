@@ -22,7 +22,7 @@ class Myaccount extends Component {
     render() {
         return (
             <Fragment>
-                {/* <div className="my-account-dashbaord">
+                <div className="my-account-dashbaord">
                     <Container>
                         <PersonalDetails />
                         <Kycdetail />
@@ -32,13 +32,13 @@ class Myaccount extends Component {
                         <Referfriend />
                         <PreapprovedInsurance/>
                     </Container>
-                </div> */}
-                {/* <Subscribe /> */}
-                {/* <Verifyaccount />
+                </div> 
+                <Subscribe />
+                <Verifyaccount />
 
                 <Servicecorner />
-                <Calculators /> */}
-                <h2>hello</h2>
+                <Calculators />
+                
 
             </Fragment >
 

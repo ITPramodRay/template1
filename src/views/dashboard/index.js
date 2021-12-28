@@ -11,14 +11,15 @@ import Plan from '../Plan/Plan';
 
 const  DashBoardPage = () => {
   const location = useLocation()
+  console.log(dashboardPaths.myprofile,"this")
   return (
     <>
     <AppHeader/>
     { location.pathname === dashboardPaths.dashboard && <Dashbordpage />}
+   { location.pathname === dashboardPaths.myprofile && <Dashbordpage />}
    { location.pathname === dashboardPaths.wellbeing && <WellBeing />}
    { location.pathname === dashboardPaths.invest && <Invest />}
    { location.pathname === dashboardPaths.plan && <Plan />}
-   { location.pathname === dashboardPaths.myprofile && <Myaccount />}
     </>
   );
 }
