@@ -1,5 +1,6 @@
 @import "../modules/colors";
 @import "../modules/card";
+
 .dashboard-page {
   display: flex !important;
   align-items: center;
@@ -7,14 +8,6 @@
   align-items: center;
   flex-direction: column;
   .user-form-wrapper {
-    // * {
-    //   display: block;
-    //   width: 100%;
-    //   text-align: center;
-    //   a {
-    //     font-weight: bold;
-    //   }
-    // }
     background-color: #eee;
     width: 50vw;
     padding: 40px;

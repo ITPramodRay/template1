@@ -1,83 +1,81 @@
-.Investsubtitle{
-    background: linear-gradient(316.64deg, #1A3E6D 0%, #2D6FC6 107.95%);
-    padding:32px 0;
-    h2{
-        font-size:24px;
-        color:$white;
-    }
+.Investsubtitle {
+  background: linear-gradient(316.64deg, #1a3e6d 0%, #2d6fc6 107.95%);
+  padding: 32px 0;
+  h2 {
+    font-size: 24px;
+    color: $white;
+  }
 }
 
-.investleftpanel{
-    background: #E7EBFF;
-    border-radius:16px;
-    padding:26px;
-    margin-top:25px;
-    height:100vh;
-    .investcardinner{
-        background:#FFF;
-        border-radius: 20px 20px 14px;
-        .topimg{
-            padding:20px 20px 0;
-        }
+.investleftpanel {
+  background: #e7ebff;
+  border-radius: 16px;
+  padding: 26px;
+  margin-top: 25px;
+  height: 100vh;
+  .investcardinner {
+    background: #fff;
+    border-radius: 20px 20px 14px;
+    .topimg {
+      padding: 20px 20px 0;
     }
-    .investleftlist{
-        font-size:14px;
-        line-height: 24px;
-        color: #2B2B2B;
-        li{
-            margin:20px 0;
-        }
+  }
+  .investleftlist {
+    font-size: 14px;
+    line-height: 24px;
+    color: #2b2b2b;
+    li {
+      margin: 20px 0;
     }
-
+  }
 }
 
-.investcardmain{
-    margin-top:25px;
-    .investcardbox{
-        background: $white;
-        border-radius: 12px;
-        padding:20px;
-        margin:15px 0;
-        position: relative;
-        .comingsoon{
-            position: absolute;
-            top:20px;
-            right: 0px;
-            width: 120px;
-        }
-        img{
-            width:40px;
-        }
-        a{
-            background: #FFFFFF;
-            border: 1.54839px solid #005E9E;
-            padding: 10px 24px 10px 28px;
-            text-align:center;
-            border-radius:38px;
-            float: right;
-            color: #005E9E;
-            font-size:16px;
-            font-weight: 600;
-            text-decoration:none;
-            &:hover{
-                background:#005E9E;
-                color:#FFFFFF;
-            }
-        }
-        span{
-            color: #005E9E;
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 27px;
-            width: 100%;
-            display: inline-block;
-            padding: 15px 0;
-        }
-        p{
-            color: #363D4E;
-            font-size: 14px;
-            line-height: 18px;
-        }
+.investcardmain {
+  margin-top: 25px;
+  .investcardbox {
+    background: $white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px 0;
+    position: relative;
+    .comingsoon {
+      position: absolute;
+      top: 20px;
+      right: 0px;
+      width: 120px;
     }
+    img {
+      width: 40px;
+    }
+    a {
+      background: #ffffff;
+      border: 1.54839px solid #005e9e;
+      padding: 10px 24px 10px 28px;
+      text-align: center;
+      border-radius: 38px;
+      float: right;
+      color: #005e9e;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      &:hover {
+        background: #005e9e;
+        color: #ffffff;
+      }
+    }
+    span {
+      color: #005e9e;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 27px;
+      width: 100%;
+      display: inline-block;
+      padding: 15px 0;
+    }
+    p {
+      color: #363d4e;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
 }
-

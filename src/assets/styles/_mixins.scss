@@ -1,0 +1,30 @@
+// Responsive
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+@mixin break($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+@mixin title($fsize, $lheight, $fweight, $color) {
+  font-size: $fsize;
+  line-height: $lheight;
+  font-weight: $fweight;
+  color: $color;
+}
+
+@mixin buttons($fsize, $fweight, $color, $bgcolor, $bradius) {
+  font-size: $fsize;
+  font-weight: $fweight;
+  color: $color;
+  background-color: $bgcolor;
+  border-radius: $bradius;
+  border: none;
+}

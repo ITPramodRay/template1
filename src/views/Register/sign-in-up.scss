@@ -212,13 +212,13 @@
     height: 100%;
   }
   &::after {
-    background: url(../images/loadingtop.svg) top right;
+    background: url(../../assets/images/loadingtop.svg) top right;
     background-repeat: no-repeat;
     top: 0;
     right: 0;
   }
   &::before {
-    background: url(../images/loadingbottom.svg) bottom left;
+    background: url(../../assets/images/loadingbottom.svg) bottom left;
     background-repeat: no-repeat;
     bottom: 0;
     left: 0;
@@ -308,7 +308,7 @@
     width: 100%;
   }
   .signleft {
-    background: $white;
+    background: #fff;
   }
   .signleft .otpInput:last-child {
     margin-right: 0;

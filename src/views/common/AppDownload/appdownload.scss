@@ -1,0 +1,52 @@
+//appdownloasd banner css
+.AppdannerPC {
+  background-image: url(../../../assets/images/App_Banner.svg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.AppdannerPC_text {
+  padding: 4rem 0rem;
+  display: flex;
+  justify-content: space-around;
+  gap: 5rem;
+  h2 {
+    font-weight: 600;
+    font-size: 48px;
+    color: #fff;
+  }
+  .img_btn {
+    display: flex;
+    gap: 1rem;
+    img {
+      width: 150px;
+    }
+  }
+}
+
+.AppbannerMV {
+  position: relative;
+  .appbanner_mv_bg {
+    width: 100%;
+  }
+  .data_app_banner {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    display: flex;
+    h4 {
+      font-weight: 600;
+      font-size: 22px;
+      color: #ffffff;
+    }
+    .img_btn {
+      display: flex;
+      gap: 20px;
+      img {
+        width: 80px;
+      }
+    }
+  }
+}

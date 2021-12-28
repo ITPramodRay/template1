@@ -19,6 +19,8 @@ import HDFCLifeSanchayPlus from "../../../assets/images/HDFC-Life-Sanchay-Plus.s
 import NationalPensionSystem from "../../../assets/images/National-Pension-System.svg";
 import { recommendedCms } from "../landingCMS";
 
+import "./recommended.scss";
+
 const Recommended = () => {
   const responsive = {
     desktop: {
@@ -76,7 +78,12 @@ const Recommended = () => {
                       <Container>
                         <Row className="">
                           <Col>
-                            <Card className="cardbox" style={{background: `${value.backgroundGradient}` }}>
+                            <Card
+                              className="cardbox"
+                              style={{
+                                background: `${value.backgroundGradient}`,
+                              }}
+                            >
                               <div className="cardimage text-right">
                                 <CardImg
                                   top
@@ -87,8 +94,16 @@ const Recommended = () => {
                                 />
                               </div>
                               <CardBody>
-                                <CardTitle style={{color:`${value.textColor}`}}>{value.mainText}</CardTitle>
-                                <CardText style={{color:`${value.textColor}`}}>{value.subText}</CardText>
+                                <CardTitle
+                                  style={{ color: `${value.textColor}` }}
+                                >
+                                  {value.mainText}
+                                </CardTitle>
+                                <CardText
+                                  style={{ color: `${value.textColor}` }}
+                                >
+                                  {value.subText}
+                                </CardText>
                                 <Button className="recommended-btn">
                                   Know More
                                 </Button>

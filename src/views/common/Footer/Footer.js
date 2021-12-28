@@ -7,6 +7,7 @@ import Facebook from "../../../assets/images/Facebook.svg";
 import Linkedin from "../../../assets/images/LinkedIN.svg";
 import Youtube from "../../../assets/images/Youtube.svg";
 import Twitter from "../../../assets/images/Twitter.svg";
+import "./footer.scss";
 
 export default class Footer extends Component {
   render() {

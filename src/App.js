@@ -6,7 +6,7 @@ import { Encrypt } from "./modules";
 import { Provider } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./assets/styles/_Websitmain.scss"
+import "./assets/styles/_Websitmain.scss";
 store.subscribe(() => {
   if (process.env.REACT_APP_PERSIST_STORE_DATA === "ENABLED") {
     sessionStorage.setItem("_store", Encrypt(store.getState(), "local"));
@@ -16,7 +16,7 @@ store.subscribe(() => {
 });
 
 function App() {
-  console.log(store,"this is the store")
+  console.log(store, "this is the store");
   return (
     <Provider store={store}>
       <ToastContainer

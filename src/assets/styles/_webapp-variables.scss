@@ -4,37 +4,23 @@ $blue: #eaf7fb;
 $lightblue: #005e9e;
 $powderblue: #e5f4ff;
 $brandblue: #3282c4;
-$skyblue:#00C0F3;
+$skyblue: #00c0f3;
 
 // White Color
 $white: #ffffff;
 $lightwhite: #f6f7f8;
 $powderwhite: #fafafa;
 
-
 // Black & Gray color
 $lightgray: #808285;
 $darkgray: #312e2e;
 
-
-
 // Gradiant Color
-$gradiantrainforest:              linear-gradient(90deg,#28d1ca,#4470a6);  
-$gradiantlightrainforest:         linear-gradient(180deg,#28d1ca,#4470a6);      
-$commservices:                    url(images/Telecom-Financial-Service.jpg);
+$gradiantrainforest: linear-gradient(90deg, #28d1ca, #4470a6);
+$gradiantlightrainforest: linear-gradient(180deg, #28d1ca, #4470a6);
+$commservices: url(images/Telecom-Financial-Service.jpg);
 
 // Font Family
-$FontRegular:'Helvetica';
-$FontLight:'HelveticaNeue-Light';
-$FontMedium:'HelveticaNeue-Medium';
-
-body{
-    font-family: 'Poppins', sans-serif !important;
-    background-color: #F2F3F7;
-
-}
-
-
-
-
-
+$FontRegular: "Helvetica";
+$FontLight: "HelveticaNeue-Light";
+$FontMedium: "HelveticaNeue-Medium";

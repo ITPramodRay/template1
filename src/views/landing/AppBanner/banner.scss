@@ -1,0 +1,71 @@
+// Banner Section
+.banner-section {
+  background: linear-gradient(313deg, #1a3e6d 0.61%, #2d6fc6 101.43%);
+  padding-top: 60px;
+  padding-bottom: 0px;
+  .banner-text {
+    font-size: 56px;
+    line-height: 74px;
+    font-weight: 600;
+    //   color: $white;
+    color: #fff;
+    a {
+      color: #0bb8e4;
+      margin-right: 15px;
+    }
+  }
+  .employee-details {
+    margin-top: 40px;
+  }
+  .employee-block {
+    padding-top: 30px;
+    .total-employee {
+      font-size: 32px;
+      line-height: 61px;
+      font-weight: 600;
+      letter-spacing: -0.253595px;
+      // color: $white;
+      color: #fff;
+      padding: 0px 7px;
+    }
+    .plus-sign {
+      font-size: 36px;
+      line-height: 61px;
+      font-weight: 600;
+      color: #0bb8e4;
+    }
+    .employee-tagline {
+      font-size: 11px;
+      line-height: 22px;
+      font-weight: 500;
+      text-transform: capitalize;
+      // color: $white;
+      color: #fff;
+      padding-left: 15px;
+    }
+  }
+
+  .qr-code-frame {
+    //   background: $white;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 15px;
+    display: inline-block;
+  }
+  .banner-download-application {
+    margin-top: 53px;
+    p {
+      font-size: 18px;
+      line-height: 27px;
+      font-weight: normal;
+      // color: $white;
+      color: #fff;
+    }
+    img {
+      width: 136px;
+      height: 45px;
+      padding-right: 10px;
+    }
+  }
+}

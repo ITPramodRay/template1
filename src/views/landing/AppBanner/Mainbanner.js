@@ -17,6 +17,8 @@ import scroll from "../../../assets/images/GIF/Scroll.gif";
 import homegif from "../../../assets/images/GIF/Home.gif";
 import { MainbannerCms } from "../landingCMS";
 
+import "./banner.scss";
+
 const Mainbanner = () => {
   const responsive = {
     desktop: {

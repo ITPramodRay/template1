@@ -1,19 +1,11 @@
 @import "../modules/grid";
 @import "../modules/colors";
 @import "../modules/card";
-@import "./main.scss";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
   .app-component {
     .app-router {
       .router-layout {
@@ -29,7 +21,8 @@ body {
     }
   }
 }
-iframe{
+
+iframe {
   display: none;
 }
 
