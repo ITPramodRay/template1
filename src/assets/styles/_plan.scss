@@ -135,7 +135,7 @@
   }
 }
 
-.SelectGoalMV{
+.SelectGoalMV {
   .FGP_MV {
     display: flex;
     justify-content: space-between;
@@ -171,27 +171,280 @@
     }
   }
 }
-.SelectGoalslider-MV{
+.SelectGoalslider-MV {
   background-image: url(../images/BG_img_NF_goal.svg);
   background-size: cover;
   border-radius: 9px;
   background-repeat: no-repeat;
   width: 100%;
   padding: 1rem;
-  img{
+  img {
     width: 35px;
     height: 35px;
     margin-bottom: 0.5rem;
   }
-  p{
+  p {
     text-align: left;
     color: #fff;
     font-weight: 500;
-font-size: 16px;
-margin-bottom: 0.5rem;
+    font-size: 16px;
+    margin-bottom: 0.5rem;
   }
 }
 
+.ExploreSliderPC_base {
+  .ExploreSlider {
+    padding: 1rem;
+    background: #e6eded;
+    border-radius: 20px;
+  }
+  .card-item {
+    display: flex;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 14px;
+    .icon {
+      width: 100px;
+      height: auto;
+    }
+    .text-div {
+      text-align: left;
+      h2 {
+        font-weight: 600;
+        font-size: 14.8989px;
+        line-height: 25px;
+        color: #263238;
+      }
+      p {
+        color: #363d4e;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14.8989px;
+      }
+      .link {
+        cursor: pointer;
+        color: #005e9e;
+        font-weight: 600;
+        font-size: 14.8989px;
+      }
+    }
+  }
+}
+.TermFuturePlanning {
+  .graph_card {
+    .card_head {
+      background: linear-gradient(134.14deg, #1a3e6d 0.61%, #2d6fc6 101.43%);
+      border-radius: 16px 16px 0px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5rem 0rem;
+      h2 {
+        text-align: center;
+        color: #fff;
+        font-weight: 500;
+        font-size: 28px;
+        width: 80%;
+      }
+    }
+    .div_text {
+      box-shadow: 0px 16px 100px -40px rgba(0, 0, 0, 0.08);
+      border-radius: 0px 0px 16px 16px;
+      .T-div {
+        padding: 0.5rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #000;
+        p {
+          margin: 0;
+          font-weight: normal;
+          font-size: 14px;
+          color: #363d4e;
+        }
+      }
+      .D-div {
+        padding: 1rem 1.5rem;
+        background-color: #fff;
+        .top {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #2277f1;
+          }
+          p {
+            margin: 0px;
+            font-weight: normal;
+            font-size: 16px;
+            color: #225290;
+          }
+          h2 {
+            margin: 0px;
+            font-weight: bold;
+            font-size: 24px;
+            color: #2277f1;
+          }
+        }
+      }
+      .down {
+        padding: 1.5rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        background: #f2f3f7;
+        border-radius: 0px 0px 16px 16px;
+        .p_one {
+          font-weight: 600;
+          font-size: 16px;
+          color: #245799;
+          margin-bottom: 0px;
+        }
+        p {
+          font-weight: normal;
+          font-size: 16px;
+          color: #225290;
+        }
+      }
+    }
+  }
+  .BookSlot {
+    width: 100%;
+    .bookslottop {
+      padding: 1.5rem;
+      display: flex;
+      background: linear-gradient(134.14deg, #1a3e6d 0.61%, #2d6fc6 101.43%);
+      gap: 3rem;
+      border-radius: 16px 16px 0px 0px;
+      .mid-data {
+        h2 {
+          color: #fff;
+          border-bottom: 1px dashed #acacac;
+          width: 85%;
+          padding-bottom: 1rem;
+        }
+        .icon-text {
+          display: flex;
+          gap: 1.5rem;
+          .icon-item {
+            display: flex;
+            color: #fff;
+            gap: 0.5rem;
+            p {
+              margin: 0;
+            }
+          }
+        }
+      }
+      .btn_div {
+        white-space: nowrap;
+        button {
+          background: #1a3e6d;
+          box-shadow: 0px 8px 16px -6px rgba(0, 82, 103, 0.32);
+          border-radius: 28px;
+          color: #f6f7f8;
+          font-weight: 600;
+          font-size: 17px;
+          padding: 0.75rem 1.25rem;
+          outline: none;
+          border-style: none;
+        }
+      }
+    }
+  }
+  .advisor_div {
+    background-color: #fff;
+    border-radius: 16px;
+    h2 {
+      font-weight: 600;
+      font-size: 18px;
+      color: #263238;
+      padding: 1rem;
+      margin: 0px;
+    }
+    hr {
+      background-color: #b9e3f1;
+    }
+    .icon-group {
+      padding: 1rem;
+      display: flex;
+      .icon-data-group {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: max-content;
+        img {
+          width: 32px;
+          height: 32px;
+        }
+        p {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 21px;
+          text-transform: capitalize;
+          color: #263238;
+          width: 75%;
+        }
+      }
+    }
+  }
+  .BookMV {
+    background: linear-gradient(134.14deg, #1a3e6d 0.61%, #2d6fc6 101.43%);
+    box-shadow: 0px 16px 64px -32px rgba(0, 0, 0, 0.04);
+    border-radius: 16px;
+    color: #fff;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      img {
+        width: 120px;
+      }
+      h2 {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 21px;
+        text-transform: capitalize;
+        color: #ffffff;
+      }
+    }
+    .mid-data{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .line_p{
+        padding: 5px;
+        border-right: 1px solid #fff;
+      }
+
+    }
+    .btn_div {
+      white-space: nowrap;
+      text-align: center;
+      button {
+        background: #1a3e6d;
+        box-shadow: 0px 8px 16px -6px rgba(0, 82, 103, 0.32);
+        border-radius: 28px;
+        color: #f6f7f8;
+        font-weight: 600;
+        font-size: 17px;
+        padding: 0.75rem 1.25rem;
+        outline: none;
+        border-style: none;
+      }
+    }
+    
+  }
+}
 
 .Plan_mv {
   display: none;

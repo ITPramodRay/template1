@@ -61,3 +61,37 @@
     font-weight: bolder !important;
   }
 }
+
+.ExploreSlider {
+  .swiper {
+    // overflow: visible !important;
+  }
+  .swiper-button-next {
+    position: absolute !important;
+    color: #5c616f !important;
+    font-size: 5px;
+    background-color: #fff;
+    box-shadow: (0px 4px 40px rgba(0, 0, 0, 0.14));
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+  .swiper-button-next::after {
+    font-size: 15px !important;
+    font-weight: bolder !important;
+  }
+  .swiper-button-prev {
+    position: absolute !important;
+    color: #5c616f !important;
+    font-size: 5px;
+    background-color: #fff;
+    box-shadow: (0px 4px 40px rgba(0, 0, 0, 0.14));
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+  .swiper-button-prev::after {
+    font-size: 15px !important;
+    font-weight: bolder !important;
+  }
+}

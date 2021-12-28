@@ -1,0 +1,92 @@
+.Offerdetail-copmonent {
+  background: #e5e5e5;
+  height: 100vh;
+  .pharma-details {
+    padding-top: 50px;
+    padding-left: 50px;
+  }
+  .flat-text {
+    font-weight: bold;
+    font-size: 59.3333px;
+    line-height: 89px;
+    color: #189272;
+  }
+  .discount-text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    text-transform: capitalize;
+    color: #263238;
+  }
+  .avail-btn {
+    background: #189272;
+    box-shadow: 0px 7.01086px 28.0434px rgba(175, 175, 175, 0.15);
+    border-radius: 42.0651px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    letter-spacing: -0.452785px;
+    color: #ffffff;
+    margin-top: 0px;
+    border: none;
+    padding: 10px 30px;
+  }
+  .pharma-tabs {
+    margin-top: 30px;
+    .react-tabs__tab-list {
+      background: #eeeeee;
+      backdrop-filter: blur(44.2645px);
+      border-radius: 27.14px;
+      border-bottom: none;
+      padding: 2px 0px 7px 0px;
+      .react-tabs__tab {
+        font-weight: 500;
+        font-size: 18.9127px;
+        line-height: 28px;
+        text-align: center;
+        color: #7b7b7b;
+        margin-right: 15px;
+      }
+      .react-tabs__tab.react-tabs__tab--selected {
+        background: #ffffff;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 18.9127px;
+        line-height: 28px;
+        text-align: center;
+        color: #189272;
+        border: none;
+        padding: 1px 22px 4px 22px;
+      }
+    }
+
+    .pharma-ul {
+      list-style: none;
+      position: relative;
+      li {
+        position: relative;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 26px;
+        color: #292929;
+        padding-top: 24px;
+      }
+    }
+
+    .pharma-ul li::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 34px;
+      left: -27px;
+      background: #189272;
+      border-radius: 50px;
+    }
+  }
+}
+
+.react-tabs__tab:focus {
+  box-shadow: none;
+}

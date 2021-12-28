@@ -287,8 +287,16 @@
 .accordion-item {
   background-color: transparent;
 }
-
+.M_title {
+  display: none;
+}
 @media only screen and (max-width: 767px) {
+  .title {
+    display: none;
+  }
+  .M_title {
+    display: contents;
+  }
   .prepare-retirement-section {
     .title-row {
       padding-bottom: 10px;

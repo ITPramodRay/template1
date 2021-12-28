@@ -35,6 +35,7 @@ export default function AppRouter({ ...props }) {
     <div className="app-router">
       <LoaderWrapper>
         <div className="router-layout">
+          {console.log(allPublicRoutes)}
           <Router>
             <ScrollToTop>
               <Switch>

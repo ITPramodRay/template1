@@ -1,0 +1,692 @@
+@mixin Myaccount-card($background) {
+  box-shadow: 0px 17.6805px 70.7219px -35.3609px rgba(0, 0, 0, 0.16);
+  border-radius: 16px;
+  background: $background;
+  margin-bottom: 30px;
+}
+
+.my-account-dashbaord {
+  background: #e5e5e5;
+  padding: 20px 0px;
+  .myaccount-component {
+    .persone-card {
+      @include Myaccount-card(#005e9e);
+      padding: 20px 25px;
+      position: relative;
+      overflow: hidden;
+      .person-pattern-img {
+        position: absolute;
+        top: 0px;
+        left: -29px;
+        content: "";
+        width: 167px;
+      }
+      .person-edit-block {
+        position: relative;
+        .persone-edit {
+          position: absolute;
+          top: 47px;
+          right: -15px;
+          width: 38px;
+          height: 38px;
+          .person-edit-btn {
+            background: #ffffff;
+            box-shadow: 0px 4px 64px rgba(0, 0, 0, 0.25);
+            border-radius: 50px;
+            color: #005e9e;
+            padding: 3px 5px 0px 6px;
+            img {
+              width: 16px;
+              height: 16px;
+              vertical-align: revert;
+            }
+          }
+        }
+      }
+      .person-name {
+        font-weight: bold;
+        font-size: 27px;
+        line-height: 37px;
+        color: #ffffff;
+      }
+      .persone-job {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 21px;
+        color: #ffffff;
+      }
+      .signed-text {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 21px;
+        text-transform: capitalize;
+        color: #ffffff;
+      }
+      .signed-persone {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 21px;
+        text-transform: capitalize;
+        color: #ffffff;
+      }
+      .logout-btn {
+        background: #ffffff;
+        box-shadow: 0px 9.85081px 19.7016px -7.38811px rgba(0, 82, 103, 0.32);
+        padding: 3px 24px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        color: #005e9e;
+        border-radius: 28px;
+      }
+    }
+    .corporate-card {
+      @include Myaccount-card(#ffffff);
+      padding: 20px 25px;
+      img {
+        width: 48px;
+      }
+      .link-text {
+        font-weight: 600;
+        font-size: 19px;
+        line-height: 24px;
+        color: #005e9e;
+      }
+      .link-now-btn {
+        background: #0bb8e4;
+        box-shadow: 0px 7.2px 14.4px -5.4px rgba(0, 82, 103, 0.32);
+        border-radius: 24px;
+        color: #f6f7f8;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        border: none;
+        padding: 7px 20px;
+      }
+    }
+    .myaccount-menus-card {
+      @include Myaccount-card(#ffffff);
+      box-shadow: 0px 17.6805px 70.7219px -35.3609px rgba(0, 0, 0, 0.16);
+      padding: 25px 50px;
+
+      .nav-item {
+        .nav-link {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 27px;
+          color: #040c22;
+          img {
+            width: 32px;
+            height: 32px;
+            margin-right: 20px;
+          }
+        }
+        .nav-link.active {
+          color: #005e9e;
+        }
+      }
+    }
+
+    .myaccount-detail-form {
+      @include Myaccount-card(#ffffff);
+      box-shadow: 0px 21.8065px 87.2258px rgba(0, 0, 0, 0.1);
+      border-radius: 21.8065px;
+      padding: 30px 25px;
+      .myacoount-heeader {
+        .borderbottom {
+          padding-bottom: 10px;
+          border-bottom: 1px solid (rgba(0, 0, 0, 0.15));
+        }
+        .persone-icon {
+          width: 36px;
+          height: 36px;
+        }
+        .myaccount-title {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 24px;
+          color: #1a3e6d;
+          padding-left: 15px;
+          display: inline-block;
+          margin-bottom: 0px;
+        }
+        .whatsapp-img {
+          width: 26px;
+          height: 26px;
+        }
+        .sharelink-text {
+          font-weight: 600;
+          font-size: 12.25px;
+          line-height: 21px;
+          color: #263238;
+          padding-left: 10px;
+        }
+      }
+    }
+
+    .myaccount--main--form {
+      padding: 15px 0px;
+      .input-div {
+        position: relative;
+      }
+      Label {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.4px;
+        color: #040c22;
+      }
+      .form-control,
+      .form-select {
+        background: #ffffff;
+        border: 1px solid #d5d4dc;
+        border-radius: 8px;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+        color: #1a3e6d;
+        height: 46px;
+        position: relative;
+        overflow: hidden;
+      }
+      .gender-all-btn {
+        .gender-btn {
+          background: #ffffff;
+          border: 1.88943px solid #b0b9c1;
+          border-radius: 45.3463px;
+          margin-right: 15px;
+          width: 13%;
+          font-size: 14px;
+          line-height: 15px;
+          text-align: center;
+          letter-spacing: -0.258333px;
+          color: #b0b9c1;
+        }
+        .gender-btn.active {
+          background: #1a3e6d;
+          border: 1.88943px solid #1a3e6d;
+          color: #ffffff;
+          font-weight: bold;
+        }
+      }
+      .downdown-image {
+        position: absolute;
+        top: 44px;
+        right: 23px;
+        width: 20px;
+        height: auto;
+      }
+      .myaccount-btn {
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: -0.4px;
+        color: #f6f7f8;
+        background: #1a3e6d;
+        box-shadow: 0px 8px 16px -6px rgba(0, 82, 103, 0.32);
+        border-radius: 28px;
+        padding: 10px 36px;
+      }
+      .kyc-checkbox {
+        margin-left: 0px;
+      }
+    }
+    .referfriend-main-form {
+      .friend-image {
+        width: 350px;
+      }
+      .referefriend-desc {
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 36px;
+        text-align: center;
+        letter-spacing: -0.3px;
+
+        color: #263238;
+      }
+      .refere-btn {
+        img {
+          margin-right: 10px;
+        }
+        background: #ffffff;
+        border: 2px solid #68cf92;
+        box-sizing: border-box;
+        border-radius: 36px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: -0.4px;
+        color: #263238;
+        padding: 10px 20px;
+      }
+    }
+    .preinsurance-main-form {
+      .insurance-desc {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        color: #263238;
+      }
+      .insurnace-block {
+        background: #ffffff;
+        box-shadow: 0px 21.8065px 87.2258px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+        padding: 20px 25px;
+        margin-top: 25px;
+        .insurnace-header {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+          padding-bottom: 10px;
+          .insurence-bank {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 27px;
+            color: #005e9e;
+            margin-bottom: 0px;
+          }
+          .insurnece-percentage {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            color: #263238;
+          }
+        }
+        .insurence-data {
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 24px;
+          color: #263238;
+          padding-top: 10px;
+        }
+        .insure-btn {
+          background: #1a3e6d;
+          box-shadow: 0px 7.23077px 14.4615px -5.42308px rgba(0, 82, 103, 0.32);
+          border-radius: 28px;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 22px;
+          text-align: center;
+          letter-spacing: -0.361538px;
+          text-transform: capitalize;
+          color: #f6f7f8;
+          padding: 7px 25px;
+        }
+      }
+    }
+  }
+}
+
+.Verify-account-component {
+  background: linear-gradient(134.14deg, #1a3e6d 0.61%, #2d6fc6 101.43%);
+  height: 100vh;
+  padding: 50px 0px;
+  .verifyemial-text {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -0.2px;
+    color: #f6f7f8;
+  }
+  p {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: -0.2px;
+    color: rgba(246, 247, 248, 0.72);
+  }
+  .backprofile-btn {
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 8px 16px -6px rgba(0, 82, 103, 0.32);
+    border-radius: 28px;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -0.4px;
+    color: #005e9e;
+    margin-top: 20px;
+    padding: 12px 40px;
+  }
+}
+
+.back-section {
+  padding-bottom: 15px;
+  padding-top: 20px;
+  img {
+    padding-right: 20px;
+  }
+  p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: #5c616f;
+  }
+}
+
+.servicecorner-copmonent {
+  background: #e5e5e5;
+  padding: 20px 0px;
+  .service-corner-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 26px;
+    min-height: 300px;
+    position: relative;
+    .service-borderbtn {
+      padding: 0px 40px 10px 40px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      .service-cmgsoon {
+        position: absolute;
+        top: 6px;
+        right: -15px;
+        width: 129px;
+      }
+      .service-corner-title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        color: #005e9e;
+        min-height: 118px;
+        padding-top: 10px;
+      }
+    }
+    .service-corner-data {
+      padding: 30px 40px 0px 40px;
+    }
+  }
+}
+
+.Calculator-copmonent {
+  background: #e5e5e5;
+  .calculator-card {
+    background: #ffffff;
+    border-radius: 16px;
+    min-height: 300px;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+
+    .calculator-title {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 24px;
+      letter-spacing: -0.4px;
+      color: #005e9e;
+      padding-bottom: 20px;
+    }
+    .calculator-data {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 30px;
+      color: #585858;
+    }
+    .calulator-image {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      width: 100px;
+    }
+  }
+}
+
+.ligainformation-componet {
+  background: #f2f3f7;
+
+  .ligalinfo {
+    padding: 30px 0px;
+    background: linear-gradient(316.64deg, #1a3e6d 0%, #2d6fc6 107.95%);
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+    .legalinfo-text {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 36px;
+      text-transform: capitalize;
+      color: #ffffff;
+    }
+    .legalinfo-desc {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      color: #ffffff;
+    }
+    .legalpattern-img {
+      position: absolute;
+      width: 150px;
+      top: 0px;
+      right: 0px;
+    }
+  }
+  .legal-part-text {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+    margin-bottom: 0px;
+    padding: 15px 0px;
+  }
+  .legalinformation-tabs {
+    .react-tabs__tab-list {
+      background: #e9e9e9;
+      padding: 10px 0px;
+      border-bottom: none;
+      .react-tabs__tab {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 27px;
+        text-transform: capitalize;
+        color: #263238;
+        padding-left: 0px;
+        padding-right: 25px;
+      }
+      .react-tabs__tab--selected {
+        border: none;
+        background: transparent;
+        color: #005e9e;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.support-screen {
+  background: #f2f3f7;
+  .support-copmonent {
+    background: #f2f3f7;
+    padding: 30px 0px;
+    .support-header-part {
+      position: relative;
+      overflow: hidden;
+      .need-help-title {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 54px;
+        text-align: center;
+        color: #1e3f6d;
+      }
+      .support-card {
+        background: #ffffff;
+        border-radius: 11.7498px;
+        padding: 15px 25px;
+        margin-top: 30px;
+        img {
+          padding-right: 25px;
+        }
+        .support-name {
+          padding-top: 10px;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: #9a9aaf;
+        }
+        .supoprt-link {
+          font-weight: 500;
+          font-size: 16px;
+          color: #005e9e;
+          text-decoration: none;
+        }
+      }
+    }
+    .Cloud1-img {
+      position: absolute;
+      position: absolute;
+      top: 10px;
+      left: 15px;
+    }
+    .Cloud2-img {
+      position: absolute;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+    }
+    .Cloud3-img {
+      position: absolute;
+      position: absolute;
+      top: 250px;
+      left: 120px;
+    }
+    .Cloud4-img {
+      position: absolute;
+      position: absolute;
+      top: 180px;
+      right: 200px;
+    }
+  }
+  .accordion-item {
+    background-color: transparent;
+  }
+}
+
+.artical-screen {
+  background: #e5e5e5;
+  padding: 30px 0px;
+  .artical-banner {
+    background-image: url("../images/myaccount/artical.png");
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    .artical-component {
+      height: 500px;
+      background-size: cover;
+
+      .artical-header {
+        padding: 140px 100px 0px 100px;
+        .auther-tagline {
+          font-weight: 600;
+          font-size: 36px;
+          line-height: 54px;
+          text-transform: capitalize;
+          color: #ffffff;
+          margin-bottom: 20px;
+        }
+        .auther-text {
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 27px;
+          text-decoration-line: underline;
+          color: #ffffff;
+          padding-right: 20px;
+        }
+        .auther-link {
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 27px;
+          text-decoration-line: underline;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  .artical-main-data {
+    padding: 30px 0px;
+    p {
+      margin-bottom: 10px;
+    }
+  }
+  .artical-bio {
+    background: #e3e3e3;
+    padding: 30px 0px;
+    .auther-name {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 36px;
+      color: #101010;
+    }
+    .auther-address {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+      color: #545454;
+    }
+    .auther-thought {
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 30px;
+      color: #101010;
+      padding-top: 10px;
+    }
+  }
+
+  .about-artical {
+    padding: 30px 0px;
+    .read-artical-text {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 27px;
+      text-transform: capitalize;
+      color: #263238;
+      padding-top: 20px;
+      padding-bottom: 50px;
+    }
+    .reletad-artical {
+      background: #ffffff;
+      overflow: hidden;
+      border-radius: 16px;
+      .image-artical {
+        position: relative;
+        .atrical-category {
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          padding: 10px 22px;
+          color: #ffffff;
+        }
+      }
+      .artical-data {
+        background: #ffffff;
+        padding: 20px 30px;
+        .artical-title {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 36px;
+          color: #373535;
+          padding-bottom: 20;
+        }
+        .artical-date {
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 27px;
+          color: #373535;
+          padding-top: 20px;
+          display: block;
+        }
+      }
+    }
+  }
+}
