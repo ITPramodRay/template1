@@ -1,0 +1,572 @@
+.main-dashboard {
+    background: #f2f3f7;
+  
+    .holding-section {
+      background: linear-gradient(316.64deg, #1a3e6d 0%, #2d6fc6 107.95%);
+      padding: 20px 0px 110px 0px;
+      position: relative;
+      .holding-curve {
+        img {
+          position: absolute;
+          right: 0px;
+          top: 0px;
+          width: 160px;
+        }
+      }
+      .border-right {
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .current-holding {
+        padding-left: 50px;
+      }
+      .holding-amount {
+        color: #fff;
+  
+        .holding-text {
+          font-weight: normal;
+          font-size: 22.1667px;
+          line-height: 35px;
+          margin-bottom: 0px;
+        }
+        .amount-text {
+          font-weight: bold;
+          font-size: 38px;
+          line-height: 57px;
+        }
+      }
+    }
+    .retiralscrore-section {
+      margin-top: -50px;
+      position: relative;
+      .add-investment {
+        background: #1a3e6d;
+        box-shadow: 0px 8px 16px -6px rgba(0, 82, 103, 0.32);
+        border-radius: 28px;
+        padding: 16px 32px 16px 28px;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 24px;
+        text-align: center;
+        color: #f6f7f8;
+        display: inline-block;
+        position: absolute;
+        top: -28px;
+        width: 25%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+      }
+  
+      .retiral-slider-block {
+        background: #ffffff;
+        box-shadow: 0px 16px 64px -32px rgba(0, 0, 0, 0.24);
+        border-radius: 11px;
+        padding: 50px 50px 5px 50px;
+        .react-multi-carousel-track {
+          padding-bottom: 46px;
+        }
+        .react-multi-carousel-dot button {
+          background: #005e9e;
+          opacity: 0.2;
+          border-radius: 50px;
+          border: none;
+          width: 7px;
+          height: 7px;
+        }
+        .react-multi-carousel-dot.react-multi-carousel-dot--active button {
+          width: 20px;
+          height: 7px;
+          opacity: 1;
+          background: #005e9e;
+        }
+      }
+  
+      .retiral-slider {
+        margin: 0px 32px;
+        padding-top: 10px;
+        .discount-border {
+          border-right: 1px solid #d9dcdf;
+        }
+        .retiral-text {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 21px;
+          text-transform: capitalize;
+          color: #1a3e6d;
+        }
+        .retiral-discount {
+          font-weight: bold;
+          font-size: 64px;
+          line-height: initial;
+          color: #1a3e6d;
+          padding-top: -10px;
+          display: block;
+          margin-top: -10px;
+        }
+        .retriral-discount-desc {
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: normal;
+          padding-top: 10px;
+          padding-left: 20px;
+        }
+        .discount-calulate-btn {
+          background: #ffffff;
+          border: 1px solid #1a3e6d;
+          box-shadow: 0px 8px 16px -6px rgba(0, 82, 103, 0.32);
+          border-radius: 28px;
+          text-align: center;
+          .btn {
+            background: transparent;
+            border: none;
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 24px;
+            text-align: center;
+            color: #1a3e6d;
+            padding: 10px;
+          }
+        }
+      }
+    }
+    .investing-section {
+      .titlewith-link {
+        a {
+          text-decoration: none;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 27px;
+          text-transform: capitalize;
+          color: #2277f1;
+        }
+      }
+      .investcardbox {
+        background: $white;
+        border-radius: 12px;
+        padding: 20px;
+        position: relative;
+        min-height: 196px;
+        .comingsoon {
+          position: absolute;
+          top: 20px;
+          right: 0px;
+          width: 120px;
+        }
+        img {
+          width: 40px;
+        }
+        a {
+          background: #ffffff;
+          border: 1.54839px solid #005e9e;
+          padding: 5px 19px;
+          text-align: center;
+          border-radius: 38px;
+          float: right;
+          color: #005e9e;
+          font-size: 16px;
+          font-weight: 600;
+          text-decoration: none;
+          &:hover {
+            background: #005e9e;
+            color: #ffffff;
+          }
+        }
+        span {
+          color: #005e9e;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 27px;
+          width: 100%;
+          display: inline-block;
+          padding: 15px 0;
+        }
+        p {
+          color: #363d4e;
+          font-size: 14px;
+          line-height: 18px;
+          margin-bottom: 0px;
+        }
+      }
+    }
+  
+    .healthymain-section {
+      .healthy-box {
+        .healthy-section {
+          background-image: url("../images/Main-Dashbaord/cardbg.png");
+          background-size: cover;
+          overflow: hidden;
+          background-repeat: no-repeat;
+          padding: 30px 35px;
+          .healthy-text {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 36px;
+            color: #ffffff;
+          }
+          .healthy-description {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 21px;
+            color: #ffffff;
+          }
+          .healthy-services {
+            padding: 20px 0px;
+            .healthy-scrore {
+              display: flex;
+              .helathy-counter {
+                font-weight: bold;
+                font-size: 47.5472px;
+                line-height: 71px;
+                text-align: center;
+                color: #16f6ff;
+                margin-right: 10px;
+              }
+              .helathy-counter-text {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 27px;
+                color: #ffffff;
+                padding-top: 14px;
+              }
+            }
+            .Bms-part {
+              p {
+                font-weight: normal;
+                font-size: 16.8883px;
+                line-height: 25px;
+                color: #ffffff;
+                margin-bottom: 5px;
+              }
+              span {
+                font-weight: bold;
+                font-size: 24.692px;
+                line-height: 37px;
+                text-align: center;
+                color: #ffffff;
+              }
+            }
+            .healthy-btn {
+              background: #fff;
+              border-radius: 31.8932px;
+              button {
+                background: transparent;
+                width: 100%;
+                text-align: center;
+                padding: 10px 30px;
+                color: #2e98a4;
+                border: none;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 21px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .healthy-mobile-section {
+      display: none;
+    }
+  
+    .service-corner-section {
+      .service-corner-box {
+        .service-corner-detail {
+          background: #c5d8f0;
+          border-radius: 50%;
+          height: 173px;
+          width: 100%;
+          align-items: center;
+          .service-corner-category {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: #031022;
+            margin-bottom: 0px;
+          }
+        }
+      }
+    }
+  
+    .main-dashboard-rightpart {
+      background: #ffffff;
+      .banks-card-sction {
+        margin-top: 25px;
+        .card-main-title {
+          margin-top: 100px;
+          h3 {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 36px;
+          }
+        }
+        .bank-cards {
+          border-radius: 18.8257px;
+          margin-top: 20px;
+        }
+        .banks-size {
+          padding: 20px 10px;
+          border-radius: 18.8257px;
+          .bank-iamge {
+            margin-top: 6px;
+          }
+          .bank-policy {
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 26px;
+          }
+          .bank-policy-desc {
+            font-weight: normal;
+            font-size: 13px;
+            line-height: 21px;
+            display: block;
+          }
+          .cards-button {
+            border-radius: 31.8932px;
+            margin-top: 20px;
+            button {
+              width: 100%;
+              text-align: center;
+              padding: 9px 1px;
+              border: none;
+              border-radius: 37.1613px;
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 11px;
+            }
+          }
+        }
+        .willplan-card {
+          position: relative;
+          .banks-size {
+            padding: 20px 20px;
+            min-height: 265px;
+          }
+          .willplan-image {
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+          }
+          .bank-policy {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+            display: inline-block;
+            padding-bottom: 5px;
+          }
+          .bank-policy-desc {
+            font-size: 12px;
+            line-height: 18px;
+            padding-top: 10px;
+          }
+          .btn {
+            background: #ffffff;
+            color: #f38374;
+            background: #ffffff;
+            border-radius: 31.8932px;
+            border: none;
+            padding: 10px 28px;
+            font-size: 14px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  
+    
+    .comming-soon-section {
+      display: none;
+    }
+  }
+  
+  // Mobile View
+  @media only screen and (max-width: 767px) {
+    .main-dashboard {
+      background: #ffffff;
+      .holding-section {
+        .current-holding {
+          padding-left: 0px;
+        }
+        .holding-amount {
+          .holding-text {
+            font-size: 16px;
+            line-height: 26px;
+          }
+          .amount-text {
+            font-size: 30px;
+            line-height: 40px;
+          }
+        }
+      }
+      .retiralscrore-section {
+        .retiral-slider-block {
+          padding: 50px 0px 5px 0px;
+        }
+        .add-investment {
+          width: 63%;
+          font-size: 20px;
+        }
+        .retiral-slider {
+          text-align: center;
+          .discount-border {
+            border-right: 0px solid #d9dcdf;
+          }
+          .retriral-discount-desc {
+            padding-left: 0px;
+          }
+        }
+      }
+      .healthymain-section {
+        display: none;
+      }
+      .healthy-mobile-section {
+        display: block;
+        height: 500px;
+        background-color: #008493;
+        background-image: url("../images/Main-Dashbaord/1.png");
+        position: relative;
+        display: block;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0px 23px;
+        border-radius: 15px;
+        background-position: right;
+  
+        .healthy-scrore-mobile {
+          display: flex;
+          .helathy-counter {
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 48px;
+            text-align: center;
+            color: #16f6ff;
+            padding-right: 10px;
+            border-right: 1px solid rgba(255, 255, 255, 0.4);
+          }
+          .helathy-counter-text {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            color: #ffffff;
+            padding-left: 10px;
+            padding-top: 7px;
+          }
+        }
+        .healthy-text-mobile {
+          margin-top: 25px;
+          padding-bottom: 5px;
+          font-weight: bold;
+          font-size: 21px;
+          line-height: 31px;
+          color: #ffffff;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .healthy-description-mobile {
+          font-weight: normal;
+          font-size: 11.8984px;
+          line-height: 18px;
+          color: #ffffff;
+        }
+        .bms-part-row-mobile {
+          margin-top: 30px;
+          .Bms-part-mobile {
+            p {
+              font-weight: normal;
+              font-size: 14px;
+              line-height: 21px;
+              color: #ffffff;
+              margin-bottom: 0px;
+            }
+            span {
+              font-weight: bold;
+              font-size: 24px;
+              line-height: 36px;
+              color: #ffffff;
+            }
+          }
+        }
+        .explore-helathy-mobile {
+          margin-top: 15px;
+          background: #ffffff;
+          border-radius: 26.4378px;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 21px;
+          text-align: center;
+          color: #2e98a4;
+        }
+      }
+      .service-corner-section {
+        display: none;
+      }
+      .investing-section {
+        .investcardbox {
+          filter: drop-shadow(0px 4px 64px rgba(0, 0, 0, 0.14));
+          margin-bottom: 28px;
+        }
+      }
+      .main-dashboard-rightpart {
+        .banks-card-sction {
+          .banks-size {
+            .cards-button {
+              display: none;
+            }
+            .bank-policy {
+              font-size: 22px;
+              line-height: 32px;
+            }
+            .bank-policy-desc {
+              font-size: 20px;
+              line-height: 28px;
+            }
+          }
+          .willplan-card {
+            .banks-size {
+              min-height: 346px;
+            }
+          }
+        }
+      }
+  
+      .subscribe-section {
+        display: none;
+      }
+      .comming-soon-section {
+        display: block;
+        background: #d3f6ff;
+        padding: 25px 0px;
+        .coming-soontext {
+          font-weight: 600;
+          font-size: 22px;
+          line-height: 32px;
+          margin-bottom: 0px;
+          color: #004343;
+        }
+        .coming-soon-desc {
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 26px;
+          display: block;
+        }
+      }
+    }
+  }
+  
+  
+  
+  .subscribe-section {
+    background: linear-gradient(316.64deg, #1a3e6d 0%, #2d6fc6 107.95%);
+    .subscribe-text {
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 72px;
+      text-transform: capitalize;
+      color: #ffffff;
+      padding-top: 60px;
+    }
+    a {
+      padding-top: 75px;
+    }
+  }
+  
+  .comming-soon-section{
+    display: none;
+  }
