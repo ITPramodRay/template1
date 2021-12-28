@@ -17,6 +17,7 @@ import Subscribe from "../MainDashboard/Subscribe";
 import Verifyaccount from './Verifyaccount';
 import Servicecorner from './Servicecorner';
 import Calculators from './Calculators';
+import Offerdetail from '../Offerdetail';
 
 class Myaccount extends Component {
     render() {
@@ -33,13 +34,11 @@ class Myaccount extends Component {
                         <PreapprovedInsurance/>
                     </Container>
                 </div> 
-                <Subscribe />
+                {/* add differtent rout screen */}
                 <Verifyaccount />
-
                 <Servicecorner />
                 <Calculators />
-                
-
+                <Offerdetail />
             </Fragment >
 
         );
