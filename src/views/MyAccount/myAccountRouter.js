@@ -1,30 +1,40 @@
 import { lazy } from "react";
-import { myAccountPaths } from "../../utils/RoutingConstants";
+import { myProfilePaths } from "../../utils/RoutingConstants";
 const myAccountPage = lazy(() => import("./index"));
 
 export const myAccountPageRouters = [
   {
-    path: myAccountPaths.myAccount,
+    path: myProfilePaths.myProfile,
     component: myAccountPage,
     exact: true,
   },
   {
-    path: myAccountPaths.verifyAccount,
+    path: myProfilePaths.kycDetails,
     component: myAccountPage,
     exact: true,
   },
   {
-    path: myAccountPaths.calculator,
+    path: myProfilePaths.bankDetails,
     component: myAccountPage,
     exact: true,
   },
   {
-    path: myAccountPaths.serviceCorner,
+    path: myProfilePaths.contactDetails,
     component: myAccountPage,
     exact: true,
   },
   {
-    path: myAccountPaths.offerDetails,
+    path: myProfilePaths.nominee,
+    component: myAccountPage,
+    exact: true,
+  },
+  {
+    path: myProfilePaths.referFriend,
+    component: myAccountPage,
+    exact: true,
+  },
+  {
+    path: myProfilePaths.preApprovedInsurance,
     component: myAccountPage,
     exact: true,
   },

@@ -12,7 +12,7 @@ import {
 } from "../../utils/RoutingConstants";
 import LoginValidation from "./LoginValidation";
 import { local } from "../../utils/Utils";
-
+import validate from "../../utils/validation"
 const LoginPage = lazy(() => import("./LoginPage/Login"));
 const VerifyLoginOtp = lazy(() => import("./VerifyOtp/VerifyOtp"));
 
@@ -39,7 +39,7 @@ const Login = () => {
     let tempLoginUserData = { ...loginUserData };
     tempLoginUserData[field] = value;
     setLoginUserData(tempLoginUserData);
-    handleValidation();
+    setValidationError({...validationError,[field]:""})
   };
 
   // login page validation
