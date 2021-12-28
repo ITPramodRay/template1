@@ -29,6 +29,13 @@ export const myProfilePaths={
   nominee: "/myprofile/nominee",
   referFriend: "/myprofile/referFriend",
   preApprovedInsurance: "/myprofile/preApprovedInsurance",
+}
+
+export const emptyNavPaths={
+  offerDetails: "/offerDetails",
+  calculator: "/calculator",
+  verifyAccount: "/verifyAccount",
+  serviceCorner: "/serviceCorner"
 
 }
 

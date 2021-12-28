@@ -5,6 +5,7 @@ import Loader from "../views/common/loader";
 import { landingPageRouters } from "../views/landing/LandingRouter";
 import { dashboardPageRouters } from "../views/dashboard/dashboardRouters";
 import { myAccountPageRouters } from "../views/MyAccount/myAccountRouter";
+import { emptyNavPageRouter } from "../views/EmptyNavComponents/emptyNavRouter";
 import { loginAndRegisterPageRouters } from "../views/Register/RegisteRouter";
 import { loginPageRouters } from "../views/Login/LoginRouter";
 // import { errorPageRouters } from "../views/common/Error/ErrorRoutes";
@@ -27,7 +28,8 @@ export default function AppRouter({ ...props }) {
     ...landingPageRouters,
     ...loginAndRegisterPageRouters,
     ...loginPageRouters,
-    ...myAccountPageRouters
+    ...myAccountPageRouters,
+    ...emptyNavPageRouter
     // ...errorPageRouters,
   ];
 

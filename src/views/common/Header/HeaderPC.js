@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom';
 import { dashboardPaths } from '../../../utils/RoutingConstants';
 import {useHistory} from "react-router-dom"
 import { myProfilePaths } from '../../../utils/RoutingConstants';
+import { emptyNavPaths } from '../../../utils/RoutingConstants';
+
 const HeaderPC = ({ activepath }) => {
   const history = useHistory()
   const [openProfileSidebar,setOpenProfileSidebar] = useState(false)
@@ -129,7 +131,7 @@ const HeaderPC = ({ activepath }) => {
         </div>
         <div className='data_base'>
           <div className='left_side'>
-            <div className='menu_items'>
+            <div className='menu_items' onClick={()=>history.push(dashboardPaths.dashboard)}>
               <h2>Home</h2>
               <img alt="" src={icon}></img>
             </div>
@@ -145,19 +147,19 @@ const HeaderPC = ({ activepath }) => {
               <h2>Portfolio</h2>
               <img alt="" src={icon}></img>
             </div>
-            <div className='menu_items'>
+            <div className='menu_items' onClick={()=>history.push(emptyNavPaths.serviceCorner)}>
               <h2>Service Corner</h2>
               <img alt="" src={icon}></img>
             </div>
-            <div className='menu_items'>
+            <div className='menu_items' onClick={()=>history.push(dashboardPaths.invest)}>
               <h2>Invest</h2>
               <img alt="" src={icon}></img>
             </div>
-            <div className='menu_items'>
+            <div className='menu_items' onClick={()=>history.push(dashboardPaths.plan)}>
               <h2>Plan</h2>
               <img alt="" src={icon}></img>
             </div>
-            <div className='menu_items'>
+            <div className='menu_items' onClick={()=>history.push(dashboardPaths.learn)}>
               <h2>Learn</h2>
               <img alt="" src={icon}></img>
             </div>
@@ -166,7 +168,12 @@ const HeaderPC = ({ activepath }) => {
               <img alt="" src={icon}></img>
             </div>
           </div>
+         
           <div className='right_side'>
+          <div className='menu_items' onClick={()=>history.push(emptyNavPaths.calculator)}>
+              <h2>Calculators </h2>
+              <img alt="" src={icon}></img>
+            </div>
             <div className='menu_items'>
               <h2>Webinars </h2>
               <img alt="" src={icon}></img>
@@ -183,7 +190,7 @@ const HeaderPC = ({ activepath }) => {
               <h2>Logout</h2>
               <img alt="" src={icon}></img>
             </div>
-            <div className='menu_items'>
+            <div className='menu_items' onClick={()=>history.push(dashboardPaths.wellbeing)}>
               <h2>Wellbeing</h2>
               <img alt="" src={icon}></img>
             </div>
