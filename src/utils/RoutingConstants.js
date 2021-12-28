@@ -21,12 +21,14 @@ export const dashboardPaths = {
   offerdetail:"/offerdetail",
 };
 
-export const myAccountPaths={
-  myAccount: "/myAccount",
-  verifyAccount: "/myAccount/verifyAccount",
-  calculator: "/myAccount/calculator",
-  serviceCorner: "/myAccount/serviceCorner",
-  offerDetails: "/myAccount/offerDetails",
+export const myProfilePaths={
+  myProfile: "/myprofile",
+  kycDetails: "/myprofile/kycDetails",
+  bankDetails: "/myprofile/bankDetails",
+  contactDetails: "/myprofile/contactDetails",
+  nominee: "/myprofile/nominee",
+  referFriend: "/myprofile/referFriend",
+  preApprovedInsurance: "/myprofile/preApprovedInsurance",
 
 }
 

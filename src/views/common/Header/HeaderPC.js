@@ -8,7 +8,10 @@ import Following from '../../../assets/images/Following-bro 1.svg';
 import icon from '../../../assets/images/menu-icon.svg';
 import { Link } from 'react-router-dom';
 import { dashboardPaths } from '../../../utils/RoutingConstants';
+import {useHistory} from "react-router-dom"
+import { myProfilePaths } from '../../../utils/RoutingConstants';
 const HeaderPC = ({ activepath }) => {
+  const history = useHistory()
   const [openProfileSidebar,setOpenProfileSidebar] = useState(false)
 
   return (
@@ -117,7 +120,7 @@ const HeaderPC = ({ activepath }) => {
 
       <div className={`profile_menu ${openProfileSidebar?"profile_menu_open":"profile_menu_off"}`}>
         <div className='head_base'>
-          <img src={Following}></img>
+          <img alt="" src={Following}></img>
           <div className='right_div'>
             <h2>Refer a friend</h2>
             <p>Referral earnings on each succesful invite.</p>
@@ -128,64 +131,64 @@ const HeaderPC = ({ activepath }) => {
           <div className='left_side'>
             <div className='menu_items'>
               <h2>Home</h2>
-              <img src={icon}></img>
+              <img alt="" src={icon}></img>
             </div>
-            <div className='menu_items'>
+            <div className='menu_items' onClick={()=>history.push(myProfilePaths.myProfile)}>
               <h2>My Profile </h2>
-              <img src={icon}></img>
+              <img alt="" src={icon}></img>
             </div>
             <div className='menu_items'>
               <h2>My Investment profile</h2>
-              <img src={icon}></img>
+              <img alt="" src={icon}></img>
             </div>
             <div className='menu_items'>
               <h2>Portfolio</h2>
-              <img src={icon}></img>
+              <img alt="" src={icon}></img>
             </div>
             <div className='menu_items'>
               <h2>Service Corner</h2>
-              <img src={icon}></img>
+              <img alt="" src={icon}></img>
             </div>
             <div className='menu_items'>
               <h2>Invest</h2>
-              <img src={icon}></img>
+              <img alt="" src={icon}></img>
             </div>
             <div className='menu_items'>
               <h2>Plan</h2>
-              <img src={icon}></img>
+              <img alt="" src={icon}></img>
             </div>
             <div className='menu_items'>
               <h2>Learn</h2>
-              <img src={icon}></img>
+              <img alt="" src={icon}></img>
             </div>
             <div className='menu_items'>
               <h2>Advisory</h2>
-              <img src={icon}></img>
+              <img alt="" src={icon}></img>
             </div>
           </div>
           <div className='right_side'>
             <div className='menu_items'>
               <h2>Webinars </h2>
-              <img src={icon}></img>
+              <img alt="" src={icon}></img>
             </div>
             <div className='menu_items'>
               <h2>Support</h2>
-              <img src={icon}></img>
+              <img alt="" src={icon}></img>
             </div>
             <div className='menu_items'>
               <h2>Legal information</h2>
-              <img src={icon}></img>
+              <img alt="" src={icon}></img>
             </div>
             <div className='menu_items'>
               <h2>Logout</h2>
-              <img src={icon}></img>
+              <img alt="" src={icon}></img>
             </div>
             <div className='menu_items'>
               <h2>Wellbeing</h2>
-              <img src={icon}></img>
+              <img alt="" src={icon}></img>
             </div>
             <div className='link'>
-              <img src={logo}></img>
+              <img alt="" src={logo}></img>
              <a href='#'>www.life99.in | by HDFC Pension</a>
             </div>
             
