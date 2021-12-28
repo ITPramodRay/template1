@@ -18,9 +18,17 @@ export const dashboardPaths = {
   advisory: "/advisory",
   learn: "/learn",
   wellbeing: "/wellbeing",
-  myprofile:"/myprofile",
   offerdetail:"/offerdetail",
 };
+
+export const myAccountPaths={
+  myAccount: "/myAccount",
+  verifyAccount: "/myAccount/verifyAccount",
+  calculator: "/myAccount/calculator",
+  serviceCorner: "/myAccount/serviceCorner",
+  offerDetails: "/myAccount/offerDetails",
+
+}
 
 export const errorPaths = {
   fourZeroFour: "/404",
