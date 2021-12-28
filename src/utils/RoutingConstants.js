@@ -10,6 +10,7 @@ export const LoginAndRegisterPagePaths = {
   UpdatePassword: "/updatePassword",
 };
 
+
 export const dashboardPaths = {
   dashboard: "/dashboard",
   invest: "/invest",
@@ -17,6 +18,7 @@ export const dashboardPaths = {
   advisory: "/advisory",
   learn: "/learn",
   wellbeing: "/wellbeing",
+  myprofile:"/myprofile",
 };
 
 export const errorPaths = {
