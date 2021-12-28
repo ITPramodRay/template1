@@ -19,6 +19,7 @@ export const dashboardPaths = {
   learn: "/learn",
   wellbeing: "/wellbeing",
   myprofile:"/myprofile",
+  offerdetail:"/offerdetail",
 };
 
 export const errorPaths = {

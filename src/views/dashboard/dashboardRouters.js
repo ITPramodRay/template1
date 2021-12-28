@@ -28,4 +28,9 @@ export const dashboardPageRouters = [
     component: dashboardPage,
     exact: true,
   },
+  {
+    path: dashboardPaths.offerdetail,
+    component: dashboardPage,
+    exact: true,
+  },
 ];
