@@ -1,0 +1,111 @@
+.link-corporate-account-page {
+  min-height: 100vh;
+
+  header.link-corporate-account {
+    padding: 6rem 0;
+
+    .lca-back {
+      top: 2rem;
+      left: 0.75rem;
+    }
+
+    .lca-headline {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .lca-desc {
+      font-size: 15px;
+      font-weight: 500;
+      color: #363d4e;
+    }
+  }
+
+  .lca-inputs-outer {
+    flex: 1;
+
+    .lca-inputs {
+      flex: 1;
+
+      label {
+        font-weight: 600;
+        font-size: 14px;
+      }
+
+      input[type="text"],
+      input[type="email"] {
+        border: 1px solid #d5d4dc;
+        border-radius: 0.5rem;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 0.75rem;
+
+        &::placeholder {
+          color: #8b849b;
+        }
+      }
+
+      .org-input {
+        margin-top: 1.5rem;
+
+        .org-label {
+          display: inline-block;
+          font-size: 15px;
+          font-weight: 500;
+          color: #363d4e;
+          margin-bottom: 0.75rem;
+        }
+
+        .form-check {
+          display: flex;
+          align-items: center;
+          padding: 0.85rem;
+          border-radius: 0.25rem;
+          border: 1px solid #97b9d7;
+
+          .form-check-input {
+            margin-left: 0;
+            margin-top: 0;
+            margin-right: 0.75rem;
+            vertical-align: middle;
+            float: none;
+          }
+
+          label {
+            line-height: 1.1;
+            font-weight: 500;
+            font-size: 14px;
+            color: #040c22;
+          }
+
+          & + .form-check {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+
+    .lca-verify-holder {
+      .lca-verify {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-size: 17px;
+        font-weight: 600;
+        border: none;
+        outline: none;
+        background: #1a3e6d;
+        color: #fff;
+        border-radius: 99rem;
+        padding: 1rem;
+        box-shadow: 0px 8px 16px -6px #00526752;
+
+        &:disabled {
+          pointer-events: none;
+          background: #97b9d7;
+        }
+      }
+    }
+  }
+}

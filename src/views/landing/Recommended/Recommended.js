@@ -14,6 +14,9 @@ import {
   Row,
 } from "reactstrap";
 
+import leftArrow from "../../../assets/images/left-arrow-icon.svg";
+import rightArrow from "../../../assets/images/right-arrow-icon.svg";
+
 import ClickProtectLife from "../../../assets/images/Click -Protect-Life.svg";
 import HDFCLifeAnnuitySolutions from "../../../assets/images/HDFC-Life-Annuity-Solutions.svg";
 import HDFCLifeSanchayPlus from "../../../assets/images/HDFC-Life-Sanchay-Plus.svg";
@@ -21,15 +24,6 @@ import NationalPensionSystem from "../../../assets/images/National-Pension-Syste
 import { recommendedCms } from "../landingCMS";
 
 import "./recommended.scss";
-
-const settings = {
-  dots: false,
-  infinite: true,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  arrows: false,
-  className: "slider-inner",
-};
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -59,26 +53,75 @@ function SamplePrevArrow(props) {
 
 const Recommended = () => {
   const slider = React.useRef(null);
+
+  const settings = {
+    dots: true,
+    autplay: true,
+    autoplaySpeed: 4000,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    centerMode: true,
+    centerPadding: "30px",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+          dots: false,
+          centerMode: false,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          dots: false,
+          centerMode: false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <div className="section Recommeded-section">
-        <Container>
-          <Row className="title-row align-items-center">
+        <Container className="mb-5 mb-lg-8">
+          <Row className="align-items-center">
             <Col sm={12} md={8}>
               <h3 className="title-text">{recommendedCms.sectionHeading}</h3>
             </Col>
-            <Col sm={12} md={4} className="d-flex justify-content-end">
-              <div className="controls d-flex gap-3">
-                <button onClick={() => slider?.current?.slickPrev()}>
-                  Prev
+            <Col
+              sm={12}
+              md={4}
+              className="d-none d-lg-flex justify-content-end mt-4 mt-lg-0"
+            >
+              <div className="controls d-flex gap-4">
+                <button
+                  className="text-btn"
+                  onClick={() => slider?.current?.slickPrev()}
+                >
+                  <img src={leftArrow} alt="" />
                 </button>
-                <button onClick={() => slider?.current?.slickNext()}>
-                  Next
+                <button
+                  className="text-btn"
+                  onClick={() => slider?.current?.slickNext()}
+                >
+                  <img src={rightArrow} alt="" />
                 </button>
               </div>
             </Col>
           </Row>
+        </Container>
 
+        <Container fluid>
           <section className="Recommended-slider">
             <Slider ref={slider} {...settings}>
               {recommendedCms.cards.map((value, key) => {
