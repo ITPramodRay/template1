@@ -28,18 +28,19 @@ export default function AppRouter({ ...props }) {
     ...landingPageRouters,
     ...loginAndRegisterPageRouters,
     ...loginPageRouters,
-    ...myAccountPageRouters,
-    ...emptyNavPageRouter
     // ...errorPageRouters,
   ];
 
-  let allPrivateRoutes = [...dashboardPageRouters];
+  let allPrivateRoutes = [
+    ...myAccountPageRouters,
+    ...emptyNavPageRouter,
+    ...dashboardPageRouters,
+  ];
 
   return (
     <div className="app-router">
       <LoaderWrapper>
         <div className="router-layout">
-          {console.log(allPublicRoutes)}
           <Router>
             <ScrollToTop>
               <Switch>
@@ -55,7 +56,6 @@ export default function AppRouter({ ...props }) {
                 })}
 
                 {allPrivateRoutes.map((value, index) => {
-                  
                   return (
                     <PrivateRoute
                       exact={value.exact}

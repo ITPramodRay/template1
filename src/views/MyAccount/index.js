@@ -1,56 +1,57 @@
-import React, { Component, Fragment } from 'react';
-import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormText, NavItem, Nav, NavLink } from 'reactstrap';
-
-// Files 
-import PersonalDetails from "./personalDetails/Personaldetails";
-import Kycdetail from "./kycDetail/KycDetail";
+import React, { Fragment } from "react";
+import { useLocation } from "react-router-dom";
+import { Col, Container, Row } from "reactstrap";
+import { myProfilePaths } from "../../utils/RoutingConstants";
+import AppHeader from "../common/Header/Header";
 import Bankdetail from "./bankDetail/Bankdetail";
 import Contactdetail from "./contactDetail/Contactdetail";
+import Kycdetail from "./kycDetail/KycDetail";
 import Nominee from "./nominee/Nominee";
-import Referfriend from './referFriend/Referfriend ';
-import PreapprovedInsurance from './preApprovedInsurance/PreapprovedInsurance';
+// Files
+import PersonalDetails from "./personalDetails/Personaldetails";
+import PreapprovedInsurance from "./preApprovedInsurance/PreapprovedInsurance";
+import Referfriend from "./referFriend/Referfriend ";
+import SideBar from "./sideBar/sideBar";
 
-import Subscribe from "../dashboard/MainDashboard/Subscribe";
+const Myaccount = () => {
+  const location = useLocation();
+  console.log(window.location, "this is loading");
 
-import { myProfilePaths } from '../../utils/RoutingConstants';
-import {useLocation} from "react-router-dom"
-import SideBar from './sideBar/sideBar';
-import AppHeader from '../common/Header/Header';
-const Myaccount = () =>{
-     const location = useLocation();
-    console.log(location.pathname,"this is loading")
-
-        return (
-            <Fragment>
-                <AppHeader />
-                <div className="my-account-dashbaord">
-                    <Container>
-                    <div className="myaccount-component  Personal-details-component">
-                    <Row className="">
-                        <SideBar />
-                        <Col sm={8} >
-                    { location.pathname === myProfilePaths.myProfile && <PersonalDetails />}
-                    { location.pathname === myProfilePaths.kycDetails && <Kycdetail />}
-                    { location.pathname === myProfilePaths.bankDetails && <Bankdetail />}
-                    { location.pathname === myProfilePaths.contactDetails && <Contactdetail />}
-                    { location.pathname === myProfilePaths.nominee && <Nominee />}
-                    { location.pathname === myProfilePaths.referFriend && <Referfriend />}
-                    { location.pathname === myProfilePaths.preApprovedInsurance && <PreapprovedInsurance />}
-                            </Col>
-                    </Row>
-                        </div>
-                        </Container>
-                </div> 
-                {/* add differtent rout screen */}
-                {/* { location.pathname === myProfilePaths.verifyAccount && <Verifyaccount />}
-                { location.pathname === myProfilePaths.serviceCorner && <Servicecorner />}
-                { location.pathname === myProfilePaths.calculator && <Calculators />}
-                { location.pathname === myProfilePaths.offerDetails && <Offerdetail />} */}
-
-            </Fragment >
-
-        );
-    
-}
+  return (
+    <Fragment>
+      <AppHeader />
+      <div className="my-account-dashbaord">
+        <Container>
+          <div className="myaccount-component  Personal-details-component">
+            <Row className="">
+              <SideBar />
+              <Col sm={8}>
+                {location.pathname === myProfilePaths.myProfile && (
+                  <PersonalDetails />
+                )}
+                {location.pathname === myProfilePaths.kycDetails && (
+                  <Kycdetail />
+                )}
+                {location.pathname === myProfilePaths.bankDetails && (
+                  <Bankdetail />
+                )}
+                {location.pathname === myProfilePaths.contactDetails && (
+                  <Contactdetail />
+                )}
+                {location.pathname === myProfilePaths.nominee && <Nominee />}
+                {location.pathname === myProfilePaths.referFriend && (
+                  <Referfriend />
+                )}
+                {location.pathname === myProfilePaths.preApprovedInsurance && (
+                  <PreapprovedInsurance />
+                )}
+              </Col>
+            </Row>
+          </div>
+        </Container>
+      </div>
+    </Fragment>
+  );
+};
 
 export default Myaccount;
