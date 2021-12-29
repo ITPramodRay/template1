@@ -1,5 +1,6 @@
 import { lazy } from "react";
 import { myProfilePaths } from "../../utils/RoutingConstants";
+import SideBarMobile from "./sideBar/sideBarMobile";
 const myAccountPage = lazy(() => import("./index"));
 
 export const myAccountPageRouters = [
@@ -36,6 +37,11 @@ export const myAccountPageRouters = [
   {
     path: myProfilePaths.preApprovedInsurance,
     component: myAccountPage,
+    exact: true,
+  },
+  {
+    path: myProfilePaths.sidebarMobile,
+    component: SideBarMobile,
     exact: true,
   },
 ];

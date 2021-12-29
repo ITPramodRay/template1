@@ -236,3 +236,68 @@
     display: none;
   }
 }
+
+// Header Nav Mobile
+
+.header-nav-mobile {
+  .refer-dropdown-item {
+    padding: 0;
+  }
+
+  .menu-refer-card {
+    background: var(--light-blue);
+    padding: 1rem 1rem 0 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    white-space: initial !important;
+    .illustration {
+      flex-basis: 45%;
+      align-self: flex-end;
+      max-width: 140px;
+    }
+
+    .content {
+      color: #fff;
+      flex-basis: 45%;
+
+      & > h3 {
+        font-size: 0.97rem;
+        font-weight: 600;
+        line-height: 1;
+      }
+
+      & > p {
+        font-size: 0.6rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .MuiPaper-root {
+    padding: 10px;
+    width: 100vw;
+  }
+
+  .MuiMenuItem-root:not(:first-child) {
+    font-weight: 500;
+    font-size: 16px;
+    padding: 6px 32px;
+    line-height: 3;
+    color: #040c22;
+    position: relative;
+
+    &:after {
+      content: url("../../../assets/images/menu-icon.svg");
+      position: absolute;
+      right: 34px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .MuiMenuItem-root + .MuiMenuItem-root {
+    border-top: 1px solid #cdd4db;
+  }
+}

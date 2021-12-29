@@ -1,0 +1,135 @@
+.profile-page-mobile {
+  .profile-back-btn {
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+  .profile-header-mobile {
+    padding: 7rem 0 9rem;
+    background: linear-gradient(134.14deg, #1a3e6d 0.61%, #2d6fc6 101.43%);
+
+    .profile-avatar-mobile {
+      position: relative;
+      & > img {
+        --size: 84px;
+        height: var(--size);
+        width: var(--size);
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .edit-profile {
+        --size: 22px;
+        height: var(--size);
+        width: var(--size);
+        border-radius: 50%;
+        display: flex;
+        background: #fff;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 20%;
+        right: 0;
+      }
+    }
+  }
+
+  //   Link Corporate Account
+  .link-corporate-account-mobile {
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 24px 48px -16px rgba(0, 0, 0, 0.16);
+    border-radius: 12px;
+    margin-top: -3rem;
+
+    .lca-title {
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    .lca-desc {
+      font-size: 14px;
+      font-weight: 500;
+      color: #363d4e;
+    }
+
+    .link-btn {
+      background: #0bb8e4;
+      border: none;
+      outline: none;
+      border-radius: 99rem;
+      display: inline-flex;
+      font-size: 15px;
+      font-weight: 600;
+      color: #fff;
+      padding: 0.6rem 1.5rem;
+    }
+  }
+
+  .whatsapp-notif-section {
+    margin: 30px 0 36px;
+    .wns-title {
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+
+  .profile-nav-mobile {
+    & > ul {
+      list-style: none;
+      padding: 20px;
+      background: #ffffff;
+      box-shadow: 0px 16px 64px -32px rgba(0, 0, 0, 0.16);
+      border-radius: 12px;
+
+      li + li {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      li:not(.logout) {
+        button {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          background: #fff;
+          outline: none;
+          border: none;
+          padding: 18px 0;
+          font-size: 17px;
+          font-weight: 600;
+          position: relative;
+
+          &::after {
+            content: url("../../../assets/images/caret-right.svg");
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-32%);
+          }
+
+          img {
+            display: inline-flex;
+            margin-right: 1.25rem;
+          }
+        }
+      }
+    }
+  }
+
+  .logout-section {
+    padding: 1.5rem 0;
+    font-size: 14px;
+    font-weight: 400;
+
+    .ls-btn {
+      border: none;
+      outline: none;
+      font-weight: 500;
+      font-size: 18px;
+      display: inline-flex;
+      padding: 14px 40px;
+      background: #1a3e6d;
+      color: #fff;
+      border-radius: 99rem;
+    }
+  }
+}
