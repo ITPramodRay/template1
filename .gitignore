@@ -1,6 +1,4 @@
 node_modules
-<<<<<<< HEAD
-=======
 .DS_STORE
 node_modules
 *.zip
@@ -8,4 +6,3 @@ node_modules
 __benchmarks__
 build/
 build2/
->>>>>>> ed0843dfece85fa2ca65f2e5f11da27c3ab4b2f6

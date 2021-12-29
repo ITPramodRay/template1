@@ -32,6 +32,9 @@ export const myProfilePaths = {
   preApprovedInsurance: "/myprofile/preApprovedInsurance",
   sidebarMobile: "/sidebar-mobile",
   corporateDetails: "/corporate-details",
+  corporateDetailsMV1: "/myprofile/corporateDetails1",
+  corporateDetailsMV2: "/myprofile/corporateDetails2",
+  corporateDetailsMV3: "/myprofile/corporateDetails3",
 };
 
 export const emptyNavPaths = {
