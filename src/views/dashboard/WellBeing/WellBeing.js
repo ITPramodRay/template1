@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from "react";
 
 const AppDownloadPC = lazy(() => import("../../common/AppDownload/AppDownloadPC"));
 const AppDownloadMV = lazy(() => import("../../common/AppDownload/AppDownloadMV"));
-const Footer = lazy(() => import("../../common/Footer/Footer"));
+
 
 const CardHead = lazy(() => import("../../common/CardHead/CardHead"));
 const EmotionalMentalWellbeing = lazy(() =>
@@ -64,7 +64,7 @@ export default function WellBeing({ ...props }) {
         <AppDownloadPC />
       </Suspense>
 
-      <Footer />
+  
     </>
   );
 }

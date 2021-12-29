@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Col, Container, Row, Button } from "reactstrap";
-
+import {Link} from "react-router-dom"
 
 
 
@@ -55,7 +55,7 @@ class Healthy extends Component {
                                                 </div>
                                             </Col>
                                             <Col sm={3} className="healthy-btn">
-                                                <Button className="">Explore</Button>
+                                                <Button className=""><Link className="link" to="/wellbeing">Explore</Link></Button>
                                             </Col>
                                         </Row>
                                     </div>

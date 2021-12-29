@@ -7,6 +7,9 @@ import Community from "./community/community"
 import SupportPage from "./supportPage/supportPage";
 import LegalInfo from "./legalInfo/legalInfo"
 import Webinars from "./webinars/webinars";
+import Article from "./article/article";
+import Footer from "../common/Footer/Footer";
+import AppHeader from "../common/Header/Header";
 import { emptyNavPaths } from "../../utils/RoutingConstants";
 import { useLocation } from "react-router-dom";
 function EmptyNav() {
@@ -14,6 +17,7 @@ function EmptyNav() {
   console.log(location.pathname,"this is")
   return (
     <>
+    <AppHeader empty={true}/>
       {location.pathname === emptyNavPaths.verifyAccount && <Verifyaccount />}
       {location.pathname === emptyNavPaths.serviceCorner && <Servicecorner />}
       {location.pathname === emptyNavPaths.calculator && <Calculators />}
@@ -22,6 +26,8 @@ function EmptyNav() {
       {location.pathname === emptyNavPaths.legalInfo && <LegalInfo />}
       {location.pathname === emptyNavPaths.support && <SupportPage />}
       {location.pathname === emptyNavPaths.webinars && <Webinars />}
+      {location.pathname === emptyNavPaths.article && <Article />}
+      <Footer />
     </>
   );
 }

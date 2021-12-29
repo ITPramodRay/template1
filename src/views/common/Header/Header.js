@@ -6,13 +6,13 @@ import HeaderPC from "./HeaderPC";
 
 import "./header.scss";
 
-const AppHeader = () => {
+const AppHeader = ({empty}) => {
   const location = useLocation();
 
   return (
     <>
       <HeaderMV activepath={location.pathname} />
-      <HeaderPC activepath={location.pathname} />
+      <HeaderPC activepath={location.pathname} empty={empty||false}/>
     </>
   );
 };

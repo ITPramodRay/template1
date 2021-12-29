@@ -48,4 +48,9 @@ export const emptyNavPageRouter = [
     component: emptyNavPage,
     exact: true,
   },
+  {
+    path: emptyNavPaths.article,
+    component: emptyNavPage,
+    exact: true,
+  },
 ];

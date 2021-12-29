@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import AppDownloadPC from '../common/AppDownload/AppDownloadPC';
 import CardHead from '../common/CardHead/CardHead';
-import Footer from '../common/Footer/Footer';
+
 import InvestLeftPanel from '../dashboard/Invest/InvestLeftPanel';
 import ExploreFetures from './ExploreFetures';
 import GoalPlannerCard from './GoalPlannerCard';
@@ -28,7 +28,7 @@ const Plan = () => {
       </div>
       <AppDownloadPC />
       <div className='desktopView'>
-        <Footer />
+       
       </div>
       
       
@@ -39,7 +39,7 @@ const Plan = () => {
         <TermFuturePlanning />
       </div>
       <div className='mobileView'>
-        <Footer />
+       
       </div>
     </>
   );

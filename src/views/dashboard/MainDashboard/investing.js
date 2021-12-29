@@ -2,9 +2,9 @@ import React, { Component, Fragment } from "react";
 import { Col, Container, Row } from "reactstrap";
 import Chart from "../../../assets/images/Main-Dashbaord/ChartLine.svg";
 import Umbrella from "../../../assets/images/Main-Dashbaord/Umbrella.svg";
-
-class Investing extends Component {
-  render() {
+import {useHistory, Link} from "react-router-dom"
+const Investing = () => {
+    const history = useHistory()
     return (
       <Fragment>
         <div className="section investing-section">
@@ -16,10 +16,10 @@ class Investing extends Component {
                 </div>
               </Col>
               <Col sm={2} md={2} xs={4} className="titlewith-link text-center">
-                <a href="#" className="text-end">
+                <Link to="/nps" className="text-end">
                   {" "}
                   View All
-                </a>
+                </Link>
               </Col>
             </Row>
 
@@ -27,7 +27,7 @@ class Investing extends Component {
               <Col md={4}>
                 <div className="investcardbox">
                   <img src={Chart} alt="NPS" title="NPS" />
-                  <a href="#">Buy Now</a>
+                  <Link to="/nps">Buy Now</Link>
                   <span>NPS</span>
                   <p>
                     Get started smart investment
@@ -63,7 +63,7 @@ class Investing extends Component {
         </div>
       </Fragment>
     );
-  }
+  
 }
 
 export default Investing;

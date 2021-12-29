@@ -46,6 +46,7 @@ export const emptyNavPaths = {
   legalInfo: "/legalInfo",
   support: "/support",
   community: "/community",
+  article: "/article"
 };
 
 export const errorPaths = {

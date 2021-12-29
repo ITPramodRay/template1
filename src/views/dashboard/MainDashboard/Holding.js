@@ -2,8 +2,8 @@ import React, { Component, Fragment } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import Hodingcurve from "../../../assets/images/Main-Dashbaord/holding-curve.png"
 
-class  Holding extends Component {
-    render() {
+const Holding = ({userProfileData}) => {
+    
         return (
             <Fragment>
                 <div className=" holding-section ">
@@ -12,7 +12,7 @@ class  Holding extends Component {
                     </div>
                     <Container>
                         <Row>
-                            <p className="title-text text-white"><span className='font-weight-bold'>Hello,</span> Ramesh Nair  </p>
+                            <p className="title-text text-white"><span className='font-weight-bold'>Hello,</span> {userProfileData?.personal_details.name || ""}  </p>
                         </Row>
 
                         <Row>                   
@@ -39,7 +39,7 @@ class  Holding extends Component {
             </Fragment >
 
         );
-    }
+    
 }
 
 export default Holding;

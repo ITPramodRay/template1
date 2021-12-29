@@ -12,7 +12,7 @@ import { useHistory } from "react-router-dom";
 import { myProfilePaths } from "../../../utils/RoutingConstants";
 import { emptyNavPaths } from "../../../utils/RoutingConstants";
 
-const HeaderPC = ({ activepath }) => {
+const HeaderPC = ({ activepath,empty }) => {
   const history = useHistory();
   const [openProfileSidebar, setOpenProfileSidebar] = useState(false);
 
@@ -24,16 +24,16 @@ const HeaderPC = ({ activepath }) => {
             <header className="Dashbord-header-PC">
               <div className="left-head">
                 <img alt="" src={logohead}></img>
-                <div className="search-bar">
+                {!empty && <div className="search-bar">
                   <input
                     type="text"
                     placeholder="Search"
                     className="search-tab"
                   ></input>
                   <img alt="" className="search-icon" src={searchicon}></img>
-                </div>
+                </div>}
               </div>
-              <div className="nav-bar">
+              {!empty && <div className="nav-bar">
                 <ul className="m-0 p-0">
                   <li>
                     <Link
@@ -104,8 +104,8 @@ const HeaderPC = ({ activepath }) => {
                     </Link>
                   </li>
                 </ul>
-              </div>
-              <div
+              </div>}
+              {!empty && <div
                 className="right-head"
                 onClick={() => setOpenProfileSidebar((prevState) => !prevState)}
               >
@@ -116,7 +116,7 @@ const HeaderPC = ({ activepath }) => {
                   className="profile-pic"
                 ></img>
                 <img alt="" src={downicon}></img>
-              </div>
+              </div>}
             </header>
           </div>
         </div>
