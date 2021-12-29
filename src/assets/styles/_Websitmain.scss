@@ -1,55 +1,43 @@
-//@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
-
+@use "fonts";
 // Color & Font-Family
-@import './webapp-variables';
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "./webapp-variables";
 
-
-// Common
-@import './Mixin';
-
-@import './error';
 //slider
-@import './Slider/SliderMain';
-// Header
-@import './Navbar';
+@import "./Slider/SliderMain";
 
 // Landing Page
-@import './Landing';
-@import './Landing-mobile';
-@import './SignInUp';
-
+@import "./Landing";
+@import "./Landing-mobile";
+@import "./SignInUp";
 
 //Wellbing page
-@import './Wellbeing';
-@import './InvestDashboard';
-@import './plan';
-@import './Mailmverify';
-@import './dashbord';
-@import './Myaccount';
-@import './Service';
+@import "./Wellbeing";
+@import "./InvestDashboard";
+@import "./plan";
+@import "./dashbord";
+@import "./Myaccount";
+@import "./Service";
 
-
-
-.desktopView{
-    display:block;
-    @media only screen and (max-width: 600px) {
-    display:none;
-     }
-}
-.mobileView{
-    display:none;
-    @media only screen and (max-width: 600px) {
-        display:block;
-         }
+.desktopView {
+  display: block;
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
 }
 
-#timer{
-    display:inline;
-    padding: 5px;
-    color: #004853;
-    font-family: Verdana, sans-serif, Arial;
-    font-size: 40px;
-    font-weight: bold;
-    text-decoration: none;
+.mobileView {
+  display: none;
+  @media only screen and (max-width: 600px) {
+    display: block;
+  }
+}
+
+#timer {
+  display: inline;
+  padding: 5px;
+  color: #004853;
+  font-family: Verdana, sans-serif, Arial;
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: none;
 }

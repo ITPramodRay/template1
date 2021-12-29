@@ -1,177 +1,6 @@
-@mixin title($fsize, $lheight, $fweight, $color) {
-  font-size: $fsize;
-  line-height: $lheight;
-  font-weight: $fweight;
-  color: $color;
-}
+@use "mixins" as *;
 
-@mixin buttons($fsize, $fweight, $color, $bgcolor, $bradius) {
-  font-size: $fsize;
-  font-weight: $fweight;
-  color: $color;
-  background-color: $bgcolor;
-  border-radius: $bradius;
-  border: none;
-}
-
-@import './webapp-variables';
-
-// Common Css
-.section {
-  padding: 50px 0px;
-}
-.text-right {
-  text-align: right !important;
-}
-.title-row {
-  padding-bottom: 30px;
-}
-.btn-check:active + .btn-secondary:focus,
-.btn-check:checked + .btn-secondary:focus,
-.btn-secondary.active:focus,
-.btn-secondary:active:focus,
-.show > .btn-secondary.dropdown-toggle:focus,
-.btn-check:focus + .btn-secondary,
-.btn-secondary:focus {
-  box-shadow: none !important;
-}
-
-// Banner Section
-.banner-section {
-  background: linear-gradient(313deg, #1a3e6d 0.61%, #2d6fc6 101.43%);
-  padding-top: 60px;
-  padding-bottom: 0px;
-  .banner-text {
-    font-size: 56px;
-    line-height: 74px;
-    font-weight: 600;
-    color: $white;
-    a {
-      color: #0bb8e4;
-      margin-right: 15px;
-    }
-  }
-  .employee-details {
-    margin-top: 40px;
-  }
-  .employee-block {
-    padding-top: 30px;
-    .total-employee {
-      font-size: 32px;
-      line-height: 61px;
-      font-weight: 600;
-      letter-spacing: -0.253595px;
-      color: $white;
-      padding: 0px 7px;
-    }
-    .plus-sign {
-      font-size: 36px;
-      line-height: 61px;
-      font-weight: 600;
-      color: #0bb8e4;
-    }
-    .employee-tagline {
-      font-size: 11px;
-      line-height: 22px;
-      font-weight: 500;
-      text-transform: capitalize;
-      color: $white;
-      padding-left: 15px;
-    }
-  }
-
-  .qr-code-frame {
-    background: $white;
-    padding: 10px;
-    border-radius: 8px;
-    margin-top: 15px;
-    display: inline-block;
-  }
-  .banner-download-application {
-    margin-top: 53px;
-    p {
-      font-size: 18px;
-      line-height: 27px;
-      font-weight: normal;
-      color: $white;
-    }
-    img {
-      width: 136px;
-      height: 45px;
-      padding-right: 10px;
-    }
-  }
-}
-
-// Prepare Retirement-Section
-.prepare-retirement-section {
-  .title-text {
-    @include title(32px, 40px, 600, $darkblue);
-  }
-  .react-tabs__tab-list {
-    border-bottom: none;
-    .react-tabs__tab {
-      display: block !important;
-      font-size: 19px;
-      line-height: 29px;
-      font-weight: 500;
-      color: $darkblue;
-      border-top: none;
-      border-left: none;
-      border-right: none;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-      padding: 35px 30px;
-      margin-bottom: 10px;
-      .tab-image {
-        width: 30px;
-        height: 30px;
-        margin-right: 30px;
-        float: left;
-      }
-      // span {
-      //   display: inline-flex;
-      // }
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0px;
-        bottom: 0px;
-        width: 0%;
-        height: 4px;
-        transition: ease-in 1s;
-      }
-      &:hover {
-        background: $blue;
-        &::before {
-          content: "";
-          position: absolute;
-          left: 0px;
-          width: 60%;
-          height: 2px;
-          background: $skyblue;
-          transition: ease-in 1s;
-        }
-      }
-    }
-    .react-tabs__tab--selected {
-      border-bottom: 1px solid transparent;
-      border-top: none;
-      border-left: none;
-      border-right: none;
-      background: $blue;
-    }
-  }
-  .react-tabs__tab:focus {
-    box-shadow: none;
-    border-color: none;
-    outline: none;
-  }
-  .react-tabs__tab-panel {
-    .preapre-image {
-      height: 580px;
-    }
-  }
-}
+@use "webapp-variables";
 
 // Products Section
 .products-container {
@@ -197,7 +26,7 @@
       width: 20%;
     }
     .products-box {
-      margin-top:40px;
+      margin-top: 40px;
       position: relative;
       .products-detail {
         background: #ffffff;
@@ -211,8 +40,8 @@
           width: 90px;
         }
         .product-img {
-          width:60px;
-          height:60px;
+          width: 60px;
+          height: 60px;
           margin-top: 8px;
         }
         .products-category {
@@ -253,89 +82,6 @@
   }
 }
 
-// Recommeded Section
-
-.Recommeded-section {
-  background: #e5f4ff;
-  padding: 100px 0px;
-  .title-text {
-    @include title(32px, 40px, 600, $darkblue);
-  }
-  .Recommended-slider {
-    .react-multi-carousel-list {
-      padding: 75px 0px 0px 0px;
-      margin-top: -64px;
-      .react-multiple-carousel__arrow--left {
-        top: 0;
-        left: 87%;
-        background: $white;
-      }
-      .react-multiple-carousel__arrow--left::before {
-        content: "";
-        background-image: url("../images/backarrow.png");
-        position: absolute;
-        top: 10px;
-        right: 9px;
-        width: 25px;
-        height: 19px;
-        background-repeat: no-repeat;
-        display: block;
-        padding: 10px;
-      }
-      .react-multiple-carousel__arrow--right {
-        top: 0;
-        background: $white;
-      }
-      .react-multiple-carousel__arrow--right::before {
-        content: "";
-        background-image: url("../images/nextarrow.png");
-        position: absolute;
-        top: 10px;
-        right: 8px;
-        width: 25px;
-        height: 19px;
-        background-repeat: no-repeat;
-        display: block;
-      }
-    }
-    .slider-block {
-      .container {
-        padding: 0px 30px 0px 0px;
-        .cardbox {
-          padding: 20px 20px;
-          background: linear-gradient(340.78deg, #4aaac1 2.17%, #206f82 114.02%);
-          border-radius: 12.9221px;
-          .card-img-top {
-            width: 120px;
-            height: 120px;
-          }
-          .card-body {
-            padding: 0px;
-            .card-title {
-              @include title(24px, 36px, normal, $white);
-              padding-top: 20px;
-            }
-            .card-text {
-              @include title(13px, 19px, normal, $white);
-              padding-top: 10px;
-                  min-height: 80px;
-            }
-            .recommended-btn {
-              font-size: 14px;
-              line-height: 24px;
-              background: $darkblue;
-              box-shadow: 0px 6px 12px -4px rgba(0, 82, 103, 0.32);
-              border-radius: 28px;
-              padding: 10px 20px;
-              margin-bottom: 15px;
-              margin-top: 5px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
 // User Saying Section
 .Users-section {
   .title-row {
@@ -432,11 +178,17 @@
     }
   }
 }
+
 // Retirment Section
 .retirment-section {
   padding: 150px 0px;
   .retirement-container {
-    background: linear-gradient(198deg, rgba(2, 0, 36, 1) 0%, rgba(64, 156, 179, 1) 0%, rgba(44, 128, 148, 1) 52%);
+    background: linear-gradient(
+      198deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(64, 156, 179, 1) 0%,
+      rgba(44, 128, 148, 1) 52%
+    );
     border-radius: 12px;
     padding: 60px 0px;
     position: relative;
@@ -474,6 +226,7 @@
     }
   }
 }
+
 // Faq Section
 .faq-section {
   .title-text {
@@ -530,77 +283,18 @@
     }
   }
 }
-// Footer Section
-.footer-section {
-  background: $powderwhite;
-  padding: 50px 0px 36px 0px;
-  .foooter-logo {
-    // width: 200px;
-    // height: 60px;
-  }
-  a {
-    font-size: 16px;
-    line-height: 22px;
-    font-weight: 500;
-    color: $darkblue;
-    display: block;
-    padding-bottom: 10px;
-    text-decoration: none;
-  }
-  .footer-social-text {
-    font-size: 16px;
-    line-height: 27px;
-    font-weight: 500;
-    color: $darkblue;
-  }
-  .footer-social-link {
-    text-decoration: none;
-    display: inline;
-    margin-right: 18px;
-    .social-image {
-      width: 34px;
-      height: 34px;
-    }
-  }
-  .copyright-text {
-    font-size: 16px;
-    font-weight: 500;
-    color: $darkblue;
-    padding-top: 45px;
-  }
+
+.accordion-item {
+  background-color: transparent;
 }
-@media only screen and (max-width: 600px) {
-  .mobile_footer{
-    padding: 1rem;
-    background-color: #F9F9F9;
-    border-radius: 22px;
-  }
-  .foooter-logo {
-    width: 100px;
-    margin-bottom: 1rem;
-  }
-  .mobile_footer_linkgroup{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #C0BABA;
-  }
-  .mobile-connected{
-    padding: 1.5rem 1rem;
-    background-color: #ffffff;
-    text-align: center;
-  }
-}
-.accordion-item{
-  background-color:transparent;
-}
-.M_title{
+.M_title {
   display: none;
 }
 @media only screen and (max-width: 767px) {
-  .title{
+  .title {
     display: none;
   }
-  .M_title{
+  .M_title {
     display: contents;
   }
   .prepare-retirement-section {
@@ -649,13 +343,14 @@
 .gif-scrolltwo {
   bottom: 40px;
 }
+
 .gif_scroll {
-    position: relative;
-    bottom:100px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    text-align: center;
+  position: relative;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
   img {
     width: 50px;
   }
@@ -664,6 +359,7 @@
     font-size: 12px;
   }
 }
+
 .slider-two {
   position: relative;
   .home-gif {
@@ -673,6 +369,3 @@
     width: 100px;
   }
 }
-
-
-

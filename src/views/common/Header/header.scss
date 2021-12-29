@@ -49,7 +49,8 @@
           font-size: 16px;
         }
         .active_link {
-          color: $text-dark-blue;
+          //   color: $text-dark-blue;
+          color: #15396a;
           font-weight: 600;
           font-size: 16px;
         }
@@ -64,7 +65,8 @@
       width: 35px;
       height: 35px;
       border-radius: 50%;
-      border: 2px solid $text-blue;
+      //   border: 2px solid $text-blue;
+      border: 2px solid #005e9e;
       margin-left: 0.5rem;
     }
   }
@@ -72,7 +74,7 @@
 //dashbord-head-ui-mobile
 .Dashbord-header-MB {
   width: 100vw;
-  background-image: url(../images/bg-pattern.svg);
+  background-image: url(../../../assets/images/bg-pattern.svg);
   background-size: cover;
   display: none;
   .top-mb-head {
@@ -87,7 +89,8 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        border: 2px solid $text-blue;
+        // border: 2px solid $text-blue;
+        border: 2px solid #005e9e;
         margin-left: 0.5rem;
       }
     }
@@ -105,7 +108,8 @@
         a {
           text-decoration: none;
           margin: 0rem 0.75rem;
-          color: $text-white;
+          //   color: $text-white;
+          color: #fff;
           font-weight: 400;
           font-size: 12px;
           padding: 13.5px 0.5rem;
@@ -126,26 +130,23 @@
   border-radius: 15px;
   width: 600px;
   position: absolute;
+  animation: profile 1s;
   right: 0;
   z-index: 999;
-  animation: profile 1s;
-  // animation-direction: alternate;
-  @keyframes profile {
-    0% {
-      right: -600px;
-      opacity: 0;
-    }
-    100% {
-      right: 0px;
-      opacity: 100;
-    }
-  }
 }
 .profile_menu_off {
   display: none !important;
 }
 .profile_menu_open {
   display: block !important;
+  @keyframes profile {
+    0% {
+      right: -600px;
+    }
+    100% {
+      right: 0px;
+    }
+  }
 
   .head_base {
     width: 100%;

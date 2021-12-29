@@ -1,99 +1,97 @@
-
-.HealthArticlesPC{
-    .swiper {
-        padding-left: 1rem !important;
-    }
+.HealthArticlesPC {
+  .swiper {
+    padding-left: 1rem !important;
+  }
 }
 
-
-.HealthArticlesPC{
-    .swiper {
-        padding-left: 1rem !important;
-    }
+.HealthArticlesPC {
+  .swiper {
+    padding-left: 1rem !important;
+  }
 }
 
-.PhysicalWellbeingPC{
-    border-radius: 16px;
-    .swiper-pagination{
-        position: absolute !important;
-        justify-content: flex-end !important;
-        padding-right: 1rem;
-        bottom: 10px;
-    }
-    .swiper-pagination-bullet{
-        width: 5px !important;
-        height: 5px !important;
-    }
-    .swiper-pagination-bullet-active{
-        width: 16px !important;
-        border-radius: 25% !important;
-    }
+.PhysicalWellbeingPC {
+  border-radius: 16px;
+  .swiper-pagination {
+    position: absolute !important;
+    justify-content: flex-end !important;
+    padding-right: 1rem;
+    bottom: 10px;
+  }
+  .swiper-pagination-bullet {
+    width: 5px !important;
+    height: 5px !important;
+  }
+  .swiper-pagination-bullet-active {
+    width: 16px !important;
+    border-radius: 25% !important;
+  }
 }
 
-.EmotionalMentalWellbeingPC{
-    .swiper{
-        overflow: visible !important;
-    }
-    .swiper-button-next{
-        position: absolute !important;
-        color: #5C616F !important;
-        font-size: 5px;
-        background-color: #fff;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        right: -1rem !important;
-    }
-    .swiper-button-next::after{
-        font-size:15px !important;
-        font-weight: bolder !important;
-    }
-    .swiper-button-prev{
-        position: absolute !important;
-        color: #5C616F !important;
-        font-size: 5px;
-        background-color: #fff;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        left: -1rem !important;
-    }
-    .swiper-button-prev::after{
-        font-size:15px !important;
-        font-weight: bolder !important;
-    }
+.EmotionalMentalWellbeingPC {
+  .swiper {
+    overflow: visible !important;
+  }
+  .swiper-button-next {
+    position: absolute !important;
+    color: #5c616f !important;
+    font-size: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    right: -1rem !important;
+  }
+  .swiper-button-next::after {
+    font-size: 15px !important;
+    font-weight: bolder !important;
+  }
+  .swiper-button-prev {
+    position: absolute !important;
+    color: #5c616f !important;
+    font-size: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    left: -1rem !important;
+  }
+  .swiper-button-prev::after {
+    font-size: 15px !important;
+    font-weight: bolder !important;
+  }
 }
 
-.ExploreSlider{
-    .swiper{
-        // overflow: visible !important;
-    }
-    .swiper-button-next{
-        position: absolute !important;
-        color: #5C616F !important;
-        font-size: 5px;
-        background-color: #fff;
-        box-shadow:(0px 4px 40px rgba(0, 0, 0, 0.14));
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-    }
-    .swiper-button-next::after{
-        font-size:15px !important;
-        font-weight: bolder !important;
-    }
-    .swiper-button-prev{
-        position: absolute !important;
-        color: #5C616F !important;
-        font-size: 5px;
-        background-color: #fff;
-        box-shadow:(0px 4px 40px rgba(0, 0, 0, 0.14));
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-    }
-    .swiper-button-prev::after{
-        font-size:15px !important;
-        font-weight: bolder !important;
-    } 
+.ExploreSlider {
+  .swiper {
+    // overflow: visible !important;
+  }
+  .swiper-button-next {
+    position: absolute !important;
+    color: #5c616f !important;
+    font-size: 5px;
+    background-color: #fff;
+    box-shadow: (0px 4px 40px rgba(0, 0, 0, 0.14));
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+  .swiper-button-next::after {
+    font-size: 15px !important;
+    font-weight: bolder !important;
+  }
+  .swiper-button-prev {
+    position: absolute !important;
+    color: #5c616f !important;
+    font-size: 5px;
+    background-color: #fff;
+    box-shadow: (0px 4px 40px rgba(0, 0, 0, 0.14));
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+  .swiper-button-prev::after {
+    font-size: 15px !important;
+    font-weight: bolder !important;
+  }
 }

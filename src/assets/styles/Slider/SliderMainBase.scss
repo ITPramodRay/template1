@@ -6,7 +6,7 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  border-radius: 10px;
+  // background: #fff;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -42,18 +42,12 @@
 }
 
 .swiper-pagination-bullet-active {
-  width: 14px !important;
-  height: 14px !important;
   color: #fff;
-  background: $darkblue !important;
+  background: #007aff;
 }
 
-.swiper-wrapper {
-  margin: 2rem 0rem 2.5rem 0rem !important;
-}
-
-.swiper-pagination {
-  align-items: center !important;
-  display: flex;
-  justify-content: center;
+.HealthArticlesPC {
+  .swiper {
+    padding-left: 1rem !important;
+  }
 }

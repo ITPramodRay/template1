@@ -1,0 +1,33 @@
+html,
+body {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--bs-font-sans-serif);
+  background: #f2f3f7;
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+
+:root {
+  --dark-blue: #1e3f6d;
+  --blue: #eaf7fb;
+  --light-blue: #005e9e;
+  --powder-blue: #e5f4ff;
+  --brand-blue: #3282c4;
+  --sky-blue: #00c0f3;
+  --white: #fff;
+  --light-white: #f6f7f8;
+  --powder-white: #fafafa;
+  --light-gray: #808285;
+  --dark-gray: #312e2e;
+  --gradient-rainforest: linear-gradient(90deg, #28d1ca, #4470a6);
+  --gradient-light-rainforest: linear-gradient(180deg, #28d1ca, #4470a6);
+}

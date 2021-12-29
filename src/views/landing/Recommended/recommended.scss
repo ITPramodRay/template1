@@ -1,0 +1,62 @@
+@use "../../../assets/styles/_mixins.scss" as *;
+// Recommeded Section
+
+.Recommeded-section {
+  background: #e5f4ff;
+  padding: 100px 0px;
+
+  .title-text {
+    @include title(32px, 40px, 600, #1e3f6d);
+  }
+
+  .Recommended-slider {
+    .slick-slide {
+      & > div {
+        height: 100%;
+      }
+    }
+
+    .slider-block {
+      height: 100%;
+
+      .cardbox {
+        padding: 20px 20px;
+        margin: 0 15px;
+        background: linear-gradient(340.78deg, #4aaac1 2.17%, #206f82 114.02%);
+        border-radius: 12.9221px;
+        height: 100%;
+
+        .card-img-top {
+          width: 120px;
+          height: 120px;
+        }
+
+        .card-body {
+          padding: 0px;
+          .card-title {
+            @include title(24px, 36px, normal, #fff);
+            padding-top: 20px;
+          }
+
+          .card-text {
+            @include title(13px, 19px, normal, #fff);
+            padding-top: 10px;
+            min-height: 80px;
+          }
+
+          .recommended-btn {
+            font-size: 14px;
+            line-height: 24px;
+            //   background: $darkblue;
+            background: #1e3f6d;
+            box-shadow: 0px 6px 12px -4px rgba(0, 82, 103, 0.32);
+            border-radius: 28px;
+            padding: 10px 20px;
+            margin-bottom: 15px;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+}

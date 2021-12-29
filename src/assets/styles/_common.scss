@@ -1,0 +1,42 @@
+@use "swiper-global";
+
+// Common Css
+.section {
+  padding: 50px 0px;
+}
+
+.title-row {
+  padding-bottom: 30px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #263238;
+  padding: 30px 0px 15px 0px;
+  margin: 0px;
+}
+
+.M_title {
+  font-weight: 600;
+  font-size: 18px;
+  color: #040c22;
+  padding: 30px 0px 15px 0px;
+  margin: 0px;
+}
+
+.btn-check:active + .btn-secondary:focus,
+.btn-check:checked + .btn-secondary:focus,
+.btn-secondary.active:focus,
+.btn-secondary:active:focus,
+.show > .btn-secondary.dropdown-toggle:focus,
+.btn-check:focus + .btn-secondary,
+.btn-secondary:focus {
+  box-shadow: none !important;
+}
+
+.error_text {
+  font-size: 1rem;
+  color: red;
+}

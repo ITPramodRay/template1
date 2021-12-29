@@ -2,7 +2,6 @@ import React, { Component, Fragment } from "react";
 import { Col, Container, Row } from "reactstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
 import { Link } from "react-router-dom";
 
 import Banner1 from "../../../assets/images/Mobile/Landingpage/mobile-banner1.svg";
@@ -12,16 +11,16 @@ import Qrcode from "../../../assets/images/QR-code.svg";
 import Google from "../../../assets/images/Google.svg";
 import Appstore from "../../../assets/images/Apple.svg";
 
+import "./banner.scss";
 
 class Mainbanner extends Component {
   render() {
     const responsive = {
-
       mobile: {
         breakpoint: { max: 767, min: 0 },
         items: 1,
-        slidesToSlide: 1
-      }
+        slidesToSlide: 1,
+      },
     };
     return (
       <Fragment>
@@ -69,9 +68,7 @@ class Mainbanner extends Component {
                           <Row>
                             <Col sm={12}>
                               <div className="banner-download-application">
-                                <p className="text-white">
-                                  Download free app
-                                </p>
+                                <p className="text-white">Download free app</p>
                                 <a>
                                   <img
                                     src={Appstore}
@@ -102,8 +99,13 @@ class Mainbanner extends Component {
                         <Col sm={12} className="">
                           <h1 className="banner-text">
                             Be smart with your <br />
-                            money. Start <Link to="#">Goal <br />planning</Link> today.
-  </h1>
+                            money. Start{" "}
+                            <Link to="#">
+                              Goal <br />
+                              planning
+                            </Link>{" "}
+                            today.
+                          </h1>
 
                           <div className="mobilebanner-image">
                             <img src={Banner1} alt="banner" title="Banner" />
@@ -111,9 +113,7 @@ class Mainbanner extends Component {
                           <Row>
                             <Col sm={12}>
                               <div className="banner-download-application">
-                                <p className="text-white">
-                                  Download free app
-                                </p>
+                                <p className="text-white">Download free app</p>
                                 <a>
                                   <img
                                     src={Appstore}
@@ -131,7 +131,6 @@ class Mainbanner extends Component {
                               </div>
                             </Col>
                           </Row>
-
                         </Col>
                       </Row>
                     </Container>
@@ -145,7 +144,11 @@ class Mainbanner extends Component {
                         <Col sm={12} className="">
                           <h1 className="banner-text">
                             Be smart with your <br />
-                            money. Buy <Link to="#">advisory <br /> plan </Link> today.
+                            money. Buy{" "}
+                            <Link to="#">
+                              advisory <br /> plan{" "}
+                            </Link>{" "}
+                            today.
                           </h1>
                           <div className="mobilebanner-image">
                             <img src={Banner1} alt="banner" title="Banner" />
@@ -153,9 +156,7 @@ class Mainbanner extends Component {
                           <Row>
                             <Col sm={12}>
                               <div className="banner-download-application">
-                                <p className="text-white">
-                                  Download free app
-                                </p>
+                                <p className="text-white">Download free app</p>
                                 <a>
                                   <img
                                     src={Appstore}
@@ -173,7 +174,6 @@ class Mainbanner extends Component {
                               </div>
                             </Col>
                           </Row>
-
                         </Col>
                       </Row>
                     </Container>

@@ -7,7 +7,10 @@ import CalendarCheck from "../../../assets/images/CalendarCheck.svg";
 import MapPin from "../../../assets/images/MapPin.svg";
 import Rerirement from "../../../assets/images/rerirement.png";
 import Rocket from "../../../assets/images/Rocket.svg";
-import {planRetirementCms} from "../landingCMS"
+import { planRetirementCms } from "../landingCMS";
+
+import "./retirement.scss";
+
 const Products = () => {
   return (
     <>
@@ -46,9 +49,7 @@ const Products = () => {
                       alt="point3 icon"
                       className="img-fluid tab-image"
                     />
-                    <span>
-                    {planRetirementCms.point3.text}
-                    </span>
+                    <span>{planRetirementCms.point3.text}</span>
                   </Tab>
                 </TabList>
               </Col>

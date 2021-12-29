@@ -8,10 +8,11 @@ import Otprightimg from "../../assets/images/Otpright.svg";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import api from "../../utils/axios";
-import { useLocation,useHistory } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 import validate from "../../utils/validation";
 import { local } from "../../utils/Utils";
 
+import "./sign-in-up.scss";
 
 const SignUp = () => {
   const location = useLocation();
@@ -142,10 +143,16 @@ const SignUp = () => {
       setError("password and re-enter password must be same");
       return;
     }
-    if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password)) {
-      setError(" Password should be 8 character long and should contains each of the following :upper case letter, lower case letter, number, special character!!");
+    if (
+      !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
+        password
+      )
+    ) {
+      setError(
+        " Password should be 8 character long and should contains each of the following :upper case letter, lower case letter, number, special character!!"
+      );
       return;
-    } 
+    }
     console.log(registerUserData.individual_id, "this is the individual id");
     let data = {
       password: confirmPassword,
@@ -166,12 +173,11 @@ const SignUp = () => {
           ...registerUserData,
           token: res?.data?.token,
         });
-        console.log(res.data,"this i the data")
+        console.log(res.data, "this i the data");
         local.setItem("loginToken", res?.data?.data?.token);
         local.setItem("individualInfo", res?.data?.data?.individualInfo);
-        setTimeout(()=>history.push("/dashboard"),2500)
+        setTimeout(() => history.push("/dashboard"), 2500);
         setError("");
-        
       })
       .catch((err) => {
         setError(err?.response?.data?.message);
@@ -179,12 +185,11 @@ const SignUp = () => {
       });
   };
 
-
   // on onChange event of register form inputs this function will change the field values of registerForm state
   const handleSetRegister = (field, value) => {
     let tempRegisterUser = { ...registerForm };
     tempRegisterUser[field] = value;
-    setError({...error, [field]:""})
+    setError({ ...error, [field]: "" });
     setRegisterForm(tempRegisterUser);
   };
 
@@ -194,48 +199,49 @@ const SignUp = () => {
     let err = validate({
       ...registerForm,
       phone: registerForm.mobile,
-      email: registerForm.mobEmail
-    })
-    setError(err)
+      email: registerForm.mobEmail,
+    });
+    setError(err);
 
     let data = {
       email: registerForm.mobEmail,
       mobile: new Date().getTime(),
       isReferral: false,
     };
-    console.log(err,"these are the errors")
+    console.log(err, "these are the errors");
     if (Object.entries(err).length === 0) {
-    axios
-      .post(
-        "https://api-uat.life99.in/api-mdm/auth/verify-on-board-user-v2",
-        data
-      )
-      .then((res) => {
-        console.log(res.data);
-        setRegisterUserData({
-          ...registerUserData,
-          temporaryIndividualId: res?.data?.userData?.temporary_individual_id,
+      axios
+        .post(
+          "https://api-uat.life99.in/api-mdm/auth/verify-on-board-user-v2",
+          data
+        )
+        .then((res) => {
+          console.log(res.data);
+          setRegisterUserData({
+            ...registerUserData,
+            temporaryIndividualId: res?.data?.userData?.temporary_individual_id,
+          });
+          console.log(
+            res.data?.message,
+            " ",
+            `Email id "${registerForm.mobEmail}" is already in use. Click "OK" to login.`,
+            "this is the"
+          );
+          if (
+            res.data?.message ===
+            `Email id "${registerForm.mobEmail}" is already in use. Click "OK" to login.`
+          ) {
+            setError("Email id already exists");
+            return;
+          }
+          setError("");
+          setViewComponent("verifyOtp");
+        })
+        .catch((err) => {
+          console.log(err, "this is error");
+          setError(err.response.data.message.split(":")[1]);
         });
-        console.log(
-          res.data?.message,
-          " ",
-          `Email id "${registerForm.mobEmail}" is already in use. Click "OK" to login.`,
-          "this is the"
-        );
-        if (
-          res.data?.message ===
-          `Email id "${registerForm.mobEmail}" is already in use. Click "OK" to login.`
-        ) {
-          setError("Email id already exists");
-          return;
-        }
-        setError("")
-        setViewComponent("verifyOtp");
-      })
-      .catch((err) => {
-        console.log(err, "this is error");
-        setError(err.response.data.message.split(":")[1]);
-      });}
+    }
   };
 
   return (

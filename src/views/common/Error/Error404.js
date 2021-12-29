@@ -1,24 +1,29 @@
-import React from 'react';
-import logo from '../../../assets/images/W_head-logo.svg';
-import Errorill from '../../../assets/images/404 Error-bro 1.svg';
-import Clouds from '../../../assets/images/Clouds.svg';
-import {useHistory} from "react-router-dom"
+import React from "react";
+import { useHistory } from "react-router-dom";
+
+import logo from "../../../assets/images/W_head-logo.svg";
+import Errorill from "../../../assets/images/404 Error-bro 1.svg";
+import Clouds from "../../../assets/images/Clouds.svg";
+
+import "./error.scss";
 
 const Error404 = () => {
-  const history = useHistory()
+  const history = useHistory();
   return (
     <>
-      <div className='base_div'>
-        <div className='container'>
-          <img src={logo} className='logo'></img>
+      <div className="base_div">
+        <div className="container">
+          <img src={logo} className="logo"></img>
         </div>
-        <div className='container data'>
-            <img src={Clouds}></img>
+        <div className="container data">
+          <img src={Clouds}></img>
           <div>
-            <img src={Errorill} className='errorimg'></img>
-            <button className='BOback_btn' onClick={()=>history.goBack()}>Go Back</button>
+            <img src={Errorill} className="errorimg"></img>
+            <button className="BOback_btn" onClick={() => history.goBack()}>
+              Go Back
+            </button>
           </div>
-          <img src={Clouds} className='Clouds_right'></img>
+          <img src={Clouds} className="Clouds_right"></img>
         </div>
       </div>
     </>
