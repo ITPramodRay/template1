@@ -15,6 +15,7 @@ import PersonalDetails from "./personalDetails/Personaldetails";
 import PreapprovedInsurance from "./preApprovedInsurance/PreapprovedInsurance";
 import Referfriend from "./referFriend/Referfriend ";
 import SideBar from "./sideBar/sideBar";
+import SideBarMobile from "./sideBar/sideBarMobile";
 const Myaccount = () => {
   const location = useLocation();
   console.log(location.pathname, "this is loading");
@@ -25,7 +26,17 @@ const Myaccount = () => {
   ];
   return (
     <>
-      <AppHeader />
+      {/* <AppHeader /> */}
+      {location.pathname === myProfilePaths.sidebarMobile && <SideBarMobile />}
+      {location.pathname === myProfilePaths.corporateDetailsMV1 && (
+        <CorporatDetailsMV1 />
+      )}
+      {location.pathname === myProfilePaths.corporateDetailsMV2 && (
+        <CorporatDetailsMV2 />
+      )}
+      {location.pathname === myProfilePaths.corporateDetailsMV3 && (
+        <CorporatDetailsMV3 />
+      )}
       <div className="my-account-dashbaord">
         <Container>
           <div className="myaccount-component  Personal-details-component">
@@ -34,7 +45,7 @@ const Myaccount = () => {
                   console.log(location.pathname === ele)
                   return location.pathname !== ele?<SideBar />: <></>;
               })} */}
-              <SideBar />
+              {/* <SideBar /> */}
               <Col sm={8}>
                 {location.pathname === myProfilePaths.myProfile && (
                   <PersonalDetails />
@@ -54,15 +65,6 @@ const Myaccount = () => {
                 )}
                 {location.pathname === myProfilePaths.preApprovedInsurance && (
                   <PreapprovedInsurance />
-                )}
-                {location.pathname === myProfilePaths.corporateDetailsMV1 && (
-                  <CorporatDetailsMV1 />
-                )}
-                {location.pathname === myProfilePaths.corporateDetailsMV2 && (
-                  <CorporatDetailsMV2 />
-                )}
-                {location.pathname === myProfilePaths.corporateDetailsMV3 && (
-                  <CorporatDetailsMV3 />
                 )}
               </Col>
             </Row>

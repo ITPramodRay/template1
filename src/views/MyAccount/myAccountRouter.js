@@ -13,6 +13,7 @@ const routes = [
   myProfilePaths.corporateDetailsMV1,
   myProfilePaths.corporateDetailsMV2,
   myProfilePaths.corporateDetailsMV3,
+  myProfilePaths.sidebarMobile,
 ];
 export const myAccountPageRouters = routes.map((ele) => ({
   path: ele,
