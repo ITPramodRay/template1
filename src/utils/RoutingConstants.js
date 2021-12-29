@@ -10,7 +10,6 @@ export const LoginAndRegisterPagePaths = {
   UpdatePassword: "/updatePassword",
 };
 
-
 export const dashboardPaths = {
   dashboard: "/dashboard",
   invest: "/invest",
@@ -18,12 +17,12 @@ export const dashboardPaths = {
   advisory: "/advisory",
   learn: "/learn",
   wellbeing: "/wellbeing",
-  offerdetail:"/offerdetail",
+  offerdetail: "/offerdetail",
   nps: "/nps",
   annuity: "/annuity",
 };
 
-export const myProfilePaths={
+export const myProfilePaths = {
   myProfile: "/myprofile",
   kycDetails: "/myprofile/kycDetails",
   bankDetails: "/myprofile/bankDetails",
@@ -36,7 +35,8 @@ export const myProfilePaths={
   corporateDetailsMV3: "/myprofile/corporateDetails3",
 }
 
-export const emptyNavPaths={
+
+export const emptyNavPaths = {
   offerDetails: "/offerDetails",
   calculator: "/calculator",
   verifyAccount: "/verifyAccount",
@@ -44,9 +44,8 @@ export const emptyNavPaths={
   webinars: "/webinars",
   legalInfo: "/legalInfo",
   support: "/support",
-  community: "/community"
-
-}
+  community: "/community",
+};
 
 export const errorPaths = {
   fourZeroFour: "/404",

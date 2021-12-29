@@ -1,44 +1,37 @@
-import React, { Component, Fragment } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Button,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  FormText,
-  NavItem,
-  Nav,
-  NavLink,
-} from "reactstrap";
-
 // Files
-import PersonalDetails from "./personalDetails/Personaldetails";
-import Kycdetail from "./kycDetail/KycDetail";
+import React from "react";
+import { Col, Container, Row } from "reactstrap";
+
 import Bankdetail from "./bankDetail/Bankdetail";
 import Contactdetail from "./contactDetail/Contactdetail";
+import Kycdetail from "./kycDetail/KycDetail";
 import Nominee from "./nominee/Nominee";
-import Referfriend from "./referFriend/Referfriend ";
-import PreapprovedInsurance from "./preApprovedInsurance/PreapprovedInsurance";
+
+
 import CorporatDetailsMV1 from "./corporateDetails/corporateDetailsMV1";
 import CorporatDetailsMV2 from "./corporateDetails/corpotateDetailsMV2";
 import CorporatDetailsMV3 from "./corporateDetails/corporateDetailsMV3";
 import { myProfilePaths } from "../../utils/RoutingConstants";
 import { useLocation } from "react-router-dom";
-import SideBar from "./sideBar/sideBar";
+
 import AppHeader from "../common/Header/Header";
+
+import PersonalDetails from "./personalDetails/Personaldetails";
+import PreapprovedInsurance from "./preApprovedInsurance/PreapprovedInsurance";
+import Referfriend from "./referFriend/Referfriend ";
+import SideBar from "./sideBar/sideBar";
+
 const Myaccount = () => {
-  const location = useLocation();
-  console.log(location.pathname, "this is loading");
-  const mobileComponents = [
-    myProfilePaths.corporateDetailsMV1,
-    myProfilePaths.corporateDetailsMV2,
-    myProfilePaths.corporateDetailsMV3,
-  ];
+    const location = useLocation();
+    console.log(location.pathname, "this is loading");
+    const mobileComponents = [
+      myProfilePaths.corporateDetailsMV1,
+      myProfilePaths.corporateDetailsMV2,
+      myProfilePaths.corporateDetailsMV3,
+    ];
+
   return (
-    <Fragment>
+    <>
       <AppHeader />
       <div className="my-account-dashbaord">
         <Container>
@@ -84,7 +77,7 @@ const Myaccount = () => {
         </Container>
       </div>
       {/* add differtent rout screen */}
-    </Fragment>
+    </>
   );
 };
 
