@@ -33,4 +33,14 @@ export const dashboardPageRouters = [
     component: dashboardPage,
     exact: true,
   },
+  {
+    path: dashboardPaths.nps,
+    component: dashboardPage,
+    exact: true,
+  },
+  {
+    path: dashboardPaths.annuity,
+    component: dashboardPage,
+    exact: true,
+  },
 ];
