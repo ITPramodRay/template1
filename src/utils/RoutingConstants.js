@@ -19,6 +19,8 @@ export const dashboardPaths = {
   learn: "/learn",
   wellbeing: "/wellbeing",
   offerdetail:"/offerdetail",
+  nps: "/nps",
+  annuity: "/annuity",
 };
 
 export const myProfilePaths={
@@ -35,7 +37,11 @@ export const emptyNavPaths={
   offerDetails: "/offerDetails",
   calculator: "/calculator",
   verifyAccount: "/verifyAccount",
-  serviceCorner: "/serviceCorner"
+  serviceCorner: "/serviceCorner",
+  webinars: "/webinars",
+  legalInfo: "/legalInfo",
+  support: "/support",
+  community: "/community"
 
 }
 

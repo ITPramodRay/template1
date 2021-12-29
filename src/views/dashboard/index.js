@@ -3,6 +3,8 @@ import AppHeader from "../common/Header/Header"
 import WellBeing from './WellBeing/WellBeing';
 import Invest from './Invest/Invest';
 import Dashbordpage from './MainDashboard/index'
+import Nps from "./NPS/nps"
+import Annuity from "./Annuity/annuity"
 import { useLocation } from 'react-router-dom';
 import {dashboardPaths} from "../../utils/RoutingConstants"
 import Plan from '../Plan/Plan';
@@ -18,6 +20,8 @@ const  DashBoardPage = () => {
     { location.pathname === dashboardPaths.wellbeing && <WellBeing />}
     { location.pathname === dashboardPaths.invest && <Invest />}
     { location.pathname === dashboardPaths.plan && <Plan />}
+    { location.pathname === dashboardPaths.nps && <Nps />}
+    { location.pathname === dashboardPaths.annuity && <Annuity />}
    </>
   );
 }

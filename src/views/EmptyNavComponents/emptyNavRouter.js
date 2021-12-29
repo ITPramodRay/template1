@@ -1,7 +1,12 @@
 import { lazy } from "react";
 import { emptyNavPaths } from "../../utils/RoutingConstants";
 const emptyNavPage = lazy(() => import("./index"));
-
+const paths = [
+  emptyNavPaths.offerDetails,
+  emptyNavPaths.serviceCorner,
+  emptyNavPaths.verifyAccount,
+  emptyNavPaths.calculator,
+];
 export const emptyNavPageRouter = [
   {
     path: emptyNavPaths.offerDetails,
@@ -23,5 +28,24 @@ export const emptyNavPageRouter = [
     component: emptyNavPage,
     exact: true,
   },
- 
+  {
+    path: emptyNavPaths.webinars,
+    component: emptyNavPage,
+    exact: true,
+  },
+  {
+    path: emptyNavPaths.support,
+    component: emptyNavPage,
+    exact: true,
+  },
+  {
+    path: emptyNavPaths.community,
+    component: emptyNavPage,
+    exact: true,
+  },
+  {
+    path: emptyNavPaths.legalInfo,
+    component: emptyNavPage,
+    exact: true,
+  },
 ];

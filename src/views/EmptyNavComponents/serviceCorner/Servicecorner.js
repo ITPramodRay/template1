@@ -1,20 +1,20 @@
 import React, { Component, Fragment } from 'react';
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormText, NavItem, Nav, NavLink } from 'reactstrap';
 
-import Backarrow from "../../../../assets/images/myaccount/backarrow.svg";
-import cmgsson from "../../../../assets/images/myaccount/cmgsson.svg";
-import Medal from "../../../../assets/images/myaccount/Medal.svg";
-import DownloadSimple from "../../../../assets/images/myaccount/DownloadSimple.svg";
-import Receiptservice from "../../../../assets/images/myaccount/Receiptservice.svg";
-import FlowArrow from "../../../../assets/images/myaccount/FlowArrow.svg";
-import Handshake from "../../../../assets/images/myaccount/Handshake.svg";
+import Backarrow from "../../../assets/images/backarrow.png";
+import cmgsson from "../../../assets/images/myaccount/cmgsson.svg";
+import Medal from "../../../assets/images/myaccount/Medal.svg";
+import DownloadSimple from "../../../assets/images/myaccount/DownloadSimple.svg";
+import Receiptservice from "../../../assets/images/myaccount/Receiptservice.svg";
+import FlowArrow from "../../../assets/images/myaccount/FlowArrow.svg";
+import Handshake from "../../../assets/images/myaccount/Handshake.svg";
 
 
 
 
 
-class Servicecorner extends Component {
-    render() {
+const Servicecorner = () => {
+    
         return (
             <Fragment>
                 <div className="servicecorner-copmonent">
@@ -85,7 +85,7 @@ class Servicecorner extends Component {
                             </Col>
                             <Col sm={4}>
                                 <div className='service-corner-card'>
-                                    <Row className='service-borderbtn  '>
+                                    <Row className='service-borderbtn'>
                                         <Col sm={9}>
                                             <p className='mb-0 service-corner-title'>Contribute to <br/>NPS</p>
                                         </Col>
@@ -105,7 +105,7 @@ class Servicecorner extends Component {
             </Fragment >
 
         );
-    }
+    
 }
 
 export default Servicecorner;
