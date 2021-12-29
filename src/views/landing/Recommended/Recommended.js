@@ -1,6 +1,7 @@
-import React from "react";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import React, { useRef } from "react";
+import Slider from "react-slick";
+import "../../../assets/styles/Slider/SlickGlobal.scss";
+
 import {
   Button,
   Card,
@@ -21,103 +22,130 @@ import { recommendedCms } from "../landingCMS";
 
 import "./recommended.scss";
 
+const settings = {
+  dots: false,
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  arrows: false,
+  className: "slider-inner",
+};
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "red" }}
+      onClick={onClick}
+    >
+      next
+    </div>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "green" }}
+      onClick={onClick}
+    >
+      prev
+    </div>
+  );
+}
+
 const Recommended = () => {
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 4,
-      slidesToSlide: 3, // optional, default to 1.
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-      slidesToSlide: 2, // optional, default to 1.
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-  };
+  const slider = React.useRef(null);
   return (
     <>
       <div className="section Recommeded-section">
         <Container>
           <Row className="title-row align-items-center">
-            <Col sm={12}>
+            <Col sm={12} md={8}>
               <h3 className="title-text">{recommendedCms.sectionHeading}</h3>
+            </Col>
+            <Col sm={12} md={4} className="d-flex justify-content-end">
+              <div className="controls d-flex gap-3">
+                <button onClick={() => slider?.current?.slickPrev()}>
+                  Prev
+                </button>
+                <button onClick={() => slider?.current?.slickNext()}>
+                  Next
+                </button>
+              </div>
             </Col>
           </Row>
 
-          <Row>
-            <Col className="Recommended-slider">
-              <Carousel
-                additionalTransfrom={0}
-                arrows={true}
-                autoPlay={false}
-                autoPlaySpeed={5000}
-                centerMode={false}
-                containerClass="container-with-dots"
-                dotListClass=""
-                draggable
-                focusOnSelect={false}
-                infinite
-                itemClass=""
-                keyBoardControl
-                minimumTouchDrag={80}
-                renderDotsOutside={false}
-                showDots={false}
-                sliderClass=""
-                slidesToSlide={2}
-                swipeable
-                responsive={responsive}
-              >
-                {recommendedCms.cards.map((value, key) => {
-                  return (
-                    <div key={key} className="slider-block">
-                      <Container>
-                        <Row className="">
-                          <Col>
-                            <Card
-                              className="cardbox"
-                              style={{
-                                background: `${value.backgroundGradient}`,
-                              }}
-                            >
-                              <div className="cardimage text-right">
-                                <CardImg
-                                  top
-                                  width="100%"
-                                  src={value.img || NationalPensionSystem}
-                                  alt="Card image cap"
-                                  className="img-fluid"
-                                />
-                              </div>
-                              <CardBody>
-                                <CardTitle
-                                  style={{ color: `${value.textColor}` }}
-                                >
-                                  {value.mainText}
-                                </CardTitle>
-                                <CardText
-                                  style={{ color: `${value.textColor}` }}
-                                >
-                                  {value.subText}
-                                </CardText>
-                                <Button className="recommended-btn">
-                                  Know More
-                                </Button>
-                              </CardBody>
-                            </Card>
-                          </Col>
-                        </Row>
-                      </Container>
-                    </div>
-                  );
-                })}
-              </Carousel>
-            </Col>
-          </Row>
+          <section className="Recommended-slider">
+            <Slider ref={slider} {...settings}>
+              {recommendedCms.cards.map((value, key) => {
+                return (
+                  <div key={key} className="slider-block">
+                    <Card
+                      className="cardbox"
+                      style={{
+                        background: `${value.backgroundGradient}`,
+                      }}
+                    >
+                      <div className="cardimage text-end">
+                        <CardImg
+                          top
+                          width="100%"
+                          src={value.img || NationalPensionSystem}
+                          alt="Card image cap"
+                          className="img-fluid"
+                        />
+                      </div>
+                      <CardBody>
+                        <CardTitle style={{ color: `${value.textColor}` }}>
+                          {value.mainText}
+                        </CardTitle>
+                        <CardText style={{ color: `${value.textColor}` }}>
+                          {value.subText}
+                        </CardText>
+                        <Button className="recommended-btn">Know More</Button>
+                      </CardBody>
+                    </Card>
+                  </div>
+                );
+              })}
+
+              {recommendedCms.cards.map((value, key) => {
+                return (
+                  <div key={key} className="slider-block">
+                    <Card
+                      className="cardbox"
+                      style={{
+                        background: `${value.backgroundGradient}`,
+                      }}
+                    >
+                      <div className="cardimage text-end">
+                        <CardImg
+                          top
+                          width="100%"
+                          src={value.img || NationalPensionSystem}
+                          alt="Card image cap"
+                          className="img-fluid"
+                        />
+                      </div>
+                      <CardBody>
+                        <CardTitle style={{ color: `${value.textColor}` }}>
+                          {value.mainText}
+                        </CardTitle>
+                        <CardText style={{ color: `${value.textColor}` }}>
+                          {value.subText}
+                        </CardText>
+                        <Button className="recommended-btn">Know More</Button>
+                      </CardBody>
+                    </Card>
+                  </div>
+                );
+              })}
+            </Slider>
+          </section>
         </Container>
       </div>
     </>

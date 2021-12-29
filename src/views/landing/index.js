@@ -2,7 +2,6 @@ import React, { lazy, Suspense } from "react";
 import { useHistory } from "react-router-dom";
 import { Container } from "reactstrap";
 import Skeleton from "@mui/material/Skeleton";
-import "react-multi-carousel/lib/styles.css";
 
 const Mainbanner = lazy(() => import("./AppBanner/Mainbanner"));
 const MainbannerMobile = lazy(() => import("./AppBanner/Mainbanner-Mobile"));
@@ -50,10 +49,10 @@ const LandingPage = () => {
       </Container>
       <Container fluid={true}>
         <div className="desktopView">
-          <Servies />{" "}
+          <Servies />
         </div>
         <div className="mobileView">
-          <ServiesMobile />{" "}
+          <ServiesMobile />
         </div>
       </Container>
       <Suspense

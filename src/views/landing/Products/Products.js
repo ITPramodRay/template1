@@ -22,7 +22,7 @@ const Products = () => {
                 <br /> products for all your needs
               </h3>
             </Col>
-            <Col sm={2} lg={3} className="text-right">
+            <Col sm={2} lg={3} className="text-end">
               <Button className="explore-btn">Explore Now</Button>
             </Col>
           </Row>

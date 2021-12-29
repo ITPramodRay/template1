@@ -2,6 +2,7 @@ $one-grid: (100% / 12);
 @function calcWidth($col) {
   @return $col * (100% / 12);
 }
+
 .grid {
   margin: 0px !important;
   padding: 0px !important;

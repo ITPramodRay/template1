@@ -1,0 +1,52 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(134.14deg, #1a3e6d 0.61%, #2d6fc6 101.43%);
+
+  .mailtext {
+    width: 70%;
+  }
+
+  h2 {
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    padding-bottom: 1rem;
+  }
+
+  p {
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+  }
+  a {
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: bold;
+    font-weight: 700;
+    color: #fff;
+  }
+  .btn {
+    padding: 1rem 2rem;
+    font-weight: 500;
+    border-radius: 25px;
+    border: 2px solid #fff;
+    background-image: linear-gradient(
+      134.14deg,
+      #1a3e6d 0.61%,
+      #2d6fc6 101.43%
+    );
+    gap: 5rem;
+    font-size: 14px;
+    color: #fff;
+  }
+}

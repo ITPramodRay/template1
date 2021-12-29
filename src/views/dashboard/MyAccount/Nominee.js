@@ -139,7 +139,7 @@ class Nominee extends Component {
                                                     <p className='myaccount-title'> Add Nominee </p>
                                                 </div>
                                             </Col>
-                                            <Col className='ms-auto text-right'>
+                                            <Col className='ms-auto text-end'>
                                                 <div class="">
                                                     <img src={whatsapp} alt="whatsapp" title="whatsapp" className='whatsapp-img' />
                                                     <span className='sharelink-text'>Get whatsapp notifications</span>

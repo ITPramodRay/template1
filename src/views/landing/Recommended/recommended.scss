@@ -4,85 +4,56 @@
 .Recommeded-section {
   background: #e5f4ff;
   padding: 100px 0px;
+
   .title-text {
     @include title(32px, 40px, 600, #1e3f6d);
   }
+
   .Recommended-slider {
-    .react-multi-carousel-list {
-      padding: 75px 0px 0px 0px;
-      margin-top: -64px;
-      .react-multiple-carousel__arrow--left {
-        top: 0;
-        left: 87%;
-        // background: $white;
-        background: #fff;
-      }
-      .react-multiple-carousel__arrow--left::before {
-        content: "";
-        background-image: url("../../../assets/images/backarrow.png");
-        position: absolute;
-        top: 10px;
-        right: 9px;
-        width: 25px;
-        height: 19px;
-        background-repeat: no-repeat;
-        display: block;
-        padding: 10px;
-      }
-      .react-multiple-carousel__arrow--right {
-        top: 0;
-        // background: $white;
-        background: #fff;
-      }
-      .react-multiple-carousel__arrow--right::before {
-        content: "";
-        background-image: url("../../../assets/images/nextarrow.png");
-        position: absolute;
-        top: 10px;
-        right: 8px;
-        width: 25px;
-        height: 19px;
-        background-repeat: no-repeat;
-        display: block;
+    .slick-slide {
+      & > div {
+        height: 100%;
       }
     }
+
     .slider-block {
-      .container {
-        padding: 0px 30px 0px 0px;
-        .cardbox {
-          padding: 20px 20px;
-          background: linear-gradient(
-            340.78deg,
-            #4aaac1 2.17%,
-            #206f82 114.02%
-          );
-          border-radius: 12.9221px;
-          .card-img-top {
-            width: 120px;
-            height: 120px;
+      height: 100%;
+
+      .cardbox {
+        padding: 20px 20px;
+        margin: 0 15px;
+        background: linear-gradient(340.78deg, #4aaac1 2.17%, #206f82 114.02%);
+        border-radius: 12.9221px;
+        height: 100%;
+
+        .card-img-top {
+          width: 120px;
+          height: 120px;
+        }
+
+        .card-body {
+          padding: 0px;
+          .card-title {
+            @include title(24px, 36px, normal, #fff);
+            padding-top: 20px;
           }
-          .card-body {
-            padding: 0px;
-            .card-title {
-              @include title(24px, 36px, normal, #fff);
-              padding-top: 20px;
-            }
-            .card-text {
-              @include title(13px, 19px, normal, #fff);
-              padding-top: 10px;
-              min-height: 80px;
-            }
-            .recommended-btn {
-              font-size: 14px;
-              line-height: 24px;
-              //   background: $darkblue;
-              background: #1e3f6d;
-              box-shadow: 0px 6px 12px -4px rgba(0, 82, 103, 0.32);
-              border-radius: 28px;
-              padding: 10px 20px;
-              margin-bottom: 15px;
-              margin-top: 5px;
-            }
+
+          .card-text {
+            @include title(13px, 19px, normal, #fff);
+            padding-top: 10px;
+            min-height: 80px;
+          }
+
+          .recommended-btn {
+            font-size: 14px;
+            line-height: 24px;
+            //   background: $darkblue;
+            background: #1e3f6d;
+            box-shadow: 0px 6px 12px -4px rgba(0, 82, 103, 0.32);
+            border-radius: 28px;
+            padding: 10px 20px;
+            margin-bottom: 15px;
+            margin-top: 5px;
           }
         }
       }

@@ -1,5 +1,3 @@
-// import "./assets/styles/app.scss";
-
 import AppRouter from "./router";
 import store from "./store/index";
 import { Encrypt } from "./modules";

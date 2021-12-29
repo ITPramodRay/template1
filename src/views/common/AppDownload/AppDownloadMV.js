@@ -5,6 +5,8 @@ import Appstore from "../../../assets/images/Apple.svg";
 import appmobile from "../../../assets/images/app_mobile.svg";
 import BG from "../../../assets/images/AppBanner_mobile-01.svg";
 
+import "./appdownload.scss";
+
 const AppDownloadMV = () => {
   return (
     <>

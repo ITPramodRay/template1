@@ -1,19 +1,21 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 
-import Appbanner from '../../../assets/images/App_Banner.svg';
-import Google from '../../../assets/images/Google.svg';
-import Appstore from '../../../assets/images/Apple.svg';
+import Appbanner from "../../../assets/images/App_Banner.svg";
+import Google from "../../../assets/images/Google.svg";
+import Appstore from "../../../assets/images/Apple.svg";
+
+import "./appdownload.scss";
 
 const AppDownloadPC = () => {
   return (
     <>
-      <div className='desktopView AppdannerPC'>
+      <div className="desktopView AppdannerPC">
         {/* <div className='img_div'>
           <img src={Appbanner}></img>
         </div> */}
-        <div className='AppdannerPC_text'>
+        <div className="AppdannerPC_text">
           <h2>Plan your retirement well</h2>
-          <div className='img_btn'>
+          <div className="img_btn">
             <img src={Google}></img>
             <img src={Appstore}></img>
           </div>
