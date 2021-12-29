@@ -1,8 +1,20 @@
 .profile-page-mobile {
   .profile-back-btn {
-    top: 1.5rem;
+    top: 2rem;
     left: 1.5rem;
+    --size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--size);
+    width: var(--size);
   }
+
+  .ppm-pattern {
+    right: 0;
+    top: 0;
+  }
+
   .profile-header-mobile {
     padding: 7rem 0 9rem;
     background: linear-gradient(134.14deg, #1a3e6d 0.61%, #2d6fc6 101.43%);
@@ -29,6 +41,10 @@
         position: absolute;
         bottom: 20%;
         right: 0;
+
+        img {
+          width: 70%;
+        }
       }
     }
   }

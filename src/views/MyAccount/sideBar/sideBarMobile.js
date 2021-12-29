@@ -8,7 +8,7 @@ import Checks from "../../../assets/images/myaccount/Checks.svg";
 import CircleWavyCheck from "../../../assets/images/myaccount/CircleWavyCheck.svg";
 import DeviceMobileCamera from "../../../assets/images/myaccount/DeviceMobileCamera.svg";
 import IdentificationCard from "../../../assets/images/myaccount/IdentificationCard.svg";
-import Pattern from "../../../assets/images/myaccount/pattern.svg";
+import Pattern from "../../../assets/images/pattern-top-right.svg";
 import Receipt from "../../../assets/images/myaccount/Receipt.svg";
 import ShareNetwork from "../../../assets/images/myaccount/ShareNetwork.svg";
 import shield from "../../../assets/images/myaccount/shield.svg";
@@ -32,6 +32,7 @@ function SideBarMobile() {
           <button className="profile-back-btn text-btn position-absolute">
             <img src={leftIcon} alt="" />
           </button>
+          <img src={Pattern} alt="" className="ppm-pattern position-absolute" />
           <div className="profile-header-mobile-inner d-flex justify-content-center container">
             <div className="profile-avatar-mobile position-relative">
               <img src={Avatar} alt="" />
