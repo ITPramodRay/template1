@@ -3,8 +3,8 @@ import { Container, Row, Col, Button } from 'reactstrap';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
-import Doctor from "../../assets/images/Service/Doctor.svg";
-import pharmalogo from "../../assets/images/Service/pharmalogo.svg";
+import Doctor from "../../../assets/images/Service/Doctor.svg";
+import pharmalogo from "../../../assets/images/Service/pharmalogo.svg";
 
 class Offerdetail extends Component {
     render() {

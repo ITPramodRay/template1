@@ -18,9 +18,26 @@ export const dashboardPaths = {
   advisory: "/advisory",
   learn: "/learn",
   wellbeing: "/wellbeing",
-  myprofile:"/myprofile",
   offerdetail:"/offerdetail",
 };
+
+export const myProfilePaths={
+  myProfile: "/myprofile",
+  kycDetails: "/myprofile/kycDetails",
+  bankDetails: "/myprofile/bankDetails",
+  contactDetails: "/myprofile/contactDetails",
+  nominee: "/myprofile/nominee",
+  referFriend: "/myprofile/referFriend",
+  preApprovedInsurance: "/myprofile/preApprovedInsurance",
+}
+
+export const emptyNavPaths={
+  offerDetails: "/offerDetails",
+  calculator: "/calculator",
+  verifyAccount: "/verifyAccount",
+  serviceCorner: "/serviceCorner"
+
+}
 
 export const errorPaths = {
   fourZeroFour: "/404",
