@@ -1,11 +1,10 @@
 import axios from "axios";
 
 const api = (url,token) =>
-  axios.create({
+  {console.log(token && `Bearer ${token}` )
+  return axios.create({
     baseURL: url,
-    header:{
-      Authorization: token && `Bearer ${token}` 
-    }
-  });
+   
+  });}
 
 export default api;

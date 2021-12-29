@@ -9,6 +9,7 @@
   background: #e5e5e5;
   padding: 20px 0px;
   .myaccount-component {
+    
     .persone-card {
       @include Myaccount-card(#005e9e);
       padding: 20px 25px;
