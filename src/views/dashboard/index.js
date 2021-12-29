@@ -8,10 +8,18 @@ import Annuity from "./Annuity/annuity"
 import { useLocation } from 'react-router-dom';
 import {dashboardPaths} from "../../utils/RoutingConstants"
 import Plan from '../Plan/Plan';
+import api from "../../utils/axios"
+import { local } from '../../utils/Utils';
 // import "swiper/css/bundle";
 
 const  DashBoardPage = () => {
   const location = useLocation()
+  const baseUrl = "https://api-uat.life99.in/"
+  const loginToken = local.getItem("loginToken")
+  console.log(loginToken,"login token")
+  api(baseUrl,loginToken).get("/api-mdm/individual/profile",{ header:{
+    "Authorization": loginToken && `Bearer ${loginToken}` 
+  }})
   console.log(dashboardPaths.myprofile,"this")
   return (
    <>

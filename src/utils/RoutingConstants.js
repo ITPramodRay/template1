@@ -30,7 +30,11 @@ export const myProfilePaths = {
   nominee: "/myprofile/nominee",
   referFriend: "/myprofile/referFriend",
   preApprovedInsurance: "/myprofile/preApprovedInsurance",
-};
+  corporateDetailsMV1: "/myprofile/corporateDetails1",
+  corporateDetailsMV2: "/myprofile/corporateDetails2",
+  corporateDetailsMV3: "/myprofile/corporateDetails3",
+}
+
 
 export const emptyNavPaths = {
   offerDetails: "/offerDetails",

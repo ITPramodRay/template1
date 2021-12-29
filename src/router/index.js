@@ -28,6 +28,7 @@ export default function AppRouter({ ...props }) {
     ...landingPageRouters,
     ...loginAndRegisterPageRouters,
     ...loginPageRouters,
+
     // ...errorPageRouters,
   ];
 
@@ -35,6 +36,7 @@ export default function AppRouter({ ...props }) {
     ...myAccountPageRouters,
     ...emptyNavPageRouter,
     ...dashboardPageRouters,
+
   ];
 
   return (
