@@ -3,16 +3,91 @@
 
 .Recommeded-section {
   background: #e5f4ff;
-  padding: 100px 0px;
+  padding: 3rem 0;
+
+  @include break(lg) {
+    padding: 7rem 0;
+  }
+
+  .controls {
+    button {
+      --size: 40px;
+      height: var(--size);
+      width: var(--size);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: #fff;
+
+      @include break(lg) {
+        --size: 40px;
+      }
+
+      img {
+        --size: 20px;
+        height: var(--size);
+        width: var(--size);
+
+        @include break(lg) {
+          --size: 24px;
+        }
+      }
+    }
+  }
 
   .title-text {
-    @include title(32px, 40px, 600, #1e3f6d);
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e3f6d;
+
+    @include break(lg) {
+      font-size: 32px;
+    }
   }
 
   .Recommended-slider {
     .slick-slide {
+      height: inherit !important;
       & > div {
         height: 100%;
+      }
+    }
+
+    .slick-track {
+      display: flex !important;
+    }
+
+    .slick-dots {
+      padding: 0;
+      list-style: none;
+      font-size: 0;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+
+      li + li {
+        margin-left: 1rem;
+      }
+
+      li {
+        button {
+          background: #cfcfcf;
+          --size: 8px;
+          height: var(--size);
+          width: var(--size);
+          border-radius: 50%;
+          border: none;
+          outline: none;
+        }
+
+        &.slick-active {
+          button {
+            --size: 12px;
+            background: #1a3e6d;
+          }
+        }
       }
     }
 
@@ -21,7 +96,7 @@
 
       .cardbox {
         padding: 20px 20px;
-        margin: 0 15px;
+        margin: 0 1rem;
         background: linear-gradient(340.78deg, #4aaac1 2.17%, #206f82 114.02%);
         border-radius: 12.9221px;
         height: 100%;
