@@ -26,7 +26,7 @@ const Myaccount = () => {
   ];
   return (
     <>
-      {/* <AppHeader /> */}
+      <AppHeader />
       {location.pathname === myProfilePaths.sidebarMobile && <SideBarMobile />}
       {location.pathname === myProfilePaths.corporateDetailsMV1 && (
         <CorporatDetailsMV1 />
@@ -45,7 +45,7 @@ const Myaccount = () => {
                   console.log(location.pathname === ele)
                   return location.pathname !== ele?<SideBar />: <></>;
               })} */}
-              {/* <SideBar /> */}
+              <SideBar />
               <Col sm={8}>
                 {location.pathname === myProfilePaths.myProfile && (
                   <PersonalDetails />
